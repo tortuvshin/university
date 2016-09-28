@@ -3,15 +3,13 @@
 Class Issue extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			INILABS TEAM
+| AUTHOR:			TAGTAA DEVELOPMENT TEAM
 | -----------------------------------------------------
-| EMAIL:			info@inilabs.net
+| EMAIL:			info@tagtaasolution.mn
 | -----------------------------------------------------
-| COPYRIGHT:		RESERVED BY INILABS IT
-| -----------------------------------------------------
-| WEBSITE:			http://inilabs.net
+| WEBSITE:			http://tagtaasolution.mn
 | -----------------------------------------------------
 */
 	function __construct() {

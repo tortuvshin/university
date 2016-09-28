@@ -1,5 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/*
+| -----------------------------------------------------
+| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| -----------------------------------------------------
+| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| -----------------------------------------------------
+| EMAIL:			info@tagtaasolution.mn
+| -----------------------------------------------------
+| WEBSITE:			http://tagtaasolution.mn
+| -----------------------------------------------------
+*/
 class Documentation extends Admin_Controller {
 
 	public function admin() {
