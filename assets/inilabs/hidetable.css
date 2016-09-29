@@ -1,0 +1,186 @@
+/*
+| -----------------------------------------------------
+| PRODUCT NAME:     INILABS SCHOOL MANAGEMENT SYSTEM
+| -----------------------------------------------------
+| AUTHOR:           INILABS TEAM
+| -----------------------------------------------------
+| EMAIL:            info@inilabs.net
+| -----------------------------------------------------
+| COPYRIGHT:        RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:          http://inilabs.net
+| -----------------------------------------------------
+*/
+
+@media only screen and (max-width: 800px) {
+
+
+
+    #hide-table table,
+
+    #hide-table thead,
+
+    #hide-table tbody,
+
+    #hide-table th,
+
+    #hide-table td,
+
+    #hide-table tr {
+
+        display: block;
+
+    }
+
+
+
+    #hide-table thead tr {
+
+        position: absolute;
+
+        top: -9999px;
+
+        left: -9999px;
+
+    }
+
+
+
+    #hide-table tr { border: 1px solid #ccc; }
+
+
+
+    #hide-table td {
+
+        border: none;
+
+        border-bottom: 1px solid #eee;
+
+        position: relative;
+
+        padding-left: 50%;
+
+        white-space: normal;
+
+        text-align:left;
+
+    }
+
+
+
+    #hide-table td:before {
+
+        position: absolute;
+
+        top: 6px;
+
+        left: 6px;
+
+        width: 45%;
+
+        padding-right: 10px;
+
+        white-space: nowrap;
+
+        text-align:left;
+
+        font-weight: 500;
+
+        color: #1a2229;
+
+    }
+
+
+
+    #hide-table td:before { content: attr(data-title); }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+
+    #hide-table-2 table,
+
+    #hide-table-2 thead,
+
+    #hide-table-2 tbody,
+
+    #hide-table-2 th,
+
+    #hide-table-2 td,
+
+    #hide-table-2 tr {
+
+        display: block;
+
+    }
+
+
+
+    #hide-table-2 thead tr {
+
+        position: absolute;
+
+        top: -9999px;
+
+        left: -9999px;
+
+    }
+
+
+
+    #hide-table-2 tr { border: 1px solid #ccc; }
+
+
+
+    #hide-table-2 td {
+
+        border: none;
+
+        border-bottom: 1px solid #eee;
+
+        position: relative;
+
+        padding-left: 0%;
+
+        white-space: normal;
+
+        text-align:center;
+
+
+    }
+
+
+
+    #hide-table-2 td:before {
+
+        position: absolute;
+
+        top: 6px;
+
+        left: 6px;
+
+        width: 45%;
+
+        padding-right: 10px;
+
+        white-space: nowrap;
+
+        text-align:left;
+
+        font-weight: 500;
+
+        color: #1a2229;
+
+    }
+
+
+
+    #hide-table-2 td:before { content: attr(data-title); }
+
+}

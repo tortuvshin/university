@@ -1,0 +1,58 @@
+@media screen and (max-width: 480px) {
+	.box > .box-header > .breadcrumb {
+		background: none !important; 
+		float: left;
+		padding: 15px 10px 10px 15px;
+		margin-bottom: 0px;
+		position: relative;
+	}
+
+	/* Login Panel */
+	.form-box > .header {
+	  margin-top: -50px;
+	}
+	/* Login Panel */
+
+	/* View breadcrumb Start */
+	.well .breadcrumb {
+	  float: left;
+	  margin-bottom: 10px;
+	  padding: 8px 0px;
+	}
+	/* View breadcrumb Close */
+
+	/* Issue Button margin Start */
+	.iss-mar {
+		margin-top: 8px;
+	}
+	/* Issue Button margin Start */
+
+	/* Report Select * Button Margin Start */
+	.rep-mar {
+		margin-top: 12px !important;
+	}
+	/* Report Select * Button Margin Close */
+}
+
+@media screen and (max-width: 767px) {
+	/* View breadcrumb Start */
+	.well .breadcrumb {
+	  float: left;
+	  margin-bottom: 10px;
+	  padding: 8px 0px;
+	}
+	/* View breadcrumb Close */
+
+	/* Issue Button margin Start */
+	.iss-mar {
+		margin-top: 8px;
+	}
+	/* Issue Button margin Start */
+
+		/* Report Select * Button Margin Start */
+	.rep-mar {
+		margin-top: 12px !important;
+	}
+	/* Report Select * Button Margin Close */
+
+}

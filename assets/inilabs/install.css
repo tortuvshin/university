@@ -1,0 +1,83 @@
+/*
+| -----------------------------------------------------
+| PRODUCT NAME:   INILABS SCHOOL MANAGEMENT SYSTEM
+| -----------------------------------------------------
+| AUTHOR:     INILABS TEAM
+| -----------------------------------------------------
+| EMAIL:      info@inilabs.net
+| -----------------------------------------------------
+| COPYRIGHT:    RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:      http://inilabs.net
+| -----------------------------------------------------
+*/
+
+/* Installer Custom CSS Start......................... */
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-default > .panel-heading, .panel-default > .panel-heading-install{
+  color: #a4b1c2;
+  background-color: #1a2229;
+  border-color: #ddd;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  background-color: #2d353c;
+}
+.panel-default > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #ddd;
+}
+.panel-default > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #ddd;
+}
+
+.nav-pills > li {
+  float: left;
+  border-radius: 4px;
+  background-color: #2d353c;
+}
+.nav-pills > li > a {
+  border-radius: 4px;
+  background-color: #2d353c;
+}
+
+.nav-pills > li + li {
+  margin-left: 2px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #00C7C7;
+}
+
+a.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
+}
+
+.has-error {
+  border-color:1px red ;
+}
+
+.ins-marg {
+  margin-top: 20px !important;
+}
+
+.ins-bg-col {
+  background-color: #343E4D;
+}
