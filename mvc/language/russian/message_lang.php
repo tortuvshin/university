@@ -4,7 +4,7 @@
 $lang['panel_title'] = "Зурвас";
 $lang['add_title'] = "Зурвас бичих";
 $lang['folder'] = "Хавтаснууд";
-$lang['inbox'] = "Зурвасууд";
+$lang['inbox'] = "Ирсэн зурвас";
 $lang['to'] = "Хэнд";
 $lang['status'] = "Статус";
 $lang['name'] = "Нэр";
@@ -33,5 +33,7 @@ $lang['send'] = "Илгээх";
 $lang['close'] = "Хаах";
 $lang['sender'] = "Илгээсэн";
 $lang['discard'] = "Болих";
-$lang['error'] = "Хариу илгээгдсэнгүй!";
+$lang['delete'] = "Устгах!";
+$lang['refresh'] = "Шинэчлэх!";
+$lang['select'] = "Сонгох!";
 
