@@ -1,5 +1,3 @@
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 <div class="box">
     <div class="box-header">
         <h3 class="box-title"><i class="fa fa-clipboard"></i> <?=$this->lang->line('panel_title')?></h3>

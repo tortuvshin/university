@@ -5,12 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <style type="text/css">
-    @font-face {
-      font-family: 'Firefly';
-      font-style: normal;
-      font-weight: normal;
-      src: url(/libraries/dompdfnew/lib/fonts/DejaVuSans.ttf) format('truetype');
-    }
+    
     * {
         font-family: 'DejaVu Sans', sans-serif;
     }
