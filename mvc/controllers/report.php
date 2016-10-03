@@ -1,4 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+header('Content-type: text/html; charset=UTF-8') ;//chrome
 
 class Report extends Admin_Controller {
 /*
@@ -138,6 +139,7 @@ class Report extends Admin_Controller {
 					    $this->html2pdf->paper('a4', 'portrait');
 					    $this->data['panel_title'] = $this->lang->line('panel_title');
 						$html = $this->load->view('report/student_list_pdf', $this->data, true);
+						
 						$this->html2pdf->html($html);
 						$this->html2pdf->create();
 

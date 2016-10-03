@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
 <title><?php echo $panel_title; ?></title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 <style type="text/css">
+  @font-face {
+    font-family: 'Firefly';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/libraries/dompdfnew/lib/fonts/DejaVuSans.ttf) format('truetype');
+  }
+    * {
+        font-family: 'DejaVu Sans', sans-serif;
+    }
     #page-wrap {
         width: 700px;
         margin: 0 auto;
@@ -39,6 +49,8 @@
     }
     @media print {
       * {
+        
+        font-family: 'DejaVu Sans', sans-serif;
         color: #000 !important;
         text-shadow: none !important;
         background: transparent !important;
