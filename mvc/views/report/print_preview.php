@@ -42,8 +42,7 @@
     }
     @media print {
       * {
-        
-        font-family: 'DejaVu Sans', sans-serif;
+        font-family: 'DejaVu Sans', sans-serif !important;
         color: #000 !important;
         text-shadow: none !important;
         background: transparent !important;
