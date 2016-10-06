@@ -1,7 +1,7 @@
 <!doctype html>  
 <!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
 <!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class=  "ie8"> <![endif]-->
 <!--[if (gt IE 7)|!(IE)]><!-->
 <html ><!--<![endif]-->
 <head>
@@ -15,45 +15,32 @@
   
   <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/documenter_style.css'); ?>" media="all">
   <link rel="stylesheet" href="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.css'); ?>" media="screen">
-  <script src="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.js'); ?>"></script>
-
-  <script type="text/javascript" src="<?php echo base_url('assets/webcamjs/webcam.js'); ?>"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <link href="<?php echo base_url('assets/bootstrap/bootstrap.min.css'); ?>" rel="stylesheet">
-
   <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/custom.css'); ?>" media="screen">
-
+  
+  <script src="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.js'); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/webcamjs/webcam.js'); ?>"></script>
   <script src="<?php echo base_url('assets/documentation/js/jquery.js'); ?>"></script>
   <script src="<?php echo base_url('assets/documentation/js/jquery.scrollTo.js'); ?>"></script>
   <script src="<?php echo base_url('assets/documentation/js/jquery.easing.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/documentation/js/cufon.js'); ?>"></script>
   <script src="<?php echo base_url('assets/documentation/js/font.js'); ?>"></script>
-  <script>Cufon.replace("h1, h2, h3, h4, h5, h6");</script>
-  
   <script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
   <script src="<?php echo base_url('assets/documentation/js/script.js'); ?>"></script>
   
   <style>
+
     html{background-color:#F3F3F3;color:#585858;}
     ::-moz-selection{background:#111111;color:#F1F1F1;}
     ::selection{background:#111111;color:#F1F1F1;}
     #documenter_sidebar #documenter_logo{
       background-image:url(<?php echo base_url('assets/documentation/images/image_16.png'); ?>);
     }
+
     a{color:#111111;}
     .btn {
       border-radius:3px;
-    }
-    .btn-primary {
-        background-image: -moz-linear-gradient(top, #585858, #3B3B3B);
-        background-image: -ms-linear-gradient(top, #585858, #3B3B3B);
-        background-image: -webkit-gradient(linear, 0 0, 0 585858%, from(#333333), to(#3B3B3B));
-        background-image: -webkit-linear-gradient(top, #585858, #3B3B3B);
-        background-image: -o-linear-gradient(top, #585858, #3B3B3B);
-        background-image: linear-gradient(top, #585858, #3B3B3B);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#585858', endColorstr='#3B3B3B', GradientType=0);
-        border-color: #3B3B3B #3B3B3B #bfbfbf;
-        color:#F9F9F9;
-    }
+    } 
     .btn-primary:hover,
     .btn-primary:active,
     .btn-primary.active,
@@ -63,8 +50,11 @@
       background-color: #3B3B3B;
     }
     hr{border-top:1px solid #E5E5E5;border-bottom:1px solid #F9F9F9;}
-    #documenter_sidebar, #documenter_sidebar ul a{background-color:#333333;color:#F1F1F1;http://static.revaxarts-themes.com/noise.gif}
-    #documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #444444;-moz-text-shadow:1px 1px 0px #444444;text-shadow:1px 1px 0px #444444;}
+    #documenter_sidebar, #documenter_sidebar ul a{
+
+      font-family: 'Roboto', sans-serif !important  ;
+      background-color:#333333;color:#F1F1F1;
+    }
     #documenter_sidebar ul{border-top:1px solid #222222;}
     #documenter_sidebar ul a{border-top:1px solid #444444;border-bottom:1px solid #222222;color:#F1F1F1;}
     #documenter_sidebar ul a:hover{background:#111111;color:#F1F1F1;border-top:1px solid #111111;}
@@ -93,7 +83,7 @@
       <li><a href="#Dungiin_zereg" title="Dungiin zereg">Дүнгийн зэрэг тохируулах</a></li>
       <li><a href="#Shalgalt" title="Shalgalt">Шалгалт тохируулах</a></li>
       <li><a href="#Dun" title="Dun">Дүн тохируулах</a></li>
-      <li><a href="#Hicheeliin_huwaari" title="Hicheeliin huwaari">Хичээлийн хуваарь тохируулах</a></li>
+       <li><a href="#Hicheeliin_huwaari" title="Hicheeliin huwaari">Хичээлийн хуваарь тохируулах</a></li>
       <li><a href="#Irts" title="Irts">Ирц тохируулах</a></li>
       <li><a href="#Tolboriin_medeelel" title="Tolboriin medeelel">Төлбөрийн мэдээлэл тохируулах</a></li>
       <li><a href="#Bvleg_dewshilt" title="Bvleg dewshilt">Бүлэг дэвшилт тохируулах</a></li>

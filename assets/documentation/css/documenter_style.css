@@ -180,8 +180,8 @@ noscript p{
 	display:block;
 	border-top:1px solid #ddd;
 	border-bottom:1px solid #aaa;
-	padding:6px 15px 7px 0;
-	text-align:right;
+	padding:6px 15px 7px 7px;
+	text-align:left;
 }
 #documenter_sidebar ul a:hover,#documenter_sidebar ul a.current{
 	-webkit-text-shadow:none;
