@@ -145,7 +145,7 @@ class Html2pdf {
 		$dompdf->setPaper($this->paper_size, $this->orientation);
 
 
-		$dompdf->set_option('defaultFont', 'Roboto');
+		$dompdf->set_option('defaultFont', 'DejaVu Sans');
 		
 		// Render the HTML as PDF
 		$dompdf->render();
