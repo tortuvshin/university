@@ -4,7 +4,7 @@
 
 	git clone https://github.com/tortuvshin/tagtaa-sms.git
 
-	composer install/updated
+	composer install/update
 
 #### Dompdf дээр ашиглаж байгаа сангууд суулгах
 
