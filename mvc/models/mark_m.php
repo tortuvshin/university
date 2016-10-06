@@ -70,21 +70,21 @@ class Mark_m extends MY_Model {
 		return $query->result();
 	}
 
-	function get_order_by_mark_with_highest_mark($classID,$studentID) {
-		$this->db->select('M.markID,M.examID, M.exam, M.subjectID, M.subject, M.studentID, M.classesID,  M.mark, M.year, (
-		SELECT Max( mark.mark )
-		FROM mark
-		WHERE mark.subjectID = M.subjectID
-		AND mark.examID = M.examID
-		) highestmark');
-		$this->db->from('exam E');
-		$this->db->join('mark M', 'M.examID = E.examID', 'LEFT');
-		$this->db->join('subject S', 'M.subjectID = S.subjectID');
-		$this->db->where('M.classesID', $classID);
-		$this->db->where('M.studentID', $studentID);
-		$query = $this->db->get();
-		return $query->result();
-	}
+	// function get_order_by_mark_with_highest_mark($classID,$studentID) {
+	// 	$this->db->select('M.markID,M.examID, M.exam, M.subjectID, M.subject, M.studentID, M.classesID,  M.mark, M.year, (
+	// 	SELECT Max( mark.mark )
+	// 	FROM mark
+	// 	WHERE mark.subjectID = M.subjectID
+	// 	AND mark.examID = M.examID
+	// 	) highestmark');
+	// 	$this->db->from('exam E');
+	// 	$this->db->join('mark M', 'M.examID = E.examID', 'LEFT');
+	// 	$this->db->join('subject S', 'M.subjectID = S.subjectID');
+	// 	$this->db->where('M.classesID', $classID);
+	// 	$this->db->where('M.studentID', $studentID);
+	// 	$query = $this->db->get();
+	// 	return $query->result();
+	// }
 }
 
 /* End of file mark_m.php */
