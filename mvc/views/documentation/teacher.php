@@ -7,28 +7,27 @@
 <head>
 	<meta charset="utf-8">
 	
-	<title>Оюутны бүртгэлийн систем</title>
-	
-	<meta name="description" content="A documentation for iNilabs school management system!">
-	<meta name="author" content="inilabs">
-	<meta name="copyright" content="inilabs">
-	
-	<link rel="stylesheet" href="./assets/css/documenter_style.css" media="all">
-	<link rel="stylesheet" href="./assets/js/google-code-prettify/prettify.css" media="screen">
-	<script src="./assets/js/google-code-prettify/prettify.js"></script>
+	 <title>Оюутны бүртгэлийн систем</title>
+  
+  <meta name="description" content="iNisys оюутны бүртгэлийн систем!">
+  <meta name="author" content="Tagtaa Development Team">
+  <meta name="copyright" content="Tagtaa Development Team">
 
-	<link rel="stylesheet" href="./assets/css/custom.css" media="screen">
-
-	<link rel="shortcut icon" type="image/x-icon" href="site.png" />
-
-	<script src="./assets/js/jquery.js"></script>
-	
-	<script src="./assets/js/jquery.scrollTo.js"></script>
-	<script src="./assets/js/jquery.easing.js"></script>
-	
-	<script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
-	<script src="assets/js/script.js"></script>
-	
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/documenter_style.css'); ?>" media="all">
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.css'); ?>" media="screen">
+  <link href="<?php echo base_url('assets/bootstrap/bootstrap.min.css'); ?>" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/custom.css'); ?>" media="screen">
+  
+  <script src="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.js'); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/webcamjs/webcam.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.scrollTo.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.easing.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/font.js'); ?>"></script>
+  <script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
+  <script src="<?php echo base_url('assets/documentation/js/script.js'); ?>"></script>
+  
 	<style>
 		html{background-color:#F3F3F3;color:#585858;}
 		::-moz-selection{background:#111111;color:#F1F1F1;}
@@ -135,7 +134,7 @@
       <h4> Багшийн удирлагын самбар</h4>
     </center>
   </p>
-  <p><img src="assets/images/teacher/teacher_view.png" width="1000" style="padding: 0px 20px;"></p>
+  <p><img src="<?php echo base_url('assets/documentation/images/teacher/teacher_view.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
   
   <br>    
 		</section>
@@ -149,8 +148,8 @@
 Курс хэсэгээс аль курсын оюутны мэдээлэл харахыг сонгоно
 Дараа нь мэдээлэл харах оюутны харгалзах харах үйлдэл сонгоно 
 </pre>
-			  <p><img src="assets/images/teacher/1.png" width="1000" style="padding: 0px 20px;"></p>
- <p><img src="assets/images/teacher/a1.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+ <p><img src="<?php echo base_url('assets/documentation/images/teacher/a1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
              
 		</section>
 		<section id="Bagsh">
@@ -161,7 +160,7 @@
 Багш цэсийг сонгох  
 Дараа нь мэдээлэл харах багшийн харгалзах харах үйлдэл сонгоно
 </pre>
-			  <p><img src="assets/images/teacher/2.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/2.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
 		</section>
 		<section id="hichel">
@@ -173,7 +172,7 @@
 Курс хэсэгээс аль курсын мэдээлэл харахыг сонгоно
 </pre>
 				<p>
-					<img src="assets/images/teacher/3.png" width="1000" style="padding: 0px 20px;"/>
+					<img src="<?php echo base_url('assets/documentation/images/teacher/3.png'); ?>" width="1000" style="padding: 0px 20px;"/>
 				</p>
 			
 		</section>
@@ -186,7 +185,7 @@
 Курс хэсэгээс аль курсын оюутны дүнгийн мэдээлэл харахыг сонгоно
 Дараа нь дүнгийн мэдээлэл харах оюутны харгалзах харах үйлдэл сонгоно
 </pre>
-			  <p><img src="assets/images/teacher/4.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/4.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="odun">
 			<div class="page-header"><h3> Оюутны дүн нэмэх, жагсаах, харах, хэвлэх,pdf татах, pdf мэйл илгээх</h3><hr class="notop"></div>
@@ -197,8 +196,8 @@
 Дүн цэсийг сонгох  
 Курс хэсэгээс аль курсын мэдээлэл харахыг сонгон
 </pre>
-              <p><img src="assets/images/teacher/5.png" width="1000" style="padding: 0px 20px;"></p>
-               <p><img src="assets/images/teacher/5_1.png" width="1000" style="padding: 0px 20px;"></p>
+              <p><img src="<?php echo base_url('assets/documentation/images/teacher/5.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+               <p><img src="<?php echo base_url('assets/documentation/images/teacher/5_1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
                <h4>2. Оюутны дүн нэмэх</h4>
         		 Оюутны дүн нэмэх. Дараах алхмуудыг дагна уу : 
 <pre class="prettyprint">
@@ -208,9 +207,9 @@
 Дүн оруулах ангыг сонгож дүн товч дарна
 Харгалзах оюутны дүнг оруулж дүн нэмэх товч дарна
 </pre>
-              <p><img src="assets/images/teacher/5_2.png" width="1000" style="padding: 0px 20px;"></p>
-               <p><img src="assets/images/teacher/5_3.png" width="1000" style="padding: 0px 20px;"></p>
-                <p><img src="assets/images/teacher/5_4.png" width="1000" style="padding: 0px 20px;"></p>
+              <p><img src="<?php echo base_url('assets/documentation/images/teacher/5_2.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+               <p><img src="<?php echo base_url('assets/documentation/images/teacher/5_3.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+                <p><img src="<?php echo base_url('assets/documentation/images/teacher/5_4.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="hicheel_huwiar">
 			<div class="page-header"><h3>Сургалт явуулах хичээлийн хуваарь харах</h3><hr class="notop"></div>
@@ -220,7 +219,7 @@
 Хичээлийн хуваарь цэсийг сонгох  
 Хичээлийн хуваарь харах анги сонгох 
 </pre>
-			  <p><img src="assets/images/teacher/6.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/6.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
 		</section>
 		<section id="Bagshipts">
@@ -230,7 +229,7 @@
 Багшийн эрхээр нэвтрэх
 Ирц -> Багшийн ирц цэсийг сонгох   
 </pre>
-			  <p><img src="assets/images/teacher/8.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/8.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="oyutanipts">
 			<div class="page-header"><h3>Оюутны болон шалгалтын ирц бүртгэх харах</h3><hr class="notop"></div>
@@ -243,8 +242,8 @@
 Оюутны ирц оруулах анги өдөр сонгож ирц товч дарна
 Харгалзах Оюутны ирц бүртгэнэ 
 </pre>
-				<p><img src="assets/images/teacher/7_3.png" width="1000" style="padding: 0px 20px;"></p>
-			  <p><img src="assets/images/teacher/7.png" width="1000" style="padding: 0px 20px;"></p>
+				<p><img src="<?php echo base_url('assets/documentation/images/teacher/7_3.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/7.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 			  	<h4>1. Оюутны ирц харах</h4>
         		Оюутны ирц харах. Дараах алхмуудыг дагна уу :
 <pre class="prettyprint">
@@ -254,8 +253,8 @@
 Ирцын мэдээлэл харах оюутанд харгалзах харах үйлдэл сонгоно 
 </pre>		
 
-			  <p><img src="assets/images/teacher/7_1.png" width="1000" style="padding: 0px 20px;"></p>
-			  <p><img src="assets/images/teacher/7_2.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/7_1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/7_2.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 			  <h4>2. Шалгалтын ирц нэмэх</h4>
         		Шалгалтын ирц нэмэх. Дараах алхмуудыг дагна уу :
 <pre class="prettyprint">
@@ -265,8 +264,8 @@
 Шалгалтын ирц оруулах анги өдөр сонгож ирц товч дарна
 Харгалзах Оюутны ирц бүртгэнэ 
 </pre>
-	<p><img src="assets/images/teacher/9_1.png" width="1000" style="padding: 0px 20px;"></p>
-			  <p><img src="assets/images/teacher/10.png" width="1000" style="padding: 0px 20px;"></p>
+	<p><img src="<?php echo base_url('assets/documentation/images/teacher/9_1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/10.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 			    <h4>2. Шалгалтын ирц харах</h4>
         		Дүнгийн зэрэг нэмэх. Дараах алхмуудыг дагна уу :
 <pre class="prettyprint">
@@ -275,7 +274,7 @@
 Ямар хичээлийн шалгалтын мэдээлэл харахыг сонгож ирц харах товч дарна
 </pre>
 
-			  <p><img src="assets/images/teacher/9.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/9.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="bulegdewsh">
 			<div class="page-header"><h3>Оюутан бүлэг дэвшүүлэх</h3><hr class="notop"></div>
@@ -286,8 +285,8 @@
 Анги дэвшихэд хамгийн бага байх дүнг оруулнж анги дэвшилтийн дүнгийн тохируулга товч дарна
 Анги дэвших нөхцөл хангагдсан бол тухайн оюутаныг сонгож дараагын ангируу дэвшүүлэх товч дарна
 </pre>
-			  <p><img src="assets/images/teacher/11.png" width="1000" style="padding: 0px 20px;"></p>
-			  <p><img src="assets/images/teacher/12.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/11.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/12.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
               
               
 		</section>
@@ -299,8 +298,8 @@
 Мэдэгдэл цэсийг сонгох  
 Тухайн мэдэгдэлийн дэлгэрэнгүйг харах бол харах үйлдэлийг сонгоно
 </pre>
-			  <p><img src="assets/images/teacher/13.png" width="1000" style="padding: 0px 20px;"></p>
-			  <p><img src="assets/images/teacher/14.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/13.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/14.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="burtgel">
 			<div class="page-header"><h3>Бүртгэлийн мэдээлэл харах</h3><hr class="notop"></div>
@@ -310,7 +309,7 @@
 Дээд хэсэгт байрлах хэрэглэгчийн нэрэн дээр дарна
 Хэрэглэгчийн мэдээлэл товч дарна
 </pre>
-			  <p><img src="assets/images/teacher/15.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/15.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
           
 		</section>
@@ -322,7 +321,7 @@
 Дээд хэсэгт байрлах хэрэглэгчийн нэрэн дээр дарна
 Хуучин нууц үг оруулсны дараа Шинэ нууц үг оруулж нууц үг товч дарна
 </pre>
-			  <p><img src="assets/images/teacher/16.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/16.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
             
               	
@@ -335,7 +334,7 @@
 Дээд хэсэгт байрлах хэлний сонголт зураг дээр дарна
 Өөрчлөх хэлээ сонгоно
 </pre>
-			  <p><img src="assets/images/teacher/17.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/17.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
               
               
@@ -347,7 +346,7 @@
 Оюутаны эрхээр нэвтрэх
 Дээд хэсэгт байрлах мэдэгдэл зураг дээр дарна
 </pre>
-			  <p><img src="assets/images/teacher/18.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/teacher/18.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 			
 		</section>
 		

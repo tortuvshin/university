@@ -9,26 +9,26 @@
 	
 	<title>Оюутны бүртгэлийн систем</title>
 	
-	<meta name="description" content="A documentation for iNilabs school management system!">
-	<meta name="author" content="inilabs">
-	<meta name="copyright" content="inilabs">
-	
-	<link rel="stylesheet" href="./assets/css/documenter_style.css" media="all">
-	<link rel="stylesheet" href="./assets/js/google-code-prettify/prettify.css" media="screen">
-	<script src="./assets/js/google-code-prettify/prettify.js"></script>
 
-	<link rel="stylesheet" href="./assets/css/custom.css" media="screen">
-
-	<link rel="shortcut icon" type="image/x-icon" href="site.png" />
-
-	<script src="./assets/js/jquery.js"></script>
-	
-	<script src="./assets/js/jquery.scrollTo.js"></script>
-	<script src="./assets/js/jquery.easing.js"></script>
-	
-	<script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
-	<script src="assets/js/script.js"></script>
-	
+  <meta name="description" content="iNisys оюутны бүртгэлийн систем!">
+  <meta name="author" content="Tagtaa Development Team">
+  <meta name="copyright" content="Tagtaa Development Team">
+  
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/documenter_style.css'); ?>" media="all">
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.css'); ?>" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="<?php echo base_url('assets/bootstrap/bootstrap.min.css'); ?>" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url('assets/documentation/css/custom.css'); ?>" media="screen">
+  
+  <script src="<?php echo base_url('assets/documentation/js/google-code-prettify/prettify.js'); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/webcamjs/webcam.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.scrollTo.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/jquery.easing.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/documentation/js/font.js'); ?>"></script>
+  <script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
+  <script src="<?php echo base_url('assets/documentation/js/script.js'); ?>"></script>
+  
 	<style>
 		html{background-color:#F3F3F3;color:#585858;}
 		::-moz-selection{background:#111111;color:#F1F1F1;}
@@ -134,7 +134,9 @@
       <h4>Оюутаны удирдагын самбар</h4>
     </center>
   </p>
-  <p><img src="assets/images/student/student_view.png" width="1000" style="padding: 0px 20px;"></p>
+
+  
+  <p><img src="<?php echo base_url('assets/documentation/images/student/student_view.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
  <br>
 
  
@@ -150,8 +152,8 @@
 Багш цэсийг сонгох  
 Тухайн багшийн дэлгэрэнгүй мэдээлэл харах бол харах үйлдэл сонгоно
 </pre>
-			  <p><img src="assets/images/student/1.png" width="1000" style="padding: 0px 20px;"></p>
-              <p><img src="assets/images/student/2.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/1.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+              <p><img src="<?php echo base_url('assets/documentation/images/student/2.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="hichel">
 			<div class="page-header"><h3>Оюутаны сонгосон хичээл харах</h3><hr class="notop"></div>
@@ -160,7 +162,7 @@
 Оюутаны эрхээр нэвтрэх
 Хичээл цэсийг сонгох 
 </pre>
-			  <p><img src="assets/images/student/3.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/3.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
              
 		</section>
@@ -173,7 +175,7 @@
 Шалгалтын хуваарь цэсийг сонгох  
 </pre>
 				<p>
-					<img src="assets/images/student/4.png" width="1000" style="padding: 0px 20px;"/>
+					<img src="<?php echo base_url('assets/documentation/images/student/4.png'); ?>" width="1000" style="padding: 0px 20px;"/>
 				</p>
 				
 		</section>
@@ -184,7 +186,7 @@
 Оюутаны эрхээр нэвтрэх
 Дүн цэсийг сонгох  
 </pre>
-			  <p><img src="assets/images/student/14.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/14.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
             
 		</section>
 		<section id="huwapi">
@@ -195,7 +197,7 @@
 Оюутаны эрхээр нэвтрэх
 Хичээлийн хуваарь цэсийг сонгох  
 </pre>
-              <p><img src="assets/images/student/5.png" width="1000" style="padding: 0px 20px;"></p>
+              <p><img src="<?php echo base_url('assets/documentation/images/student/5.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
             
 		</section>
@@ -207,7 +209,7 @@
 Оюутаны эрхээр нэвтрэх
 Ирц цэсийг сонгох  
 </pre>
-			  <p><img src="assets/images/student/15.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/15.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
               
 		</section>
@@ -219,9 +221,9 @@
 Нэхэмжлэл цэсийг сонгох  
 Тухайн нэхэмжлэлийн дэлгэрэнгүйг харах бол харах үйлдэлийг сонгоно
 </pre>
-			  <p><img src="assets/images/student/12.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/12.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
-              <p><img src="assets/images/student/13.png" width="1000" style="padding: 0px 20px;"></p>
+              <p><img src="<?php echo base_url('assets/documentation/images/student/13.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="medegdel">
 			<div class="page-header"><h3>Мэдэгдэлийн жагсаалт ба тухайн мэдэгдэлийн дэлгэрэнгүй харах</h3><hr class="notop"></div>
@@ -231,8 +233,8 @@
 Мэдэгдэл цэсийг сонгох  
 Тухайн мэдэгдэлийн дэлгэрэнгүйг харах бол харах үйлдэлийг сонгоно
 </pre>
-			  	  <p><img src="assets/images/student/6.png" width="1000" style="padding: 0px 20px;"></p>
- <p><img src="assets/images/student/7.png" width="1000" style="padding: 0px 20px;"></p>
+			  	  <p><img src="<?php echo base_url('assets/documentation/images/student/6.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
+ <p><img src="<?php echo base_url('assets/documentation/images/student/7.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 		</section>
 		<section id="burtgel">
 			<div class="page-header"><h3>Бүртгэлийн мэдээлэл харах</h3><hr class="notop"></div>
@@ -242,7 +244,7 @@
 Дээд хэсэгт байрлах хэрэглэгчийн нэрэн дээр дарна
 Хэрэглэгчийн мэдээлэл товч дарна
 </pre>
-			  <p><img src="assets/images/student/8.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/8.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
         
              
@@ -255,7 +257,7 @@
 Дээд хэсэгт байрлах хэрэглэгчийн нэрэн дээр дарна
 Хуучин нууц үг оруулсны дараа Шинэ нууц үг оруулж нууц үг товч дарна
 </pre>
-			  <p><img src="assets/images/student/9.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/9.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
 		</section>
 		<section id="hel">
@@ -266,7 +268,7 @@
 Дээд хэсэгт байрлах хэлний сонголт зураг дээр дарна
 Өөрчлөх хэлээ сонгоно
 </pre>
-			  <p><img src="assets/images/student/10.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/10.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
 
 		</section>
 		<section id="not">
@@ -276,7 +278,7 @@
 Оюутаны эрхээр нэвтрэх
 Дээд хэсэгт байрлах мэдэгдэл зураг дээр дарна
 </pre>
-			  <p><img src="assets/images/student/11.png" width="1000" style="padding: 0px 20px;"></p>
+			  <p><img src="<?php echo base_url('assets/documentation/images/student/11.png'); ?>" width="1000" style="padding: 0px 20px;"></p>
     
 		</section>
 		
