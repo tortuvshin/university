@@ -331,7 +331,7 @@
                         <?php
                             if($this->session->userdata("usertype") == "Admin") { 
                                 echo '<li>';
-                                    echo anchor('documentation/admin', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                    echo anchor('doc/admin', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
                                 echo '</li>';
                             } 
                         ?>
@@ -339,7 +339,7 @@
                         <?php
                             if($this->session->userdata("usertype") == "Teacher") { 
                                 echo '<li>';
-                                    echo anchor('documentation/teacher', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                    echo anchor('doc/teacher', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
                                 echo '</li>';
                             } 
                         ?>
@@ -347,7 +347,7 @@
                         <?php
                             if($this->session->userdata("usertype") == "Student") { 
                                 echo '<li>';
-                                    echo anchor('documentation/student', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                    echo anchor('doc/student', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
                                 echo '</li>';
                             } 
                         ?>

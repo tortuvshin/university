@@ -10,17 +10,17 @@
 | WEBSITE:			http://tagtaasolution.mn
 | -----------------------------------------------------
 */
-class Documentation extends Admin_Controller {
+class Doc extends Admin_Controller {
 
 	public function admin() {
-			$this->load->view('documentation/admin', $this->data);
+			$this->load->view('doc/admin', $this->data);
 	}
 	
 	public function teacher() {
-			$this->load->view('documentation/teacher', $this->data);
+			$this->load->view('doc/teacher', $this->data);
 	}
 
 	public function student() {
-			$this->load->view('documentation/student', $this->data);
+			$this->load->view('doc/student', $this->data);
 	}
 }
