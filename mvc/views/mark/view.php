@@ -112,21 +112,21 @@
                                                         {
                                                             break;
                                                         }
-                                                    }
+                                                    }    
 
-                                                    echo "<caption>";
-                                                        echo "<h3>". $exam->exam."</h3>";
-                                                    echo "</caption>";
+                                                    if(count($grades) && $f == 1) {
+                                                        echo "<caption>";
+                                                            echo "<h3>". $exam->exam."</h3>";
+                                                        echo "</caption>";
 
-                                                    echo "<thead>";
-                                                        echo "<tr>";
-                                                            echo "<th>";
-                                                                echo $this->lang->line("mark_subject");
-                                                            echo "</th>";
-                                                            echo "<th>";
-                                                                echo $this->lang->line("mark_mark");
-                                                            echo "</th>";
-                                                            if(count($grades) && $f == 1) {
+                                                        echo "<thead>";
+                                                            echo "<tr>";
+                                                                echo "<th>";
+                                                                    echo $this->lang->line("mark_subject");
+                                                                echo "</th>";
+                                                                echo "<th>";
+                                                                    echo $this->lang->line("mark_mark");
+                                                                echo "</th>";
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_point");
                                                                 echo "</th>";
@@ -139,9 +139,10 @@
                                                                         echo $this->lang->line("mark_highest_mark");
                                                                     echo "</th>";
                                                                 }
-                                                            }
-                                                        echo "</tr>";
-                                                    echo "</thead>";
+                                                            
+                                                            echo "</tr>";
+                                                        echo "</thead>";
+                                                    }
                                                 }
                                             }
 
