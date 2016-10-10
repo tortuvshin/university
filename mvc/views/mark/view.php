@@ -92,7 +92,7 @@
                                     $grades_check = array_map($map4, $grades);
 
                                     foreach ($exams as $exam) {
-                                        echo "<table class=\"table table-striped table-bordered\">";
+                                        echo "<table class=\"table table-striped table-bordered grade-table\">";
                                             if($exam->examID <= $max_semester) {
 
                                                 $check = array_search($exam->examID, $marks_examsID);
