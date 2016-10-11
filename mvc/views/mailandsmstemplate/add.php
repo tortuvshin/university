@@ -18,6 +18,7 @@
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="<?php if($email == 1) echo 'active'; ?>"><a data-toggle="tab" href="#email" aria-expanded="true"><?=$this->lang->line('mailandsmstemplate_email')?></a></li>
+                        <li class="<?php if($sms == 1) echo 'active'; ?>"><a data-toggle="tab" href="#sms" aria-expanded="true"><?=$this->lang->line('mailandsmstemplate_sms')?></a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -60,7 +61,9 @@
                                                     $array = array(
                                                         'select' => $this->lang->line('mailandsmstemplate_select_user'),
                                                         'student' => $this->lang->line('mailandsmstemplate_student'),
+                                                        'parents' => $this->lang->line('mailandsmstemplate_parents'),
                                                         'teacher' => $this->lang->line('mailandsmstemplate_teacher'),
+                                                        'librarian' => $this->lang->line('mailandsmstemplate_librarian'),
                                                         'accountant' => $this->lang->line('mailandsmstemplate_accountant')
                                                     );
                                                     echo form_dropdown("email_user", $array, set_value("email_user"), "id='email_user' class='form-control'");
@@ -165,6 +168,153 @@
                             </div>
                         </div>
 
+
+
+                        <div id="sms" class="tab-pane <?php if($sms == 1) echo 'active'; ?>">
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="form-horizontal" role="form" method="post">
+                                        <?php echo form_hidden('type', 'sms'); ?> 
+                                        <?php 
+                                            if(form_error('sms_name')) 
+                                                echo "<div class='form-group has-error' >";
+                                            else     
+                                                echo "<div class='form-group' >";
+                                        ?>
+                                            <label for="sms_name" class="col-sm-1 control-label">
+                                                <?=$this->lang->line("mailandsmstemplate_name")?>
+                                            </label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="sms_name" name="sms_name" value="<?=set_value('sms_name')?>" >
+                                            </div>
+                                            <span class="col-sm-4 control-label">
+                                                <?php echo form_error('sms_name'); ?>
+                                            </span>
+                                        </div>
+
+                                        <?php 
+                                            if(form_error('sms_user')) 
+                                                echo "<div class='form-group has-error' >";
+                                            else     
+                                                echo "<div class='form-group' >";
+                                        ?>
+                                            <label for="sms_user" class="col-sm-1 control-label">
+                                                <?=$this->lang->line("mailandsmstemplate_user")?>
+                                            </label>
+                                            <div class="col-sm-4">
+                                                <?php
+                                                    $array = array(
+                                                        'select' => $this->lang->line('mailandsmstemplate_select_user'),
+                                                        'student' => $this->lang->line('mailandsmstemplate_student'),
+                                                        'parents' => $this->lang->line('mailandsmstemplate_parents'),
+                                                        'teacher' => $this->lang->line('mailandsmstemplate_teacher'),
+                                                        'librarian' => $this->lang->line('mailandsmstemplate_librarian'),
+                                                        'accountant' => $this->lang->line('mailandsmstemplate_accountant')
+                                                    );
+                                                    echo form_dropdown("sms_user", $array, set_value("sms_user"), "id='sms_user' class='form-control'");
+                                                ?>
+                                            </div>
+                                            <span class="col-sm-4 control-label">
+                                                <?php echo form_error('sms_user'); ?>
+                                            </span>
+                                        </div>
+
+                                        <?php 
+                                            if(form_error('sms_tags')) 
+                                                echo "<div class='form-group has-error' >";
+                                            else     
+                                                echo "<div class='form-group' >";
+                                        ?>
+                                            <label for="sms_tags" class="col-sm-1 control-label">
+                                                <?=$this->lang->line("mailandsmstemplate_tags")?>
+                                            </label>
+                                            <div class="col-sm-8" >
+                                                <div class="col-sm-12 border" id="sms_tags">
+                                                    <div id="sms_student">
+                                                        <?php
+                                                            if(count($students)) {
+                                                                foreach ($students as $key => $student) {
+                                                                    echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$student->tagname.'"> ';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+
+                                                    <div id="sms_parents">
+                                                        <?php
+                                                            if(count($parents)) {
+                                                                foreach ($parents as $key => $parent) {
+                                                                    // echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$parent->tagname.'"> ';
+                                                                    echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$parent->tagname.'"> ';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+
+                                                    <div id="sms_teacher">
+                                                        <?php
+                                                            if(count($teachers)) {
+                                                                foreach ($teachers as $key => $teacher) {
+                                                                    echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$teacher->tagname.'"> ';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                    <div id="sms_librarian">
+                                                        <?php
+                                                            if(count($librarians)) {
+                                                                foreach ($librarians as $key => $librarian) {
+                                                                    echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$librarian->tagname.'"> ';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                    <div id="sms_accountant">
+                                                        <?php
+                                                            if(count($accountants)) {
+                                                                foreach ($accountants as $key => $accountant) {
+                                                                    echo '<input class="btn bg-black btn-xs sms_alltag" type="button" value="'.$accountant->tagname.'"> ';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                
+                                                    <!-- <input type="button" class="alltag" name="" value="aaaa"> -->
+                                                </div>
+                                            </div>
+                                            <span class="col-sm-3 control-label">
+                                                <?php echo form_error('sms_tags'); ?>
+                                            </span>
+                                        </div>
+
+                                        <?php 
+                                            if(form_error('sms_template')) 
+                                                echo "<div class='form-group has-error' >";
+                                            else     
+                                                echo "<div class='form-group' >";
+                                        ?>
+                                            <label for="sms_template" class="col-sm-1 control-label">
+                                                <?=$this->lang->line("mailandsmstemplate_template")?>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <textarea class="form-control" style="resize: vertical;" id="sms_template" name="sms_template" ><?=set_value('sms_template')?></textarea>
+                                            </div>
+                                            <span class="col-sm-3 control-label">
+                                                <?php echo form_error('sms_template'); ?>
+                                            </span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-1 col-sm-8">
+                                                <input type="submit" class="btn btn-success" value="<?=$this->lang->line("add_template")?>" >
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div> <!-- nav-tabs-custom -->

@@ -49,6 +49,7 @@
                                         'student' => $this->lang->line('mailandsmstemplate_student'),
                                         'parents' => $this->lang->line('mailandsmstemplate_parents'),
                                         'teacher' => $this->lang->line('mailandsmstemplate_teacher'),
+                                        'librarian' => $this->lang->line('mailandsmstemplate_librarian'),
                                         'accountant' => $this->lang->line('mailandsmstemplate_accountant')
                                     );
                                     echo form_dropdown("email_user", $array, set_value("email_user", $mailandsmstemplate->user), "id='email_user' class='form-control'");
@@ -183,6 +184,7 @@
                                         'student' => $this->lang->line('mailandsmstemplate_student'),
                                         'parents' => $this->lang->line('mailandsmstemplate_parents'),
                                         'teacher' => $this->lang->line('mailandsmstemplate_teacher'),
+                                        'librarian' => $this->lang->line('mailandsmstemplate_librarian'),
                                         'accountant' => $this->lang->line('mailandsmstemplate_accountant')
                                     );
                                     echo form_dropdown("sms_user", $array, set_value("sms_user", $mailandsmstemplate->user), "id='sms_user' class='form-control'");
