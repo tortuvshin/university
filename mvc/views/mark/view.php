@@ -27,50 +27,30 @@
 
     <div id="printablediv">
         <section class="panel">
-            <div class="profile-view-head">
-                <a href="#">
+           
+           <h1 class="dun-header"><?=$this->lang->line("mark_information")?></h1>
+ 
+            <div class="profile-head">
+                <div class="profile-view-school">
+
+                    <?php
+                        if(count($siteinfos->photo)) {
+                            echo "<img src=".base_url('uploads/images/'.$siteinfos->photo)." />";
+                        }
+                    ?>
+                    <h4><?php echo $siteinfos->sname; ?></h4>
+                </div>
+                <div class="profile-view-user">
                     <?=img(base_url('uploads/images/'.$student->photo))?>
-                </a>
+                    <h4><?=$student->name?></h4>
+                    <p><?=$this->lang->line("student_classes")." ".$classes->classes?></p>
+                    <p><span><?=$this->lang->line("mark_roll")?> </span>: <?=$student->roll?></p>
 
-                <h1><?=$student->name?></h1>
-                <p><?=$this->lang->line("student_classes")." ".$classes->classes?></p>
-
-            </div>
-            <div class="panel-body profile-view-dis">
-                <h1><?=$this->lang->line("personal_information")?></h1>
-                <div class="row">
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_roll")?> </span>: <?=$student->roll?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("menu_section")?> </span>: <?php if(count($section)) { echo $section->section;} else { echo $student->section;}?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_dob")?> </span>: <?=date("d M Y", strtotime($student->dob))?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_sex")?> </span>: <?=$student->sex?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_religion")?> </span>: <?=$student->religion?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_email")?> </span>: <?=$student->email?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_phone")?> </span>: <?=$student->phone?></p>
-                    </div>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_address")?> </span>: <?=$student->address?></p>
-                    </div>
-                    <?php if($usertype == "Admin") { ?>
-                    <div class="profile-view-tab">
-                        <p><span><?=$this->lang->line("mark_username")?> </span>: <?=$student->username?></p>
-                    </div>
-                    <?php } ?>
                 </div>
 
-                <h1><?=$this->lang->line("mark_information")?></h1>
+            </div>
+            
+            <div class="panel-body profile-view-dis">
 
                 <div class="row">
                     <?php if($marks && $exams) { ?>
@@ -135,7 +115,7 @@
                                                                 echo "</th>";
 
                                                                 if($usertype == "Admin" || $usertype == "Teacher" ) {
-                                                                    echo "<th>";
+                                                                    echo "<th class='high-grade'>";
                                                                         echo $this->lang->line("mark_highest_mark");
                                                                     echo "</th>";
                                                                 }
@@ -174,7 +154,7 @@
 
 
                                                     if($usertype == "Admin" || $usertype == "Teacher" ) {
-                                                        echo "<td data-title='".$this->lang->line('mark_highest_mark')."'>";
+                                                        echo "<td class='high-grade' data-title='".$this->lang->line('mark_highest_mark')."'>";
                                                             echo $mark->highestmark;
                                                         echo "</td>";
                                                     }

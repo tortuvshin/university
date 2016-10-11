@@ -284,11 +284,47 @@ label {
 .profile-view-head h1 {
     font-size: 22px;
     font-weight: 300;
-    margin-bottom: 5px;
 }
 
 .profile-view-head p {
     font-size: 12px;
+}
+.profile-head {
+    height: auto;
+    background-color: #b5bbc8;
+}
+
+.profile-view-school, .profile-view-user {
+    width: 50% !important;
+    height: 100px;
+    float: left;
+    background-color: #F0F3F5;
+    font-style: italic;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.profile-view-school img, .profile-view-user img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+}
+
+.dun-header {
+    font-size: 26px;
+    text-align: center;
+}
+
+.profile-view-school h4 {
+    height: 100%;
+    line-height: 3;
+    float: left;
+}
+
+.profile-view-user p{
+    margin: 0 !important;   
 }
 
 .profile-view-dis {
@@ -299,6 +335,7 @@ label {
     font-size: 22px;
     font-weight: 300;
     margin: 0 0 20px;
+    text-align: center;
 }
 
 .profile-view-tab {
@@ -599,3 +636,20 @@ label {
     right: 0px;
 }
 /* Close Onoff Small switch */
+
+.grade-table > tbody > tr {
+  height: 12px !important;
+}
+
+.grade-table > tbody > tr > td{
+  padding: 2px !important;
+}
+
+.grade-table > caption > h3{
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+.high-grade {
+  min-width: 70px !important;
+}
