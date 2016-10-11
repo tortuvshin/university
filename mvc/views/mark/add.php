@@ -102,35 +102,76 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if(count($students)) {$i = 1; foreach($students as $student) { foreach ($marks as $mark) { if($student->studentID == $mark->studentID) {   ?>
-                                <tr>
-                                    <td data-title="<?=$this->lang->line('slno')?>">
-                                        <?php echo $i; ?>
-                                    </td>
-                                    <td data-title="<?=$this->lang->line('mark_photo')?>">
-                                        <?php $array = array(
-                                                "src" => base_url('uploads/images/'.$student->photo),
-                                                'width' => '35px',
-                                                'height' => '35px',
-                                                'class' => 'img-rounded'
+                            <?php if(count($students)) {
+                                $i = 1; 
+                                foreach($students as $student) 
+                                { 
+                                    foreach ($marks as $mark) 
+                                        { 
+                                            if($student->studentID == $mark->studentID) {   
+                                                ?>
+                                            <tr>
+                                            <td data-title="<?=$this->lang->line('slno')?>">
+                                                <?php echo $i; ?>
+                                            </td>
+                                            <td data-title="<?=$this->lang->line('mark_photo')?>">
+                                                <?php $array = array(
+                                                        "src" => base_url('uploads/images/'.$student->photo),
+                                                        'width' => '35px',
+                                                        'height' => '35px',
+                                                        'class' => 'img-rounded'
 
-                                            );
-                                            echo img($array); 
-                                        ?>
-                                    </td>
-                                    <td data-title="<?=$this->lang->line('mark_name')?>">
-                                        <?php echo $student->name; ?>
-                                    </td>
-                                    <td data-title="<?=$this->lang->line('mark_roll')?>">
-                                        <?php echo $student->roll; ?>
-                                    </td>
-                                    <td data-title="<?=$this->lang->line('mark_phone')?>">
-                                        <?php echo $student->phone; ?>
-                                    </td>
-                                    <td data-title='Action'>
-                                        <input class="form-control mark" type="number" name="<?=$student->studentID?>" id="<?=$student->studentID?>" value="<?=set_value($student->studentID, $mark->mark)?>" />
-                                    </td>
-                                </tr>
+                                                    );
+                                                    echo img($array); 
+                                                ?>
+                                            </td>
+                                            <td data-title="<?=$this->lang->line('mark_name')?>">
+                                                <?php echo $student->name; ?>
+                                            </td>
+                                            <td data-title="<?=$this->lang->line('mark_roll')?>">
+                                                <?php echo $student->roll; ?>
+                                            </td>
+                                            <td data-title="<?=$this->lang->line('mark_phone')?>">
+                                                <?php echo $student->phone; ?>
+                                            </td>
+                                                <td data-title='Action'>
+
+                                                <?php $usertype = $this->session->userdata("usertype"); ?>
+
+
+                                                <?php 
+                                                    if($usertype == "Teacher") {
+                                                         if ($mark->mark==null || $mark->mark==0) {?>
+                                                    <input 
+                                                        class="form-control mark" 
+                                                        type="number" 
+                                                        name="<?=$student->studentID?>" 
+                                                        id="<?=$student->studentID?>" 
+                                                        value="<?=set_value($student->studentID, $mark->mark)?>" 
+                                                    />
+
+                                                        
+                                                <?php   } 
+                                                    else {
+                                                            echo $mark->mark;
+                                                        } 
+                                                    } 
+                                                ?>
+
+                                                <?php 
+                                                    if($usertype == "Admin") {?>
+                                                        <input 
+                                                            class="form-control mark" 
+                                                            type="number" 
+                                                            name="<?=$student->studentID?>" 
+                                                            id="<?=$student->studentID?>" 
+                                                            value="<?=set_value($student->studentID, $mark->mark)?>" 
+                                                        />  
+                                                <?php } ?>
+                                                
+                                            </td>
+                                                
+                                        </tr>
                             <?php $i++;  }}}} ?>
                         </tbody>
                     </table>
