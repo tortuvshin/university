@@ -274,9 +274,9 @@
 
                         <?php 
                             if($this->session->userdata("usertype") == "Admin") {
-                                echo '<li>';
-                                    echo anchor('report/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_report').'</span>');
-                                echo '</li>';
+                                // echo '<li>';
+                                //     echo anchor('report/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_report').'</span>');
+                                // echo '</li>';
                             }
                         ?>
 						

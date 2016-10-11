@@ -409,7 +409,7 @@ class Dompdf
      * @param null $encoding
      * @deprecated
      */
-    public function load_html($str, $encoding = null)
+    public function load_html($str, $encoding = 'UTF-8')
     {
         $this->loadHtml($str, $encoding);
     }
@@ -422,7 +422,7 @@ class Dompdf
      * @param string $str HTML text to load
      * @param string $encoding Not used yet
      */
-    public function loadHtml($str, $encoding = null)
+    public function loadHtml($str, $encoding = 'UTF-8')
     {
         $this->saveLocale();
 

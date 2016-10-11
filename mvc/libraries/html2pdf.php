@@ -139,7 +139,7 @@ class Html2pdf {
 	    
 		$dompdf = new Dompdf();
 
-		$dompdf->loadHtml($this->html, 'UTF-8');
+		$dompdf->load_html($this->html, 'UTF-8');
 
 		// (Optional) Setup the paper size and orientation
 		$dompdf->setPaper($this->paper_size, $this->orientation);
