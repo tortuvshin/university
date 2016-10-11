@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/tortuvshin/tagtaa-sms/issues"
   },
-  "homepage": "https://github.com/tortuvshin/tagtaa-sms#readme"
+  "homepage": "https://github.com/tortuvshin/tagtaa-sms#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  }
 }

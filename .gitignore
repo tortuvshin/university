@@ -1,1 +1,5 @@
 .idea/
+
+/_ide_helper.php
+/node_modules/*
+sms.zip
