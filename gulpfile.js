@@ -25,6 +25,17 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
+    .pipe(minify())
+    .pipe(gulp.dest('./assets/inisys'));
+
+});
+
+var gulp = require('gulp');
+var cleanCSS = require('gulp-clean-css');
+ 
+gulp.task('minify-css', function() {
+  return gulp.src('./assets/inisys/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./assets/inisys'));
 });
 
