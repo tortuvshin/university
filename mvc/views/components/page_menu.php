@@ -267,6 +267,14 @@
                         <?php
                             if($usertype) { 
                                 echo '<li>';
+                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
+                        <?php
+                            if($usertype) { 
+                                echo '<li>';
                                     echo anchor('notice/index', '<i class="fa fa-calendar"></i><span>'.$this->lang->line('menu_notice').'</span>');
                                 echo '</li>';
                             }

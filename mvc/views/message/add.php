@@ -97,7 +97,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <input class="form-control" name="subject" value="<?=set_value('subject')?>" placeholder="Subject:"/>
+                        <input class="form-control" name="subject" value="<?=set_value('subject')?>" placeholder="<?=$this->lang->line('subject')?>:"/>
                         <div class="has-error">
                             <?php if (form_error('subject')): ?>
                                 <p class="text-danger"> <?php echo form_error('subject'); ?></p>
@@ -105,7 +105,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" name="message" rows="10" placeholder="Message"><?=set_value('message')?></textarea>
+                        <textarea class="form-control" name="message" rows="10" placeholder="<?=$this->lang->line('message_message')?>"><?=set_value('message')?></textarea>
                         <div class="has-error">
                             <?php if (form_error('message')): ?>
                                 <p class="text-danger"> <?php echo form_error('message'); ?></p>
@@ -118,7 +118,7 @@
                           <input type="file" id="attachment" name="attachment"/>
                         </div>
                         <div class="col-sm-3" style="padding-left:0;">
-                            <input class="form-control"  id="uploadFile" placeholder="Choose File" disabled />
+                            <input class="form-control"  id="uploadFile" placeholder="Файл сонгох" disabled />
                         </div>
                         <div class="has-error">
                             <p class="text-danger"> <?php if(isset($attachment_error)) echo $attachment_error; ?></p>
