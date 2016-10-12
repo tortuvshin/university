@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 // });
 
 gulp.task('less', function () {
-  return gulp.src('./assets/inisys/main.less')
+  return gulp.src('./assets/inisys/style.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))

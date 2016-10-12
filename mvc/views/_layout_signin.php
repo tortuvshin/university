@@ -12,9 +12,6 @@
     <link href="<?php echo base_url('assets/fonts/font-awesome.css'); ?>" rel="stylesheet"  type="text/css">
     <!-- Style -->
     <link href="<?php echo base_url('assets/inisys/style.css'); ?>" rel="stylesheet"  type="text/css">
-    <!-- iNilabs css -->
-    <link href="<?php echo base_url('assets/inisys/inisys.css'); ?>" rel="stylesheet"  type="text/css">
-    <link href="<?php echo base_url('assets/inisys/responsive.css'); ?>" rel="stylesheet"  type="text/css">
 </head>
 
 <body class="white-bg-login">

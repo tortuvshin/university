@@ -12,13 +12,9 @@
         <link href="<?php echo base_url('assets/inisys/style.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/datepicker/datepicker.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/timepicker/timepicker.css'); ?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/inisys/hidetable.css'); ?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/inisys/inisys.css'); ?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/inisys/responsive.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/fullcalendar/fullcalendar.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/editor/jquery-te-1.4.0.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/toastr/toastr.min.css'); ?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/inisys/rid.css'); ?>" rel="stylesheet">
 
         <link rel="stylesheet" href="<?php echo base_url('assets/select2/css/select2.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/select2/css/select2-bootstrap.css'); ?>">
