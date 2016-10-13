@@ -2,7 +2,7 @@
 
 ### Суулгах
 
-	git clone https://github.com/tortuvshin/tagtaa-sms.git
+	git clone https://github.com/tortuvshin/sms.git
 
 	composer install/update
 

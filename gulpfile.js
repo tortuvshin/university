@@ -25,7 +25,6 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(minify())
     .pipe(gulp.dest('./assets/inisys'));
 
 });

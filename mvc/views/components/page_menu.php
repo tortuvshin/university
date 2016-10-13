@@ -246,7 +246,7 @@
                         ?>
 
                         <?php if($usertype == "Admin") { ?>
-                            <li class="treeview">
+                         <!--    <li class="treeview">
                                 <a href="#">
                                     <i class="fa icon-mailandsmstop"></i> 
                                     <span><?=$this->lang->line('menu_mailandsms');?></span>
@@ -260,7 +260,7 @@
                                         <?php echo anchor('mailandsms/index', '<i class="fa icon-mailandsms"></i><span>'.$this->lang->line('menu_mailandsms').'</span>'); ?>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         <?php } ?>
                         
 
