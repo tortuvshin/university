@@ -16,7 +16,6 @@
 
 	composer install/update
 
-
 ### Less compile хийх 
 
 	gulp less
@@ -24,4 +23,3 @@
 ### Javascript minify хийх
 
 	gulp js
-

@@ -31,6 +31,11 @@ class Migration_Create_subject extends CI_Migration {
 				'constraint' => '100',
 				'null' => TRUE
 			),
+			'subject_credit' => array(
+				'type' => 'INT',
+				'constraint' => '25',
+				'null' => FALSE
+			),
 			'subject_code' => array(
 				'type' => 'TEXT',
 				'constraint' => '25',

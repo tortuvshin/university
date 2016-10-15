@@ -163,7 +163,7 @@ class Mark extends Admin_Controller {
 										"year" => $year
 									);
 									$this->mark_m->insert_mark($array);
-								}
+									}
 							}
 							$this->data['students'] = $students;
 							$all_student = $this->mark_m->get_order_by_mark(array("examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID));
@@ -230,7 +230,6 @@ class Mark extends Admin_Controller {
 
 					// dump($this->data["marks"]);
 					// die;
-
 
 					$this->data["subview"] = "mark/view";
 					$this->load->view('_layout_main', $this->data);
@@ -402,6 +401,8 @@ class Mark extends Admin_Controller {
 			}
 		}
 	}
+
+	
 
 	function check_exam() {
 		if($this->input->post('examID') == 0) {
