@@ -21,6 +21,7 @@ $lang['mark_username'] = "Хэрэглэгчийн нэр";
 
 $lang['mark_subject'] = "Хичээл";
 $lang['mark_mark'] = "Оноо";
+$lang['mark_credit'] = "Багц цаг";
 $lang['mark_point'] = "Голч";
 $lang['mark_grade'] = "Дүн";
 $lang['mark_highest_mark'] = "Дээд дүн";
