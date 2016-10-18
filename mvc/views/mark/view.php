@@ -129,39 +129,56 @@
                                             echo "<tbody>";
 
 
-                                        foreach ($marks as $mark) {
-                                            if($exam->examID == $mark->examID) {
-                                                echo "<tr>";
-                                                    echo "<td data-title='".$this->lang->line('mark_subject')."'>";
-                                                        echo $mark->subject;
-                                                    echo "</td>";
-                                                    echo "<td data-title='".$this->lang->line('mark_mark')."'>";
-                                                        echo $mark->mark;
-                                                    echo "</td>";
-                                                    if(count($grades)) {
-                                                        foreach ($grades as $grade) {
-                                                            if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                                echo "<td data-title='".$this->lang->line('mark_point')."'>";
-                                                                    echo $grade->point;
-                                                                echo "</td>";
-                                                                echo "<td data-title='".$this->lang->line('mark_grade')."'>";
-                                                                    echo $grade->grade;
-                                                                echo "</td>";
-                                                                break;
+                                            foreach ($marks as $mark) {
+                                                if($exam->examID == $mark->examID) {
+
+                                                    echo "<tr>";
+                                                        echo "<td data-title='".$this->lang->line('mark_subject')."'>";
+                                                            echo $mark->subject;
+                                                        echo "</td>";
+                                                        echo "<td data-title='".$this->lang->line('mark_mark')."'>";
+                                                            echo $mark->mark;
+                                                        echo "</td>";
+                                                        if(count($grades)) {
+                                                            $gpa = 0;
+                                                            foreach ($grades as $grade) {
+                                                                if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
+                                                                    echo "<td data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
+                                                                        echo $grade->point;
+                                                                    echo "</td>";
+                                                                    echo "<td data-title='".$this->lang->line('mark_grade')."'>";
+                                                                        echo $grade->grade;
+                                                                    echo "</td>";
+
+                                                                    break;
+                                                                }
                                                             }
                                                         }
-                                                    }
+                                                        if($usertype == "Admin" || $usertype == "Teacher" ) {
+                                                            echo "<td class='high-grade' data-title='".$this->lang->line('mark_highest_mark')."'>";
+                                                                echo $mark->highestmark;
+                                                            echo "</td>";
+                                                        }
 
-
-                                                    if($usertype == "Admin" || $usertype == "Teacher" ) {
-                                                        echo "<td class='high-grade' data-title='".$this->lang->line('mark_highest_mark')."'>";
-                                                            echo $mark->highestmark;
+                                                        echo "<td data-title='".$this->lang->line('mark_grade')."'>";
+                                                            
                                                         echo "</td>";
-                                                    }
-                                                echo "</tr>";
+
+                                                    echo "</tr>";
+
+                                                }
+
                                             }
-                                        }
                                             echo "</tbody>";
+
+                                            echo "<tfoot>";
+                                                echo "<tr>";
+                                                    echo "<td class='table-gpa'>";
+                                                        echo "Улирлын голч: 4.0";
+                                                    echo "</td>";
+                                                echo "</tr>";
+                                            echo "</tfoot>";
+
                                         echo "</table>";
                                     }
                                 ?>
@@ -244,6 +261,21 @@
     </div>
 </form>
 <!-- email end here -->
+    <script type="text/javascript">
+        $( document ).ready(function() {
+
+            var sum = 0;
+            var table = document.getElementsByClassName("grade-table");
+            var ths = table.getElementsByTagName('tr');
+            var tds = table.getElementsByTagName('td');
+            for(var i=0;i<tds.length;i++){
+                sum += isNaN(tds[i].innerText) ? 0 : parseInt(tds[i].innerText);
+            }
+            // document.getElementById("gpa").innerHTML = sum;
+            alert(sum);
+
+        });
+    </script>
 
     <?php if($usertype == "Admin" || $usertype == "Teacher") { ?>
     <script language="javascript" type="text/javascript">
