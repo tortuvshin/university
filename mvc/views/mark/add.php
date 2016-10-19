@@ -8,7 +8,8 @@
             <li><a href="<?=base_url("mark/index")?>"><?=$this->lang->line('menu_mark')?></a></li>
             <li class="active"><?=$this->lang->line('menu_add')?> <?=$this->lang->line('menu_mark')?></li>
         </ol>
-    </div><!-- /.box-header -->
+    </div>
+    <!-- /.box-header -->
     <!-- form start -->
     <div class="box-body">
         <div class="row">
@@ -192,7 +193,6 @@
                             } else {
                                 inputs += $(this).attr("id") +":"+inputs_value+"$";
                             }
-
                         });
 
                         $.ajax({

@@ -5,8 +5,6 @@
 
 ?>
 
-
-
   <div class="row">
     <div class="col-lg-3 col-xs-6">
         <div class="small-box ">
@@ -43,23 +41,83 @@
             </a>
         </div>
     </div>
-	
-	<script type="text/javascript" src="<?php echo base_url('assets/chartjs/chart.js'); ?>"></script>
-	
-	<div class="col-lg-3 col-xs-6">
-        <section class="panel">
-			<center><canvas id="pai" width="200" height="200"/></canvas></center>
-        </section>
+
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box ">
+            <a class="small-box-footer" href="<?=base_url('parentes')?>">
+                <div class="icon bg-yellow">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="inner ">
+                    <h3>
+                        <?=count($parents)?>
+                    </h3>
+                    <p>
+                        <?=$this->lang->line("menu_parent")?>
+                    </p>
+                </div>
+            </a>
+        </div>
     </div>
-	
-	<div class="col-lg-3 col-xs-6">
-        <section class="panel">
-			<center><canvas id="chart-area" width="200" height="200"/></canvas></center>
-        </section>
+
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box ">
+            <a class="small-box-footer" href="<?=base_url('sattendance')?>">
+                <div class="icon bg-blue" style="padding: 9.5px 18px 8px 18px;">
+                    <i class="fa icon-attendance"></i>
+                </div>
+                <div class="inner ">
+                  <h3>
+                      <?=count($attendance)?>
+                  </h3>
+                  <p>
+                    <?=$this->lang->line("menu_attendance")?>
+                  </p>
+                </div>
+            </a>
+        </div>
     </div>
   </div>
 
+  
 
+  <script type="text/javascript" src="<?php echo base_url('assets/chartjs/chart.js'); ?>"></script>
+   <div class="row">
+
+      <div class="col-lg-9">
+
+        <div class="box">
+          <div class="box-header" style="background-color:#33c9dd;">
+            <h3 class="box-title">
+                <?=$this->lang->line('dashboard_earning_graph')?>
+              </h3>
+          </div>
+
+          <div class="box-body" style="background-color:#33c9dd;">
+            <canvas style="padding-right:25px" id="graph" width="200" height="101"/></canvas>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <center><canvas id="pai" width="200" height="200"/></canvas></center>
+            </section>
+          </div>
+
+          <div class="col-lg-12">
+            <section class="panel">
+              <center><canvas id="chart-area" width="200" height="200"/></canvas></center>
+            </section>
+          </div>
+        </div>
+      </div>
+  </div>
+ 
   <script>
 
     var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
@@ -182,48 +240,48 @@
     });
 
 
-    // $.ajax({
-    //     type: 'POST',
-    //     url: 'http://schoolupdate.inilabs.net/updatenotification/index',
-    //     data: "id=" + 1,
-    //     dataType: "html",
-    //     success: function(data) {
-    //         if(data != 2.0) {
-    //           toastr["success"]("Update 3.0 now Relese <br /><br /><button id='update' type='button' class='btn clear'>Update</button>")
-    //           toastr.options = {
-    //             "closeButton": false,
-    //             "debug": false,
-    //             "newestOnTop": false,
-    //             "progressBar": false,
-    //             "positionClass": "toast-top-right",
-    //             "preventDuplicates": false,
-    //             "onclick": null,
-    //             "showDuration": "10000",
-    //             "hideDuration": "100",
-    //             "timeOut": 0,
-    //             "extendedTimeOut": 0,
-    //             "showEasing": "swing",
-    //             "hideEasing": "linear",
-    //             "showMethod": "fadeIn",
-    //             "hideMethod": "fadeOut",
-    //             "tapToDismiss": false
-    //           }
+    $.ajax({
+        type: 'POST',
+        url: 'http://schoolupdate.inilabs.net/updatenotification/index',
+        data: "id=" + 1,
+        dataType: "html",
+        success: function(data) {
+            if(data != 2.0) {
+              toastr["success"]("Update 3.0 now Relese <br /><br /><button id='update' type='button' class='btn clear'>Update</button>")
+              toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "10000",
+                "hideDuration": "100",
+                "timeOut": 0,
+                "extendedTimeOut": 0,
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut",
+                "tapToDismiss": false
+              }
 
-    //           $('#update').click(function() {
-    //             $.ajax({
-    //               type: 'POST',
-    //               url: 'http://schoolupdate.inilabs.net/updatenotification/verification',
-    //               data: "purchase_code=" + "<?=$setting->purchase_code?>",
-    //               dataType: "html",
-    //               success: function(data) {
-    //                   alert(data);
-    //               }
-    //             });
+              $('#update').click(function() {
+                $.ajax({
+                  type: 'POST',
+                  url: 'http://schoolupdate.inilabs.net/updatenotification/verification',
+                  data: "purchase_code=" + "<?=$setting->purchase_code?>",
+                  dataType: "html",
+                  success: function(data) {
+                      alert(data);
+                  }
+                });
 
-    //           });
-    //         }
-    //     }
-    // });
+              });
+            }
+        }
+    });
 
 
 
@@ -374,7 +432,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -399,7 +457,7 @@
   </script>
 <?php } elseif($usertype == "Teacher") { ?>
   <div class="row">
-    <div class="col-lg-4 col-xs-6">
+    <div class="col-lg-3 col-xs-6">
         <div class="small-box ">
             <a class="small-box-footer" href="<?=base_url('student')?>">
                 <div class="icon bg-aqua" style="padding: 9.5px 18px 8px 18px;">
@@ -417,7 +475,7 @@
         </div>
     </div>
 
-    <div class="col-lg-4 col-xs-6">
+    <div class="col-lg-3 col-xs-6">
       <div class="small-box ">
           <a class="small-box-footer" href="<?=base_url('teacher')?>">
               <div class="icon bg-red" style="padding: 9.5px 18px 8px 18px;">
@@ -435,7 +493,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4 col-xs-6">
+    <div class="col-lg-3 col-xs-6">
       <div class="small-box ">
           <a class="small-box-footer" href="<?=base_url('subject')?>">
               <div class="icon bg-yellow" style="padding: 9.5px 18px 8px 18px;">
@@ -453,6 +511,23 @@
       </div>
     </div>
 
+    <div class="col-lg-3 col-xs-6">
+      <div class="small-box ">
+          <a class="small-box-footer" href="<?=base_url('sattendance')?>">
+              <div class="icon bg-blue" style="padding: 9.5px 18px 8px 18px;">
+                  <i class="fa icon-attendance"></i>
+              </div>
+              <div class="inner ">
+                <h3>
+                    <?=count($attendance)?>
+                </h3>
+                <p>
+                  <?=$this->lang->line("menu_attendance")?>
+                </p>
+              </div>
+          </a>
+      </div>
+    </div>
   </div>
 
   <div class="row">
@@ -602,7 +677,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -847,7 +922,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -1091,7 +1166,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -1337,7 +1412,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -1587,7 +1662,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
@@ -1835,7 +1910,7 @@
                 day: 'day'
             },
             eventLimit: true,
-    		events: [
+        events: [
                 <?php
                     foreach ($event as $data) {
                         echo '{';
