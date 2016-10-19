@@ -45,6 +45,7 @@
                     <h4><?=$student->name?></h4>
                     <p><?=$this->lang->line("student_classes")." ".$classes->classes?></p>
                     <p><span><?=$this->lang->line("mark_roll")?> </span>: <?=$student->roll?></p>
+                    <p><span class="gpa-sum"></span></p>
 
                 </div>
 
@@ -143,7 +144,7 @@
                                                             $gpa = 0;
                                                             foreach ($grades as $grade) {
                                                                 if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                                    echo "<td data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
+                                                                    echo "<td class='std-gpa' data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
                                                                         echo $grade->point;
                                                                     echo "</td>";
                                                                     echo "<td data-title='".$this->lang->line('mark_grade')."'>";
@@ -167,17 +168,16 @@
                                                     echo "</tr>";
 
                                                 }
-
                                             }
                                             echo "</tbody>";
 
-                                            echo "<tfoot>";
-                                                echo "<tr>";
-                                                    echo "<td class='table-gpa'>";
-                                                        echo "Улирлын голч: 4.0";
-                                                    echo "</td>";
-                                                echo "</tr>";
-                                            echo "</tfoot>";
+                                            // echo "<tfoot>";
+                                            //     echo "<tr>";
+                                            //         echo "<td class='table-gpa'>";
+                                            //             echo "Улирлын голч: 4.0";
+                                            //         echo "</td>";
+                                            //     echo "</tr>";
+                                            // echo "</tfoot>";
 
                                         echo "</table>";
                                     }
@@ -261,19 +261,23 @@
     </div>
 </form>
 <!-- email end here -->
+    
     <script type="text/javascript">
         $( document ).ready(function() {
-
-            var sum = 0;
-            var table = document.getElementsByClassName("grade-table");
-            var ths = table.getElementsByTagName('tr');
-            var tds = table.getElementsByTagName('td');
-            for(var i=0;i<tds.length;i++){
-                sum += isNaN(tds[i].innerText) ? 0 : parseInt(tds[i].innerText);
+            var gpalist = document.querySelectorAll(".std-gpa[data-gpa]");
+            var count = 0;
+            var gpasum = 0;
+            for (var i = 0; i < gpalist.length; i++) {
+              var gpa = gpalist[i].getAttribute('data-gpa');
+              count = count + 1;
+              var a = gpa.toString();
+              gpasum = parseFloat(gpasum) + parseFloat(gpa);
+              
             }
-            // document.getElementById("gpa").innerHTML = sum;
-            alert(sum);
 
+            var average = gpasum / count;
+            // alert(average);
+            $(".gpa-sum").html("Нийт голч : "+average);
         });
     </script>
 
