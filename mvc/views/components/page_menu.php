@@ -34,6 +34,17 @@
                             ?>
                         </li>
 
+                        <?php
+                            if($usertype) { 
+                                echo '<li>';
+                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span><span class="label label-info pull-right" id="inboxcounter" style="
+    font-size: 100% !important;
+    line-height: inherit;
+"></span>');
+                               
+                                echo '</li>';
+                            }
+                        ?>
                         <?php 
                             if($usertype == "Admin" || $usertype == "Teacher") {
                                 echo '<li>';
@@ -267,14 +278,6 @@
                         <?php
                             if($usertype) { 
                                 echo '<li>';
-                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-
-                        <?php
-                            if($usertype) { 
-                                echo '<li>';
                                     echo anchor('notice/index', '<i class="fa fa-calendar"></i><span>'.$this->lang->line('menu_notice').'</span>');
                                 echo '</li>';
                             }
@@ -365,3 +368,21 @@
                 </section>
                 <!-- /.sidebar -->
             </aside>
+
+
+<script type="text/javascript">
+    
+    $( document ).ready(function () {
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('message/unreadCounter')?>",
+            dataType: "json",
+            success: function(data) {
+                var a = data.inbox + data.send;
+                $( "#inboxcounter" ).append(a);
+
+            }
+        });
+    });
+
+</script>
