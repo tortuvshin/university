@@ -277,7 +277,6 @@
                   gpasum = parseFloat(gpasum) + parseFloat(gpa);
                 }
                 var average = gpasum / count;
-                // alert(average);
                 $(this).find(".sem-gpa").html("Улирлын голч : "+average.toFixed(2)+" GPA");
             
             });
@@ -295,7 +294,6 @@
               
             }
             var average = gpasum / count;
-            // alert(average);
             $(".gpa-sum").html("Нийт голч : "+average.toFixed(2)+" GPA");
         }
 
