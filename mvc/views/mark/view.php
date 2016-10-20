@@ -273,11 +273,10 @@
                 for (var i = 0; i < gpalist.length; i++) {
                   var gpa = gpalist[i].getAttribute('data-gpa');
                   count = count + 1;
-                  var a = gpa.toString();
                   gpasum = parseFloat(gpasum) + parseFloat(gpa);
                 }
                 var average = gpasum / count;
-                $(this).find(".sem-gpa").html("Улирлын голч : "+average.toFixed(2)+" GPA");
+                $(this).find(".sem-gpa").html("Улирлын ҮГД: "+average.toFixed(2));
             
             });
         }
@@ -289,12 +288,11 @@
             for (var i = 0; i < gpalist.length; i++) {
               var gpa = gpalist[i].getAttribute('data-gpa');
               count = count + 1;
-              var a = gpa.toString();
               gpasum = parseFloat(gpasum) + parseFloat(gpa);
               
             }
             var average = gpasum / count;
-            $(".gpa-sum").html("Нийт голч : "+average.toFixed(2)+" GPA");
+            $(".gpa-sum").html("ҮГД: "+average.toFixed(2));
         }
 
     </script>

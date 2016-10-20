@@ -3902,7 +3902,7 @@ label {
 .profile-view-school,
 .profile-view-user {
   width: 50% !important;
-  height: 100px;
+  height: 110px;
   float: left;
   background-color: #F0F3F5;
   font-style: italic;
@@ -4572,3 +4572,9 @@ label {
   right: 0px;
 }
 /* end oon off switch */
+.gpa-sum {
+  font-weight: bold;
+}
+.sem-gpa {
+  font-weight: bold;
+}
