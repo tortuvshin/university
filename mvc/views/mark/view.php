@@ -73,7 +73,7 @@
                                     $grades_check = array_map($map4, $grades);
 
                                     foreach ($exams as $exam) {
-                                        echo "<table class=\"table table-striped table-bordered grade-table\">";
+                                        echo "<table id=\"gpa-table\" class=\"table table-striped table-bordered grade-table\">";
                                             if($exam->examID <= $max_semester) {
 
                                                 $check = array_search($exam->examID, $marks_examsID);
@@ -161,23 +161,19 @@
                                                             echo "</td>";
                                                         }
 
-                                                        echo "<td data-title='".$this->lang->line('mark_grade')."'>";
-                                                            
-                                                        echo "</td>";
-
                                                     echo "</tr>";
 
                                                 }
                                             }
                                             echo "</tbody>";
 
-                                            // echo "<tfoot>";
-                                            //     echo "<tr>";
-                                            //         echo "<td class='table-gpa'>";
-                                            //             echo "Улирлын голч: 4.0";
-                                            //         echo "</td>";
-                                            //     echo "</tr>";
-                                            // echo "</tfoot>";
+                                            echo "<tfoot>";
+                                                echo "<tr>";
+                                                    echo "<td class='table-gpa'>";
+                                                        echo "<span class=\"sem-gpa\"></span>";
+                                                    echo "</td>";
+                                                echo "</tr>";
+                                            echo "</tfoot>";
 
                                         echo "</table>";
                                     }
@@ -264,7 +260,31 @@
     
     <script type="text/javascript">
         $( document ).ready(function() {
-            var gpalist = document.querySelectorAll(".std-gpa[data-gpa]");
+                semisterGpa();
+                totalGpa();
+        });
+
+        function semisterGpa () {
+
+            $(".grade-table").each(function(){
+                var gpalist = $(this).find(".std-gpa[data-gpa]");
+                var count = 0;
+                var gpasum = 0;
+                for (var i = 0; i < gpalist.length; i++) {
+                  var gpa = gpalist[i].getAttribute('data-gpa');
+                  count = count + 1;
+                  var a = gpa.toString();
+                  gpasum = parseFloat(gpasum) + parseFloat(gpa);
+                }
+                var average = gpasum / count;
+                // alert(average);
+                $(this).find(".sem-gpa").html("Улирлын голч : "+average.toFixed(2)+" GPA");
+            
+            });
+        }
+
+        function totalGpa () {
+            var gpalist = $(".std-gpa[data-gpa]");
             var count = 0;
             var gpasum = 0;
             for (var i = 0; i < gpalist.length; i++) {
@@ -274,11 +294,11 @@
               gpasum = parseFloat(gpasum) + parseFloat(gpa);
               
             }
-
             var average = gpasum / count;
             // alert(average);
-            $(".gpa-sum").html("Нийт голч : "+average);
-        });
+            $(".gpa-sum").html("Нийт голч : "+average.toFixed(2)+" GPA");
+        }
+
     </script>
 
     <?php if($usertype == "Admin" || $usertype == "Teacher") { ?>
