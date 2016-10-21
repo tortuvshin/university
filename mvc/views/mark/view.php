@@ -276,8 +276,9 @@
                   gpasum = parseFloat(gpasum) + parseFloat(gpa);
                 }
                 var average = gpasum / count;
+                
                 $(this).find(".sem-gpa").html("Улирлын ҮГД: "+average.toFixed(2));
-            
+
             });
         }
 
