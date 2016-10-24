@@ -114,12 +114,6 @@
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_grade");
                                                                 echo "</th>";
-
-                                                                if($usertype == "Admin" || $usertype == "Teacher" ) {
-                                                                    echo "<th class='high-grade'>";
-                                                                        echo $this->lang->line("mark_highest_mark");
-                                                                    echo "</th>";
-                                                                }
                                                             
                                                             echo "</tr>";
                                                         echo "</thead>";
@@ -155,11 +149,6 @@
                                                                 }
                                                             }
                                                         }
-                                                        if($usertype == "Admin" || $usertype == "Teacher" ) {
-                                                            echo "<td class='high-grade' data-title='".$this->lang->line('mark_highest_mark')."'>";
-                                                                echo $mark->highestmark;
-                                                            echo "</td>";
-                                                        }
 
                                                     echo "</tr>";
 
@@ -167,13 +156,15 @@
                                             }
                                             echo "</tbody>";
 
-                                            echo "<tfoot>";
-                                                echo "<tr>";
-                                                    echo "<td class='table-gpa'>";
-                                                        echo "<span class=\"sem-gpa\"></span>";
-                                                    echo "</td>";
-                                                echo "</tr>";
-                                            echo "</tfoot>";
+                                            if(count($grades) && $f == 1) {
+                                                echo "<tfoot>";
+                                                    echo "<tr>";
+                                                        echo "<td class='table-gpa'>";
+                                                            echo "<span class=\"sem-gpa\"></span>";
+                                                        echo "</td>";
+                                                    echo "</tr>";
+                                                echo "</tfoot>";
+                                            }
 
                                         echo "</table>";
                                     }
