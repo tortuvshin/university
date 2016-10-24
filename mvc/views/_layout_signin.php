@@ -14,15 +14,32 @@
     <link href="<?php echo base_url('assets/inisys/style.css'); ?>" rel="stylesheet"  type="text/css">
 </head>
 
+<style type="text/css">
+        .white-bg-login {
+            background-image: url(../uploads/images/citi_back_login.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;   
+        }
+
+        .login-header {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1578bc;
+            line-height: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+</style>
+
 <body class="white-bg-login">
 
-    <div class="col-md-4 col-md-offset-4 marg" style="margin-top:30px;">
+    <div class="login-header">
         <?php
             if(count($siteinfos->photo)) {
-                echo "<center><img width='50' height='50' src=".base_url('uploads/images/'.$siteinfos->photo)." /></center>";
+                echo "<img class='login-logo' width='50' height='50' src=".base_url('uploads/images/'.$siteinfos->photo)." />";
             }
         ?>
-        <center><h4><?php echo $siteinfos->sname; ?></h4></center>
+        <h4 style="float:left;"><?php echo $siteinfos->sname; ?></h4>
     </div>
 
     <?php $this->load->view($subview); ?>

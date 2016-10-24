@@ -1,5 +1,5 @@
 
-<div class="form-box" id="login-box">
+<div class="form-box" id="login-box" >
     <div class="header"><?=$this->lang->line('signin')?></div>
     <form method="post">
 
