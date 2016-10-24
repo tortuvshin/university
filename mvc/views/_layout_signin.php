@@ -17,29 +17,23 @@
 <style type="text/css">
         .white-bg-login {
             background-image: url(../uploads/images/citi_back_login.jpg);
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; 
             background-size: cover;   
-        }
-
-        .login-header {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1578bc;
-            line-height: 20px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
         }
 </style>
 
 <body class="white-bg-login">
 
     <div class="login-header">
+        <div class="login-control">
         <?php
             if(count($siteinfos->photo)) {
                 echo "<img class='login-logo' width='50' height='50' src=".base_url('uploads/images/'.$siteinfos->photo)." />";
             }
         ?>
-        <h4 style="float:left;"><?php echo $siteinfos->sname; ?></h4>
+        <h4 style="float:left;"><?php echo $siteinfos->sname; ?></h4>    
+        </div>
+        
     </div>
 
     <?php $this->load->view($subview); ?>
