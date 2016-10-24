@@ -102,10 +102,9 @@
 		
 			
 			<hr>
-			<ul>
-			<li>Хөгжүүлэгч: Тагтаа солюшн ХХК  ( <a href="http://folder.mn">folder.mn</a> )</li>
-			<li>Тусламж: <a href="http://support@folder.mn/">Онлайн тусламж ( support@folder.mn)</a></li>
-			</ul>
+	      <ul>
+	      <li>Citi University  ( <a href="http://citi.edu.mn">www.citi.edu.mn</a> )</li>
+	      </ul>
 			<p>Inisys Оюутны бүртгэлийн систем v.1.2 танилцуулгын дэлгэрэнгүй</p>
 		</section>
 	
