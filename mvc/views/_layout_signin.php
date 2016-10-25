@@ -38,9 +38,27 @@
 
     <?php $this->load->view($subview); ?>
 
+
     
 
 <script type="text/javascript" src="<?php echo base_url('assets/inisys/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
 </body>
+<footer class="login-footer">
+    <span>
+        <a href="https://www.citi.edu.mn">Сити их сургууль © 2016 он</a>
+        <a href="https://www.facebook.com/citiuniversity">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/CitiUniversity">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/citiuniversity">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCROeKzkani6QRJYmmVsa92g">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </a>
+    </span>
+</footer>
 </html>

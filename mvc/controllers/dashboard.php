@@ -61,8 +61,7 @@ class Dashboard extends Admin_Controller {
 						$cnt = 1;
 					}
 				}
-
-
+				
 				if($cnt === 0) {
 					$alltotalamount = 0;
 					$alltotalamounttransport = 0;
