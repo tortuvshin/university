@@ -38,13 +38,21 @@
                             if($usertype) { 
                                 echo '<li>';
                                     echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span><span class="label label-info pull-right" id="inboxcounter" style="
-    font-size: 100% !important;
-    line-height: inherit;
-"></span>');
+                                        font-size: 100% !important;
+                                        line-height: inherit;
+                                    "></span>');
                                
                                 echo '</li>';
                             }
                         ?>
+                        <?php
+                            if($usertype) { 
+                                echo '<li>';
+                                    echo anchor('media/index', '<i class="fa fa-film"></i><span>'.$this->lang->line('menu_media').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
                         <?php 
                             if($usertype == "Admin" || $usertype == "Teacher") {
                                 echo '<li>';
