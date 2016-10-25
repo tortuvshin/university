@@ -43,7 +43,7 @@
 </body>
 <footer class="login-footer">
     <span>
-        <a href="https://www.citi.edu.mn" target="_blank">Сити их сургууль © 2016 он</a>
+        <a href="https://www.citi.edu.mn" target="_blank"><?php echo $siteinfos->sname; ?> © 2016 он</a>
         <a href="https://www.facebook.com/citiuniversity" target="_blank">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
