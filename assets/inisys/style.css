@@ -4188,19 +4188,6 @@ label {
   right: 0px;
 }
 /* Close Onoff Small switch */
-.grade-table > tbody > tr {
-  height: 12px !important;
-}
-.grade-table > tbody > tr > td {
-  padding: 2px !important;
-}
-.grade-table > caption > h3 {
-  font-size: 13px !important;
-  font-weight: bold;
-}
-.high-grade {
-  min-width: 70px !important;
-}
 @media screen and (max-width: 480px) {
   .box > .box-header > .breadcrumb {
     background: none !important;
@@ -4257,6 +4244,36 @@ label {
     float: left;
     margin-bottom: 0px !important;
     margin-right: 1% !important;
+  }
+  .grade-table > thead > tr > th {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+  .grade-table > tbody > tr {
+    height: 12px !important;
+  }
+  .grade-table > tbody > tr > td {
+    padding: 2px !important;
+    font-size: 12px !important;
+  }
+  .grade-table > tfoot > tr > td {
+    padding: 2px !important;
+    font-size: 12px !important;
+  }
+  .grade-table > caption > h3 {
+    font-size: 13px !important;
+    font-weight: bold !important;
+  }
+  .high-grade {
+    min-width: 70px !important;
+  }
+  .gpa-sum {
+    font-weight: bold !important;
+    font-size: 13px !important;
+  }
+  .sem-gpa {
+    font-weight: bold !important;
+    font-size: 13px !important;
   }
 }
 .margin-bottom {
@@ -4647,4 +4664,31 @@ label {
 .login-footer span a i {
   font-size: 24px;
   margin-top: 5px;
+}
+.grade-table > tbody > tr {
+  height: 10px;
+}
+.grade-table > tbody > tr > td {
+  padding: 0px;
+  font-size: 9px;
+}
+.grade-table > tfoot > tr > td {
+  padding: 0px;
+  font-size: 9px;
+}
+.grade-table > thead > tr > th {
+  padding: 0px;
+  font-size: 9px;
+}
+.grade-table > caption > h3 {
+  font-size: 10px;
+  font-weight: 300;
+}
+.gpa-sum {
+  font-size: 9px;
+  font-weight: 300;
+}
+.sem-gpa {
+  font-size: 9px;
+  font-weight: 300;
 }

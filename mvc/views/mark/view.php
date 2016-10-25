@@ -26,6 +26,25 @@
     <?php } ?>
 
     <div id="printablediv">
+
+
+    <style type="text/css">
+        .grade-table {
+
+            width: 49%;
+            float: left;
+            margin-bottom: 0px;
+            margin-right: 1%;
+        
+        }
+
+        .grade-table > tbody > tr > td {
+            padding: 0px;
+            font-size: 8px;
+        }
+
+    </style>
+
         <section class="panel">
            
            <h1 class="dun-header"><?=$this->lang->line("mark_information")?></h1>
