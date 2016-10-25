@@ -15,11 +15,11 @@
 </head>
 
 <style type="text/css">
-        .white-bg-login {
-            background-image: url(../uploads/images/citi_back_login.jpg);
-            background-repeat: no-repeat; 
-            background-size: cover;   
-        }
+    .white-bg-login {
+        background-image: url(../uploads/images/citi_back_login.jpg);
+        background-repeat: no-repeat; 
+        background-size: cover;   
+    }
 </style>
 
 <body class="white-bg-login">
@@ -37,9 +37,6 @@
     </div>
 
     <?php $this->load->view($subview); ?>
-
-
-    
 
 <script type="text/javascript" src="<?php echo base_url('assets/inisys/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
