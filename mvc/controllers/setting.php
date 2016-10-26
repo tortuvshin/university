@@ -89,10 +89,7 @@ Class setting extends Admin_Controller {
 						$this->data["subview"] = "setting/index";
 						$this->load->view('_layout_main', $this->data);
 					} else {
-						if($this->pcode_validation($this->data['setting']->purchase_code) == FALSE) {
-							$this->session->set_flashdata('error', $this->lang->line('settings_pde'));
-							redirect(base_url('setting/index'));
-						}
+						
 						$array = array();
 						for($i=0; $i<count($rules); $i++) {
 							$array[$rules[$i]['field']] = $this->input->post($rules[$i]['field']);
@@ -157,25 +154,6 @@ Class setting extends Admin_Controller {
 		} else {
 			$this->form_validation->set_message("unique_day", "%s already exists");
 			return FALSE;
-		}
-	}
-
-	public function pcode_validation($pcode) {
-		$purchase_code = $pcode;
-		// $purchase_code_username = "sangwh";
-		// $purchase_code = "f541d688-9d40-40db-99fb-65e6f80692ab";
-	    $username = 'inilabs';
-	    $api_key = 'a7hfhirfq8dw64old1bafe2dpimk5zdb';
-	    $ch = curl_init();
-	    curl_setopt($ch, CURLOPT_USERAGENT, 'API');
-	    curl_setopt($ch, CURLOPT_URL, "http://marketplace.envato.com/api/edge/". $username ."/". $api_key ."/verify-purchase:". $purchase_code .".json");
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	    $purchase_data = json_decode(curl_exec($ch), true);
-	    if(!count($purchase_data['verify-purchase'])) {
-	    	$this->form_validation->set_message("pcode_validation", "Your Purchase Code Is Not Valid.");
-			return FALSE;
-		} else {
-			return TRUE;
 		}
 	}
 
