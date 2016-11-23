@@ -165,8 +165,6 @@ Class setting extends Admin_Controller {
 		}
 		return TRUE;
 	}
-
-
 }
 
 /* End of file setting.php */
