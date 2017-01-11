@@ -93,6 +93,32 @@
                     </div>
                 </form>
 
+                <form enctype="multipart/form-data" style="" action="<?=base_url('bulkimport/book_bulkimport');?>" class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <label for="csvBook" class="col-sm-2 control-label col-xs-8 col-md-2">
+                            <?=$this->lang->line("bulkimport_book")?>
+                        </label>
+                        <div class="col-sm-3 col-xs-4 col-md-3">
+                            <input class="form-control bookImport" id="uploadFile" placeholder="Choose File" disabled />
+                        </div>
+
+                        <div class="col-sm-2 col-xs-6 col-md-2">
+                            <div class="fileUpload btn btn-success form-control">
+                                <span class="fa fa-repeat"></span>
+                                <span><?=$this->lang->line("upload")?></span>
+                                <input id="uploadBtn" type="file" class="upload bookUpload" name="csvBook" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 rep-mar">
+                            <input type="submit" class="btn btn-success" value="<?=$this->lang->line("bulkimport_submit")?>" >
+                        </div>
+
+                        <div class="col-md-1 rep-mar">
+                            <a class="btn btn-info" href="<?=base_url('assets/csv/sample_book.csv')?>"><i class="fa fa-download"></i> <?=$this->lang->line("bulkimport_sample")?></a>
+                        </div>
+                    </div>
+                </form>
                 <form action="<?=base_url('bulkimport/student_bulkimport');?>" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="photo" class="col-sm-2 control-label col-xs-8 col-md-2">

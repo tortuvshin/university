@@ -1,0 +1,259 @@
+/*
+| -----------------------------------------------------
+| PRODUCT NAME:   INILABS SCHOOL MANAGEMENT SYSTEM
+| -----------------------------------------------------
+| AUTHOR:     INILABS TEAM
+| -----------------------------------------------------
+| EMAIL:      info@inilabs.net
+| -----------------------------------------------------
+| COPYRIGHT:    RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:      http://inilabs.net
+| -----------------------------------------------------
+*/
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.message > li.active > a {
+  border-left-color: #49b6d6 !important;
+}
+
+.mailbox-attachments li {
+    border: 1px solid #eee;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+.list-unstyled, .chart-legend, .contacts-list, .users-list, .mailbox-attachments {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.mailbox-attachment-name {
+    color: #666;
+    font-weight: bold;
+}
+.mailbox-attachment-icon, .mailbox-attachment-info, .mailbox-attachment-size {
+    display: block;
+}
+.mailbox-attachment-info {
+    background: #f4f4f4 none repeat scroll 0 0;
+    padding: 10px;
+}
+.mailbox-attachment-size {
+    color: #999;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+.mailbox-attachment-icon {
+    color: #666;
+    font-size: 65px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.mailbox-attachment-icon.has-img {
+    padding: 0;
+}
+.mailbox-attachment-icon.has-img > img {
+    height: auto;
+    max-width: 100%;
+}
+.box .chat {
+  padding: 5px 20px 5px 10px;
+}
+.box .chat .item {
+  margin-bottom: 10px;
+}
+.box .chat .item:before,
+.box .chat .item:after {
+  display: table;
+  content: " ";
+}
+.box .chat .item:after {
+  clear: both;
+}
+.box .chat .item > img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.box .chat .item > img.online {
+  border: 2px solid #00a65a;
+}
+.box .chat .item > img.offline {
+  border: 2px solid #f56954;
+}
+.box .chat .item > .message {
+  margin-left: 55px;
+  margin-top: -40px;
+}
+.box .chat .item > .message > .name {
+  display: block;
+  font-weight: 600;
+}
+.box .chat .item > .attachment {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #f0f0f0;
+  margin-left: 65px;
+  margin-right: 15px;
+  padding: 10px;
+}
+.box .chat .item > .attachment > h4 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+.box .chat .item > .attachment > p,
+.box .chat .item > .attachment > .filename {
+  font-weight: 600;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+}
+.box .chat .item > .attachment:before,
+.box .chat .item > .attachment:after {
+  display: table;
+  content: " ";
+}
+.box .chat .item > .attachment:after {
+  clear: both;
+}
+.unread > td > a {
+  color:#000 !important;
+}
+/* media page css */
+/*
+    Component: media boxes
+*/
+#media-upload {
+  border-radius: 5px;
+  padding-top: 25px !important;
+  font-size: 30px !important;
+  width: 195px;
+  height: 150px;
+  border-style: dotted;
+  border:2px dotted;
+  margin-left: 0 !important;
+  opacity: 0.7;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+#media-upload:hover {
+  opacity: 1;
+  -webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+#media-upload > i{
+  font-size: 100px !important;
+}
+#media-folder {
+  border-radius: 5px;
+  padding-top: 25px !important;
+  font-size: 15px !important;
+  font-style: bold;
+  text-transform: uppercase;
+  width: 195px;
+  height: 150px;
+  border-style: dotted;
+  border:2px dotted;
+  margin-left: 0 !important;
+  opacity: 0.7;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+#media-folder:hover {
+  opacity: 1;
+  -webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+#media-folder > i{
+  font-size: 100px !important;
+}
+/* upload media button */
+#upload_media {
+  display:none !important;
+}
+/* disable button */
+/*#close_folder {
+   pointer-events: none;
+   cursor: default;
+}*/
+#close_folder {
+    left: 185px;
+    position: absolute;
+    top: 2px;
+}
+.share_file {
+    left: 23px;
+    position: absolute;
+    top: 4px;
+    cursor: pointer;
+}
+
+/* on off switch */
+    .onoffswitch {
+        position: relative; width: 90px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+        -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+        font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "ON";
+        padding-left: 10px;
+        background-color: #34A7C1; color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "OFF";
+        padding-right: 10px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 18px; margin: 6px;
+        background: #FFFFFF;
+        border: 2px solid #999999; border-radius: 20px;
+        position: absolute; top: 0; bottom: 0; right: 56px;
+        -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+    }
+    /* end oon off switch */

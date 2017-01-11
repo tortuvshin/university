@@ -1,16 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
-| -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
-| -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
-| -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
-| -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
-| -----------------------------------------------------
-*/
+
 class Visitorinfo extends Admin_Controller {
 
 	function __construct() {

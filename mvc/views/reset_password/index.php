@@ -31,6 +31,7 @@
                                     0 => $this->lang->line("reset_password_select_users"),
                                     'Admin' => $this->lang->line("Admin"),
                                     'Accountant' =>  $this->lang->line("Accountant"),
+                                    'Librarian' => $this->lang->line("Librarian"),
                                     'Parent' => $this->lang->line("Parent"),
                                     'Student' => $this->lang->line("Student"),
                                     'Teacher' => $this->lang->line("Teacher")

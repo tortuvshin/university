@@ -1,9 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 
-require_once 'dompdf/autoload.inc.php';
-use Dompdf\Dompdf;
-use Dompdf\Options;
-
 class Html2pdf {
 
     var $html;
@@ -137,18 +133,14 @@ class Html2pdf {
 			show_error("Orientation not set");
 		}
 	    
-		$dompdf = new Dompdf();
+	    //Load the DOMPDF libary
+	    require_once("dompdf/dompdf_config.inc.php");
+	    
+	    $dompdf = new DOMPDF();
+	    $dompdf->load_html($this->html);
+	    $dompdf->set_paper($this->paper_size, $this->orientation);
+	    $dompdf->render();
 
-		$dompdf->load_html($this->html, 'UTF-8');
-
-		// (Optional) Setup the paper size and orientation
-		$dompdf->setPaper($this->paper_size, $this->orientation);
-
-
-		$dompdf->set_option('defaultFont', 'DejaVu Sans');
-		
-		// Render the HTML as PDF
-		$dompdf->render();
 	    
 	    if($mode == 'save') {
     	    $this->CI->load->helper('file');

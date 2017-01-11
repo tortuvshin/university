@@ -1,16 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-header('Content-type: text/html; charset=UTF-8') ;//chrome
 
 class Report extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 	function __construct() {
@@ -137,7 +138,6 @@ class Report extends Admin_Controller {
 					    $this->html2pdf->paper('a4', 'portrait');
 					    $this->data['panel_title'] = $this->lang->line('panel_title');
 						$html = $this->load->view('report/student_list_pdf', $this->data, true);
-						
 						$this->html2pdf->html($html);
 						$this->html2pdf->create();
 

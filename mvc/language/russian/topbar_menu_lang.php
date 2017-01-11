@@ -16,7 +16,7 @@ $lang['close'] = "Хаах";
 
 $lang['Admin'] = "Админ";
 $lang['Student'] = "Оюутан";
-$lang['Parent'] = "Эцэг эх";
+$lang['Parent'] = "Дүн харагч";
 $lang['Teacher'] = "Багш";
 $lang['Accountant'] = "Нягтлан бодогч";
 $lang['Librarian'] = "Номын санч";
@@ -32,7 +32,7 @@ $lang['menu_view'] = 'Харах';
 $lang['menu_success'] = 'Амжилттай';
 $lang['menu_dashboard'] = 'Нүүр';
 $lang['menu_student'] = 'Оюутан';
-$lang['menu_parent'] = 'Эцэг эх';
+$lang['menu_parent'] = 'Дүн харагч';
 $lang['menu_teacher'] = 'Багш';
 $lang['menu_user'] = 'Хэрэглэгч';
 $lang['menu_classes'] = 'Курс';
@@ -68,7 +68,6 @@ $lang['menu_systemadmin'] = 'Систем админ';
 $lang['menu_reset_password'] = 'Нууц үг сэргээх';
 $lang['menu_setting'] = 'Тохиргоо';
 $lang['menu_update'] = 'Update';
-$lang['menu_doc'] = 'Гарын авлага';
 
 $lang['accountant'] = 'Нягтлан бодогч';
 $lang['librarian'] = 'Номын санч';

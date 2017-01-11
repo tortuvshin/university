@@ -20,10 +20,9 @@ $lang['mark_address'] = "Хаяг";
 $lang['mark_username'] = "Хэрэглэгчийн нэр";
 
 $lang['mark_subject'] = "Хичээл";
-$lang['mark_mark'] = "Оноо";
-$lang['mark_credit'] = "Багц цаг";
-$lang['mark_point'] = "Голч";
-$lang['mark_grade'] = "Дүн";
+$lang['mark_mark'] = "Дүн";
+$lang['mark_point'] = "Оноо";
+$lang['mark_grade'] = "Голч";
 $lang['mark_highest_mark'] = "Дээд дүн";
 
 
@@ -44,13 +43,13 @@ $lang["mail"] = "Pdf-г эмэйлрүү илгээх";
 $lang['add_mark'] = 'Дүн';
 $lang['add_sub_mark'] = 'Дүн нэмэх';
 
-
 $lang['to'] = 'Хэнд';
 $lang['subject'] = 'Гарчиг';
 $lang['message'] = 'Зурвас';
 $lang['send'] = 'Илгээх';
 $lang['mail_to'] = "Хэнд хэсгийг бөглөнө үү.";
-$lang['mail_valid'] = "И-мэйл хаягаа зөв бичнэ үү.";
+$lang['mail_valid'] = "Эмэйл хаягаа зөв бичнэ үү.";
 $lang['mail_subject'] = "Гарчиг хэсгийг бөглөнө үү.";
-$lang['mail_success'] = 'И-мэйл амжилттай илгээгдлээ!';
-$lang['mail_error'] = 'Уучлаарай! И-мэйл илгээгдсэнгүй!';
+$lang['mail_success'] = 'Эмэйл амжилттай илгээгдлээ!';
+$lang['mail_error'] = 'Уучлаарай! Эмэйл илгээгдсэнгүй!';
+

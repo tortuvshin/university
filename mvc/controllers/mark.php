@@ -3,13 +3,15 @@
 class Mark extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 	function __construct() {
@@ -163,7 +165,7 @@ class Mark extends Admin_Controller {
 										"year" => $year
 									);
 									$this->mark_m->insert_mark($array);
-									}
+								}
 							}
 							$this->data['students'] = $students;
 							$all_student = $this->mark_m->get_order_by_mark(array("examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID));
@@ -230,6 +232,7 @@ class Mark extends Admin_Controller {
 
 					// dump($this->data["marks"]);
 					// die;
+
 
 					$this->data["subview"] = "mark/view";
 					$this->load->view('_layout_main', $this->data);
@@ -401,8 +404,6 @@ class Mark extends Admin_Controller {
 			}
 		}
 	}
-
-	
 
 	function check_exam() {
 		if($this->input->post('examID') == 0) {

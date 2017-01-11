@@ -2,13 +2,8 @@
 <html lang="en">
 <head>
 <title><?php echo $panel_title; ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <style type="text/css">
-    
-    * {
-        font-family: 'DejaVu Sans', sans-serif;
-    }
     #page-wrap {
         width: 700px;
         margin: 0 auto;
@@ -44,7 +39,6 @@
     }
     @media print {
       * {
-        font-family: 'DejaVu Sans', sans-serif !important;
         color: #000 !important;
         text-shadow: none !important;
         background: transparent !important;

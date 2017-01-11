@@ -1,13 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 class Hostel extends Admin_Controller {

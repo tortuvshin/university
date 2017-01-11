@@ -55,10 +55,9 @@
                     <table id="example1" class="table table-striped table-bordered table-hover dataTable no-footer">
                         <thead>
                             <tr>
-                                <th class="col-sm-1"><?=$this->lang->line('slno')?></th>
-                                <th class="col-sm-3"><?=$this->lang->line('subject_name')?></th>
+                                <th class="col-sm-2"><?=$this->lang->line('slno')?></th>
+                                <th class="col-sm-2"><?=$this->lang->line('subject_name')?></th>
                                 <th class="col-sm-2"><?=$this->lang->line('subject_author')?></th>
-                                <th class="col-sm-1"><?=$this->lang->line('subject_credit')?></th>
                                 <th class="col-sm-2"><?=$this->lang->line('subject_code')?></th>
                                 <th class="col-sm-2"><?=$this->lang->line('subject_teacher')?></th>
                                 <?php  if($usertype == "Admin") { ?>
@@ -78,9 +77,6 @@
                                     </td>
                                     <td data-title="<?=$this->lang->line('subject_author')?>">
                                         <?php echo $subject->subject_author; ?>
-                                    </td>
-                                    <td data-title="<?=$this->lang->line('subject_credit')?>">
-                                        <?php echo $subject->subject_credit; ?>
                                     </td>
                                     <td data-title="<?=$this->lang->line('subject_code')?>">
                                         <?php echo $subject->subject_code; ?>

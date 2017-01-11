@@ -111,13 +111,48 @@
                                 $image = $this->session->userdata('lang'); 
                                 echo base_url('uploads/language_image/'.$image.'.png'); ?>" 
                                 /> 
-                                <span class="label label-warning">2</span>
+                                <span class="label label-warning">14</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header"> <?=$this->lang->line("language")?></li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
+                                        <li class="language" id="arabic">
+                                            <a href="<?php echo base_url('language/index/arabic')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/arabic.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Arabic
+                                                    <?php if($image == 'arabic') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="bengali">
+                                            <a href="<?php echo base_url('language/index/bengali')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/bengali.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Bengali
+                                                    <?php if($image == 'bengali') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="chinese">
+                                            <a href="<?php echo base_url('language/index/chinese')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/chinese.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Chinese
+                                                    <?php if($image == 'chinese') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
 
                                         <li class="language" id="english">
                                             <a href="<?php echo base_url('language/index/english')?>">
@@ -131,14 +166,122 @@
                                             </a>
                                         </li>
 
+                                        <li class="language" id="french">
+                                            <a href="<?php echo base_url('language/index/french')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/french.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    French
+                                                    <?php if($image == 'french') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="german">
+                                            <a href="<?php echo base_url('language/index/german')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/german.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    German
+                                                    <?php if($image == 'german') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="hindi">
+                                            <a href="<?php echo base_url('language/index/hindi')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/hindi.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Hindi
+                                                    <?php if($image == 'hindi') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="indonesian">
+                                            <a href="<?php echo base_url('language/index/indonesian')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/indonesian.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Indonesian
+                                                    <?php if($image == 'indonesian') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="italian">
+                                            <a href="<?php echo base_url('language/index/italian')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/italian.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Italian
+                                                    <?php if($image == 'italian') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="romanian">
+                                            <a href="<?php echo base_url('language/index/romanian')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/romanian.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Romanian
+                                                    <?php if($image == 'romanian') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
                                         <li class="language" id="russian">
                                             <a href="<?php echo base_url('language/index/russian')?>">
                                                 <div class="pull-left">
                                                     <img src="<?php echo base_url('uploads/language_image/russian.png'); ?>"/>
                                                 </div>
                                                 <h4>
-                                                    Монгол
+                                                    Russian
                                                     <?php if($image == 'russian') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="spanish">
+                                            <a href="<?php echo base_url('language/index/spanish')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/spanish.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Spanish
+                                                    <?php if($image == 'spanish') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="thai">
+                                            <a href="<?php echo base_url('language/index/thai')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/thai.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Thai
+                                                    <?php if($image == 'thai') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
+                                                </h4>
+                                            </a>
+                                        </li>
+
+                                        <li class="language" id="turkish">
+                                            <a href="<?php echo base_url('language/index/turkish')?>">
+                                                <div class="pull-left">
+                                                    <img src="<?php echo base_url('uploads/language_image/turkish.png'); ?>"/>
+                                                </div>
+                                                <h4>
+                                                    Turkish
+                                                    <?php if($image == 'turkish') echo " <i class='glyphicon glyphicon-ok'></i>";  ?>
                                                 </h4>
                                             </a>
                                         </li>

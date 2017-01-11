@@ -4,7 +4,7 @@
         <!-- Bootstrap js -->
         <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
         <!-- Style js -->
-        <script type="text/javascript" src="<?php echo base_url('assets/inisys/style.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/inilabs/style.js'); ?>"></script>
 
         <!-- Jquery datatable tools js -->
           <script type="text/javascript" src="<?php echo base_url('assets/datatables/tools/jquery.dataTables.min.js'); ?>"></script>
@@ -18,7 +18,7 @@
         <!-- Datatable js -->
         <script type="text/javascript" src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js'); ?>"></script>
 
-        <script type="text/javascript" src="<?php echo base_url('assets/inisys/inisys.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/inilabs/inilabs.js'); ?>"></script>
 
         <!-- autocomplete plugin select2 js -->
         <script type="text/javascript" src="<?php echo base_url('assets/select2/select2.js'); ?>"></script>

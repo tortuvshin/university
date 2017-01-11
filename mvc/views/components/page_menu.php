@@ -34,25 +34,6 @@
                             ?>
                         </li>
 
-                        <?php
-                            if($usertype) { 
-                                echo '<li>';
-                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span><span class="label label-info pull-right" id="inboxcounter" style="
-                                        font-size: 100% !important;
-                                        line-height: inherit;
-                                    "></span>');
-                               
-                                echo '</li>';
-                            }
-                        ?>
-                        <?php
-                            if($usertype) { 
-                                echo '<li>';
-                                    echo anchor('media/index', '<i class="fa fa-film"></i><span>'.$this->lang->line('menu_media').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-
                         <?php 
                             if($usertype == "Admin" || $usertype == "Teacher") {
                                 echo '<li>';
@@ -214,6 +195,156 @@
                         <?php if($usertype == "Admin") { ?>
                             <li class="treeview">
                                 <a href="#">
+                                    <i class="fa icon-library"></i> 
+                                    <span><?=$this->lang->line('menu_library');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <?php echo anchor('lmember/index', '<i class="fa icon-member"></i><span>'.$this->lang->line('menu_member').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('book/index', '<i class="fa icon-lbooks"></i><span>'.$this->lang->line('menu_books').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('issue/index', '<i class="fa icon-issue"></i><span>'.$this->lang->line('menu_issue').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('issue/fine', '<i class="fa icon-fine"></i><span>'.$this->lang->line('menu_fine').'</span>'); ?>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php } ?>
+
+                        <?php 
+                            if($usertype == "Librarian") {
+                                echo '<li>';
+                                    echo anchor('lmember/index', '<i class="fa icon-member"></i><span>'.$this->lang->line('menu_member').'</span>');
+                                echo '</li>';
+                            } 
+                        ?>
+                           
+                        <?php 
+                            if($usertype == "Librarian" || $usertype == "Parent" || $usertype == "Teacher") {
+                                echo '<li>';
+                                    echo anchor('book/index', '<i class="fa icon-lbooks"></i><span>'.$this->lang->line('menu_books').'</span>');
+                                echo '</li>';
+                            } 
+                        ?>
+                           
+                        <?php 
+                            if($usertype == "Librarian" || $usertype == "Parent") {
+                                echo '<li>';
+                                    echo anchor('issue/index', '<i class="fa icon-issue"></i><span>'.$this->lang->line('menu_issue').'</span>');
+                                echo '</li>';
+                            } 
+                        ?>
+
+                        <?php 
+                            if($usertype == "Librarian") {
+                                echo '<li>';
+                                    echo anchor('issue/fine', '<i class="fa icon-fine"></i><span>'.$this->lang->line('menu_fine').'</span>');
+                                echo '</li>';
+                            } 
+                        ?>
+
+                        <?php if($usertype == "Student") { ?>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa icon-exam"></i> 
+                                    <span><?=$this->lang->line('menu_library');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    
+                                    <li>
+                                        <?php echo anchor('book/index', '<i class="fa icon-lbooks"></i><span>'.$this->lang->line('menu_books').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('issue/index', '<i class="fa icon-issue"></i><span>'.$this->lang->line('menu_issue').'</span>'); ?>
+                                    </li>
+                                   
+                                    <li>
+                                        <?php echo anchor('lmember/view', '<i class="fa fa-briefcase"></i><span>'.$this->lang->line('menu_profile').'</span>'); ?>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($usertype == "Admin" || $usertype == "Accountant") { ?>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa icon-bus"></i> 
+                                    <span><?=$this->lang->line('menu_transport');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <?php echo anchor('transport/index', '<i class="fa icon-sbus"></i><span>'.$this->lang->line('menu_transport').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('tmember/index', '<i class="fa icon-member"></i><span>'.$this->lang->line('menu_member').'</span>'); ?>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($usertype == "Student") { ?>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa icon-bus"></i> 
+                                    <span><?=$this->lang->line('menu_transport');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <?php echo anchor('transport/index', '<i class="fa icon-sbus"></i><span>'.$this->lang->line('menu_transport').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('tmember/view', '<i class="fa fa-briefcase"></i><span>'.$this->lang->line('menu_profile').'</span>'); ?>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        <?php } ?>
+
+                        <?php 
+                            if($usertype == "Parent" || $usertype == "Teacher" || $usertype == "Librarian") { 
+                                echo '<li>';
+                                echo anchor('transport/index', '<i class="fa icon-sbus"></i><span>'.$this->lang->line('menu_transport').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
+                        <?php if($usertype) { ?>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa icon-hhostel"></i> 
+                                    <span><?=$this->lang->line('menu_hostel');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <?php echo anchor('hostel/index', '<i class="fa icon-hostel"></i><span>'.$this->lang->line('menu_hostel').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('category/index', '<i class="fa fa-leaf"></i><span>'.$this->lang->line('menu_category').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php if($usertype == "Admin" || $usertype == "Accountant") { echo anchor('hmember/index', '<i class="fa icon-member"></i><span>'.$this->lang->line('menu_member').'</span>'); } ?>
+                                    </li>
+                                    <li>
+                                        <?php if($usertype == "Student") { echo anchor('hmember/view', '<i class="fa fa-briefcase"></i><span>'.$this->lang->line('menu_profile').'</span>'); } ?>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($usertype == "Admin") { ?>
+                            <li class="treeview">
+                                <a href="#">
                                     <i class="fa icon-account"></i> 
                                     <span><?=$this->lang->line('menu_account');?></span>
                                     <i class="fa fa-angle-left pull-right"></i>
@@ -230,6 +361,9 @@
                                     </li>
                                     <li>
                                         <?php echo anchor('expense/index', '<i class="fa icon-expense"></i><span>'.$this->lang->line('menu_expense').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('payment_settings/index', '<i class="fa icon-paymentsettings"></i><span>'.$this->lang->line('menu_paymentsettings').'</span>'); ?>
                                     </li>
                                 </ul>
                             </li>
@@ -264,8 +398,16 @@
                             }
                         ?>
 
+                        <?php
+                            if($usertype) { 
+                                echo '<li>';
+                                    echo anchor('media/index', '<i class="fa fa-film"></i><span>'.$this->lang->line('menu_media').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
                         <?php if($usertype == "Admin") { ?>
-                         <!--    <li class="treeview">
+                            <li class="treeview">
                                 <a href="#">
                                     <i class="fa icon-mailandsmstop"></i> 
                                     <span><?=$this->lang->line('menu_mailandsms');?></span>
@@ -278,9 +420,20 @@
                                     <li>
                                         <?php echo anchor('mailandsms/index', '<i class="fa icon-mailandsms"></i><span>'.$this->lang->line('menu_mailandsms').'</span>'); ?>
                                     </li>
+                                    <li>
+                                        <?php echo anchor('smssettings/index', '<i class="fa fa-wrench"></i><span>'.$this->lang->line('menu_smssettings').'</span>'); ?>
+                                    </li>
                                 </ul>
-                            </li> -->
+                            </li>
                         <?php } ?>
+
+                        <?php
+                            if($usertype) { 
+                                echo '<li>';
+                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
                         
 
                         <?php
@@ -293,40 +446,8 @@
 
                         <?php 
                             if($this->session->userdata("usertype") == "Admin") {
-                                // echo '<li>';
-                                //     echo anchor('report/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_report').'</span>');
-                                // echo '</li>';
-                            }
-                        ?>
-						
-						<?php
-                            if($this->session->userdata("usertype") == "Admin") {
                                 echo '<li>';
-                                    echo anchor('bulkimport/index', '<i class="fa fa-upload"></i><span>'.$this->lang->line('menu_import').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-						
-						<?php
-                            if($this->session->userdata("usertype") == "Admin") {
-                                echo '<li>';
-                                    echo anchor('backup/index', '<i class="fa fa-download"></i><span>'.$this->lang->line('menu_backup').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-						
-						<?php
-                            if($this->session->userdata("usertype") == "Admin") {
-                                echo '<li>';
-                                    echo anchor('reset_password/index', '<i class="fa icon-reset_password"></i><span>'.$this->lang->line('menu_reset_password').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-						
-						<?php
-                            if($this->session->userdata("usertype") == "Admin") {
-                                echo '<li>';
-                                    echo anchor('systemadmin/index', '<i class="fa icon-systemadmin"></i><span>'.$this->lang->line('menu_systemadmin').'</span>');
+                                    echo anchor('report/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_report').'</span>');
                                 echo '</li>';
                             }
                         ?>
@@ -346,51 +467,9 @@
                                 echo '</li>';
                             } 
                         ?>
-
-                        <?php
-                            if($this->session->userdata("usertype") == "Admin") { 
-                                echo '<li>';
-                                    echo anchor('doc/admin', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
-                                echo '</li>';
-                            } 
-                        ?>
-
-                        <?php
-                            if($this->session->userdata("usertype") == "Teacher") { 
-                                echo '<li>';
-                                    echo anchor('doc/teacher', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
-                                echo '</li>';
-                            } 
-                        ?>
-
-                        <?php
-                            if($this->session->userdata("usertype") == "Student") { 
-                                echo '<li>';
-                                    echo anchor('doc/student', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
-                                echo '</li>';
-                            } 
-                        ?>
   
                     </ul>
                     
                 </section>
                 <!-- /.sidebar -->
             </aside>
-
-
-<script type="text/javascript">
-    
-    $( document ).ready(function () {
-        $.ajax({
-            type: 'POST',
-            url: "<?=base_url('message/unreadCounter')?>",
-            dataType: "json",
-            success: function(data) {
-                var a = data.inbox + data.send;
-                $( "#inboxcounter" ).append(a);
-
-            }
-        });
-    });
-
-</script>

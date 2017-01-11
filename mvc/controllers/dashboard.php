@@ -3,13 +3,15 @@
 class Dashboard extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 
@@ -61,7 +63,8 @@ class Dashboard extends Admin_Controller {
 						$cnt = 1;
 					}
 				}
-				
+
+
 				if($cnt === 0) {
 					$alltotalamount = 0;
 					$alltotalamounttransport = 0;

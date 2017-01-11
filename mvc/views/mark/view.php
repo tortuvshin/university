@@ -26,51 +26,51 @@
     <?php } ?>
 
     <div id="printablediv">
-
-
-    <style type="text/css">
-        .grade-table {
-
-            width: 49%;
-            float: left;
-            margin-bottom: 0px;
-            margin-right: 1%;
-        
-        }
-
-        .grade-table > tbody > tr > td {
-            padding: 0px;
-            font-size: 8px;
-        }
-
-    </style>
-
         <section class="panel">
-           
-           <h1 class="dun-header"><?=$this->lang->line("mark_information")?></h1>
- 
-            <div class="profile-head">
-                <div class="profile-view-school">
-
-                    <?php
-                        if(count($siteinfos->photo)) {
-                            echo "<img src=".base_url('uploads/images/'.$siteinfos->photo)." />";
-                        }
-                    ?>
-                    <h4><?php echo $siteinfos->sname; ?></h4>
-                </div>
-                <div class="profile-view-user">
+            <div class="profile-view-head">
+                <a href="#">
                     <?=img(base_url('uploads/images/'.$student->photo))?>
-                    <h4><?=$student->name?></h4>
-                    <p><?=$this->lang->line("student_classes")." ".$classes->classes?></p>
-                    <p><span><?=$this->lang->line("mark_roll")?> </span>: <?=$student->roll?></p>
-                    <p><span class="gpa-sum"></span></p>
+                </a>
 
-                </div>
+                <h1><?=$student->name?></h1>
+                <p><?=$this->lang->line("student_classes")." ".$classes->classes?></p>
 
             </div>
-            
             <div class="panel-body profile-view-dis">
+                <h1><?=$this->lang->line("personal_information")?></h1>
+                <div class="row">
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_roll")?> </span>: <?=$student->roll?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("menu_section")?> </span>: <?php if(count($section)) { echo $section->section;} else { echo $student->section;}?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_dob")?> </span>: <?=date("d M Y", strtotime($student->dob))?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_sex")?> </span>: <?=$student->sex?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_religion")?> </span>: <?=$student->religion?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_email")?> </span>: <?=$student->email?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_phone")?> </span>: <?=$student->phone?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_address")?> </span>: <?=$student->address?></p>
+                    </div>
+                    <?php if($usertype == "Admin") { ?>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("mark_username")?> </span>: <?=$student->username?></p>
+                    </div>
+                    <?php } ?>
+                </div>
+
+                <h1><?=$this->lang->line("mark_information")?></h1>
 
                 <div class="row">
                     <?php if($marks && $exams) { ?>
@@ -92,7 +92,7 @@
                                     $grades_check = array_map($map4, $grades);
 
                                     foreach ($exams as $exam) {
-                                        echo "<table id=\"gpa-table\" class=\"table table-striped table-bordered grade-table\">";
+                                        echo "<table class=\"table table-striped table-bordered\">";
                                             if($exam->examID <= $max_semester) {
 
                                                 $check = array_search($exam->examID, $marks_examsID);
@@ -112,79 +112,68 @@
                                                         {
                                                             break;
                                                         }
-                                                    }    
+                                                    }
 
-                                                    if(count($grades) && $f == 1) {
-                                                        echo "<caption>";
-                                                            echo "<h3>". $exam->exam."</h3>";
-                                                        echo "</caption>";
+                                                    echo "<caption>";
+                                                        echo "<h3>". $exam->exam."</h3>";
+                                                    echo "</caption>";
 
-                                                        echo "<thead>";
-                                                            echo "<tr>";
-                                                                echo "<th>";
-                                                                    echo $this->lang->line("mark_subject");
-                                                                echo "</th>";
-                                                                echo "<th>";
-                                                                    echo $this->lang->line("mark_mark");
-                                                                echo "</th>";
+                                                    echo "<thead>";
+                                                        echo "<tr>";
+                                                            echo "<th>";
+                                                                echo $this->lang->line("mark_subject");
+                                                            echo "</th>";
+                                                            echo "<th>";
+                                                                echo $this->lang->line("mark_mark");
+                                                            echo "</th>";
+                                                            if(count($grades) && $f == 1) {
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_point");
                                                                 echo "</th>";
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_grade");
                                                                 echo "</th>";
-                                                            
-                                                            echo "</tr>";
-                                                        echo "</thead>";
-                                                    }
+                                                                echo "<th>";
+                                                                    echo $this->lang->line("mark_highest_mark");
+                                                                echo "</th>";
+                                                            }
+                                                        echo "</tr>";
+                                                    echo "</thead>";
                                                 }
                                             }
 
                                             echo "<tbody>";
 
 
-                                            foreach ($marks as $mark) {
-                                                if($exam->examID == $mark->examID) {
-
-                                                    echo "<tr>";
-                                                        echo "<td data-title='".$this->lang->line('mark_subject')."'>";
-                                                            echo $mark->subject;
-                                                        echo "</td>";
-                                                        echo "<td data-title='".$this->lang->line('mark_mark')."'>";
-                                                            echo $mark->mark;
-                                                        echo "</td>";
-                                                        if(count($grades)) {
-                                                            $gpa = 0;
-                                                            foreach ($grades as $grade) {
-                                                                if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                                    echo "<td class='std-gpa' data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
-                                                                        echo $grade->point;
-                                                                    echo "</td>";
-                                                                    echo "<td data-title='".$this->lang->line('mark_grade')."'>";
-                                                                        echo $grade->grade;
-                                                                    echo "</td>";
-
-                                                                    break;
-                                                                }
+                                        foreach ($marks as $mark) {
+                                            if($exam->examID == $mark->examID) {
+                                                echo "<tr>";
+                                                    echo "<td data-title='".$this->lang->line('mark_subject')."'>";
+                                                        echo $mark->subject;
+                                                    echo "</td>";
+                                                    echo "<td data-title='".$this->lang->line('mark_mark')."'>";
+                                                        echo $mark->mark;
+                                                    echo "</td>";
+                                                    if(count($grades)) {
+                                                        foreach ($grades as $grade) {
+                                                            if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
+                                                                echo "<td data-title='".$this->lang->line('mark_point')."'>";
+                                                                    echo $grade->point;
+                                                                echo "</td>";
+                                                                echo "<td data-title='".$this->lang->line('mark_grade')."'>";
+                                                                    echo $grade->grade;
+                                                                echo "</td>";
+                                                                break;
                                                             }
                                                         }
-
-                                                    echo "</tr>";
-
-                                                }
+                                                    }
+                                                    echo "<td data-title='".$this->lang->line('mark_highest_mark')."'>";
+                                                        echo $mark->highestmark;
+                                                    echo "</td>";
+                                                echo "</tr>";
                                             }
+                                        }
                                             echo "</tbody>";
-
-                                            if(count($grades) && $f == 1) {
-                                                echo "<tfoot>";
-                                                    echo "<tr>";
-                                                        echo "<td class='table-gpa'>";
-                                                            echo "<span class=\"sem-gpa\"></span>";
-                                                        echo "</td>";
-                                                    echo "</tr>";
-                                                echo "</tfoot>";
-                                            }
-
                                         echo "</table>";
                                     }
                                 ?>
@@ -267,46 +256,6 @@
     </div>
 </form>
 <!-- email end here -->
-    
-    <script type="text/javascript">
-        $( document ).ready(function() {
-                semisterGpa();
-                totalGpa();
-        });
-
-        function semisterGpa () {
-
-            $(".grade-table").each(function(){
-                var gpalist = $(this).find(".std-gpa[data-gpa]");
-                var count = 0;
-                var gpasum = 0;
-                for (var i = 0; i < gpalist.length; i++) {
-                  var gpa = gpalist[i].getAttribute('data-gpa');
-                  count = count + 1;
-                  gpasum = parseFloat(gpasum) + parseFloat(gpa);
-                }
-                var average = gpasum / count;
-                
-                $(this).find(".sem-gpa").html("Улирлын ҮГД: "+average.toFixed(2));
-
-            });
-        }
-
-        function totalGpa () {
-            var gpalist = $(".std-gpa[data-gpa]");
-            var count = 0;
-            var gpasum = 0;
-            for (var i = 0; i < gpalist.length; i++) {
-              var gpa = gpalist[i].getAttribute('data-gpa');
-              count = count + 1;
-              gpasum = parseFloat(gpasum) + parseFloat(gpa);
-              
-            }
-            var average = gpasum / count;
-            $(".gpa-sum").html("ҮГД: "+average.toFixed(2));
-        }
-
-    </script>
 
     <?php if($usertype == "Admin" || $usertype == "Teacher") { ?>
     <script language="javascript" type="text/javascript">

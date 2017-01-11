@@ -3,13 +3,15 @@
 class Student extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 	function __construct () {
@@ -394,7 +396,7 @@ class Student extends Admin_Controller {
 					$this->data["section"] = $this->section_m->get_section($this->data['student']->sectionID);
 				    $this->load->library('html2pdf');
 				    $this->html2pdf->folder('./assets/pdfs/');
-				    $this->html2pdf->filename('Report');
+				    $this->html2pdf->filename('Report.pdf');
 				    $this->html2pdf->paper('a4', 'portrait');
 				    $this->data['panel_title'] = $this->lang->line('panel_title');
 					$this->data["parent"] = $this->parentes_m->get_parentes($this->data["student"]->parentID);

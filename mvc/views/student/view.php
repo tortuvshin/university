@@ -77,6 +77,46 @@
                     <?php } ?>
                 </div>
 
+                <h1><?=$this->lang->line("parents_information")?></h1>
+                <?php   if(isset($parent)) { ?>
+
+                <div class="row">
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_guargian_name")?> </span>: <?=$parent->name?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_father_name")?> </span>: <?=$parent->father_name?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_mother_name")?> </span>: <?=$parent->mother_name?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_father_profession")?> </span>: <?=$parent->father_profession?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_mother_profession")?> </span>: <?=$parent->mother_profession?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_email")?> </span>: <?=$parent->email?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_phone")?> </span>: <?=$parent->phone?></p>
+                    </div>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_address")?> </span>: <?=$parent->address?></p>
+                    </div>
+                    <?php if($usertype == "Admin") { ?>
+                    <div class="profile-view-tab">
+                        <p><span><?=$this->lang->line("parent_username")?> </span>: <?=$parent->username?></p>
+                    </div>
+                    <?php } ?>
+                </div>
+                <?php
+                    } else {
+                        echo "<div class='col-sm-12'><div class='col-sm-12 alert alert-warning'><span class='fa fa-exclamation-triangle'></span> " .$this->lang->line("parent_error"). "</div></div>";
+                    }
+                ?>
+
             </div>
         </section>
     </div>

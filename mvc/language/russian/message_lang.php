@@ -2,9 +2,9 @@
 
 /* List Language  */
 $lang['panel_title'] = "Зурвас";
-$lang['add_title'] = "Зурвас бичих";
+$lang['add_title'] = "Шинээр үүсгэх";
 $lang['folder'] = "Хавтаснууд";
-$lang['inbox'] = "Ирсэн зурвас";
+$lang['inbox'] = "Зурвасны хайрцаг";
 $lang['to'] = "Хэнд";
 $lang['status'] = "Статус";
 $lang['name'] = "Нэр";
@@ -21,7 +21,7 @@ $lang['message_date'] = "Огноо";
 $lang['action'] = "Үйлдэл";
 $lang['read_message'] = "Зурвас унших";
 $lang['reply'] = "Хариулах";
-$lang['compose_new'] = "Шинэ зурвас бичих";
+$lang['compose_new'] = "Шинэ зурвас үүсгэх";
 $lang['admin_select_label'] = "Admin жагсаалт";
 $lang['student_select_label'] = "Оюутны жагсаалт";
 $lang['parent_select_label'] = "Дүн харагчийн жагсаалт";
@@ -33,7 +33,5 @@ $lang['send'] = "Илгээх";
 $lang['close'] = "Хаах";
 $lang['sender'] = "Илгээсэн";
 $lang['discard'] = "Болих";
-$lang['delete'] = "Устгах!";
-$lang['refresh'] = "Шинэчлэх!";
-$lang['select'] = "Сонгох!";
+$lang['error'] = "Хариу илгээгдсэнгүй!";
 

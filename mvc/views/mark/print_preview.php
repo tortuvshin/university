@@ -4,9 +4,6 @@
 <title><?php echo $panel_title; ?></title>
 
 <style type="text/css">
-    * {
-        font-family: 'DejaVu Sans', sans-serif;
-    }
     #page-wrap {
         width: 700px;
         margin: 0 auto;
@@ -436,6 +433,14 @@
                     echo "</tbody>";
                 echo "</table>";
             }
+                                
+
+
+
+
+
+
+
       }
       ?>
 

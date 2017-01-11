@@ -3,13 +3,15 @@
 Class Subject extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			TAGTAA DEVELOPMENT TEAM
+| AUTHOR:			INILABS TEAM
 | -----------------------------------------------------
-| EMAIL:			info@tagtaasolution.mn
+| EMAIL:			info@inilabs.net
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
 | -----------------------------------------------------
 */
 	function __construct() {
@@ -93,14 +95,7 @@ Class Subject extends Admin_Controller {
 					'field' => 'subject_author', 
 					'label' => $this->lang->line("subject_author"), 
 					'rules' => 'trim|xss_clean|max_length[100]'
-				),
-
-				array(
-					'field' => 'subject_credit', 
-					'label' => $this->lang->line("subject_credit"),
-					'rules' => 'trim|required|max_length[20]|xss_clean'
-				),
-
+				), 
 				array(
 					'field' => 'subject_code', 
 					'label' => $this->lang->line("subject_code"),
@@ -128,7 +123,6 @@ Class Subject extends Admin_Controller {
 						"teacherID" => $this->input->post("teacherID"),
 						"subject" => $this->input->post("subject"),
 						"subject_author" => $this->input->post("subject_author"),
-						"subject_credit" => $this->input->post("subject_credit"),
 						"subject_code" => $this->input->post("subject_code"),
 						"teacher_name" => $teacher->name,
 						"create_date" => date("Y-m-d h:i:s"),
@@ -176,7 +170,6 @@ Class Subject extends Admin_Controller {
 								"teacherID" => $this->input->post("teacherID"),
 								"subject" => $this->input->post("subject"),
 								"subject_author" => $this->input->post("subject_author"),
-								"subject_credit" => $this->input->post("subject_credit"),
 								"subject_code" => $this->input->post("subject_code"),
 								"teacher_name" => $teacher->name,
 								"modify_date" => date("Y-m-d h:i:s")

@@ -10,7 +10,7 @@ $lang['smssettings_accountSID'] = "AccountSID";
 $lang['smssettings_authtoken'] = "Auth Token";
 $lang['smssettings_fromnumber'] = "From Number";
 
-$lang['save'] = "Хадгалах";
+$lang['save'] = "Save";
 
 
 
