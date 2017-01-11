@@ -19,11 +19,11 @@ $lang['student_roll'] = "Оюутны ID";
 $lang['student_username'] = "Хэрэглэгчийн нэр";
 $lang['student_password'] = "Нууц үг";
 $lang['student_select_class'] = "Курс сонгох";
-$lang['student_guargian'] = "Дүн харагч";
+$lang['student_guargian'] = "Эцэг эх";
 $lang['student_status'] = "Статус";
 
 /* Parent */
-$lang['parent_guargian_name'] = "Дүн харагч";
+$lang['parent_guargian_name'] = "Эцэг эх";
 $lang['parent_father_name'] = "Эцгийн нэр";
 $lang['parent_mother_name'] = "Эхийн нэр";
 $lang['parent_father_profession'] = "Эцгийн мэргэжил";
@@ -32,7 +32,7 @@ $lang['parent_email'] = "Эмэйл";
 $lang['parent_phone'] = "Утас";
 $lang['parent_address'] = "Хаяг";
 $lang['parent_username'] = "Хэрэглэгчийн нэр";
-$lang['parent_error'] = "Дүн харагчийн мэдээлэл байхгүй байна! Дүн харагчийн мэдээллээ оруулна уу.";
+$lang['parent_error'] = "Эцэг эхийн мэдээлэл байхгүй байна! Эцэг эхийн мэдээллээ оруулна уу.";
 
 $lang['action'] = "Үйлдэл";
 $lang['view'] = 'Харах';
@@ -56,7 +56,7 @@ $lang['mail_error'] = 'Уучлаарай! Эмэйл илгээгдсэнгүй
 
 /* Add Language */
 $lang['personal_information'] = "Хувийн мэдээлэл";
-$lang['parents_information'] = "Дүн харагчийн мэдээлэл";
+$lang['parents_information'] = "Эцэг эхийн мэдээлэл";
 $lang['add_student'] = 'Оюутан нэмэх';
 $lang['add_parent'] = 'Эцэг эх нэмэх';
 $lang['update_student'] = 'Оюутны мэдээлэл шинэчлэх';

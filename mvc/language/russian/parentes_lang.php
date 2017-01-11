@@ -1,7 +1,7 @@
 <?php
 /* List Language  */
-$lang['panel_title'] = "Дүн харагч";
-$lang['add_title'] = "Дүн харагч нэмэх";
+$lang['panel_title'] = "Эцэг эх";
+$lang['add_title'] = "Эцэг эх нэмэх";
 $lang['slno'] = "#";
 $lang['parentes_photo'] = "Зураг";
 $lang['parentes_name'] = "Нэр";
@@ -20,7 +20,7 @@ $lang['parentes_select_class'] = "Курс сонгох";
 $lang['parentes_status'] = "Статус";
 
 /* Parentes */
-$lang['parentes_guargian_name'] = "Дүн харагч нэр";
+$lang['parentes_guargian_name'] = "Эцэг эх нэр";
 $lang['parentes_father_name'] = "Эцгийн нэр";
 $lang['parentes_mother_name'] = "Эхийн нэр";
 $lang['parentes_father_profession'] = "Эцгийн мэргэжил";
@@ -47,9 +47,9 @@ $lang['mail_error'] = 'Уучлаарай! Эмэйл илгээгдсэнгүй
 
 /* Add Language */
 
-$lang['add_parentes'] = 'Дүн харагч нэмэх';
-$lang['update_parentes'] = 'Дүн харагч шинэчлэх';
+$lang['add_parentes'] = 'Эцэг эх нэмэх';
+$lang['update_parentes'] = 'Эцэг эх шинэчлэх';
 
 /* ini code starts here*/
 $lang['personal_information'] = "Хувийн мэдээлэл";
-$lang['parentess_information'] = "Дүн харагчийн мэдээлэл";
+$lang['parentess_information'] = "Эцэг эхийн мэдээлэл";

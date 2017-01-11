@@ -37,7 +37,7 @@ $lang['invalid_id'] = 'Зочны id алдаатай байна!';
 
 $lang['admin_select_label'] = "Admin жагсаалт";
 $lang['student_select_label'] = "Оюутны жагсаалт";
-$lang['parent_select_label'] = "Дүн харагчийн жагсаалт";
+$lang['parent_select_label'] = "Эцэг эхийн жагсаалт";
 $lang['teacher_select_label'] = "Багш нарын жагсаалт";
 $lang['librarian_select_label'] = "Номын санчдын жагсаалт";
 $lang['accountant_select_label'] = "Нягтлан бодогчдын жагсаалт";
