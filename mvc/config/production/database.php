@@ -52,7 +52,7 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 <<<<<<< HEAD
-$db['default']['database'] = 'citi.edu.mn';
+$db['default']['database'] = 'smsgit';
 =======
 $db['default']['database'] = 'smsgit';
 >>>>>>> 4a235aa20d78a258c8aa45899efcf668eea6fa53
