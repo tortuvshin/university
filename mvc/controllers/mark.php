@@ -427,8 +427,11 @@ class Mark extends Admin_Controller {
 		}
 		return TRUE;
 	}
+	
 	public function graph() {
-			$this->load->view('mark/graph', $this->data);
+		
+		$this->data["subview"] = "mark/graph";
+		$this->load->view('_layout_main', $this->data);
 	}
 }
 
