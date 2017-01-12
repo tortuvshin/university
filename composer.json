@@ -1,0 +1,22 @@
+{
+    "name": "tortuvshin/sms",
+    "description": "Student Management System",
+    "keywords": ["student", "management","sms","student management system"],
+    "homepage": "http://sms.tagtaasolution.mn",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Tortuvshin Byambaa",
+            "email": "toroo.byamba@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/tortuvshin/sms/issues",
+        "source": "https://github.com/tortuvshin/sms"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9",
+    }
+}
