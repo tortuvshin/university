@@ -129,7 +129,7 @@
       success: function(data) {
         var response = jQuery.parseJSON(data);
         var barChartData = {
-          labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug", 'Sep', "Oct", "Nov", "Dec"],
+          labels : ["1-р сар","2-р сар","3-р сар","4-р сар","5-р сар","6-р сар","7-р сар", "8-р сар", '9-р сар', "10-р сар", "11-р сар", "12-р сар"],
           datasets : [{
             fillColor : "rgba(255,255,255,1)", // bar color
             strokeColor : "rgba(151,187,205,0.8)", //hover color
