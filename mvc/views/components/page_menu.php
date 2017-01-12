@@ -427,7 +427,7 @@
                         ?>
 
                         <?php
-                            if($usertype == "Admin" || $usertype == "Teacher" || $usertype == "Accountant") { 
+                            if($usertype == "Admin" || $usertype == "Teacher") { 
                                 echo '<li>';
                                     echo anchor('media/index', '<i class="fa fa-film"></i><span>'.$this->lang->line('menu_media').'</span>');
                                 echo '</li>';
