@@ -34,10 +34,14 @@
                             ?>
                         </li>
 						
-						<?php
+						 <?php
                             if($usertype) { 
                                 echo '<li>';
-                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
+                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span><span class="label label-info pull-right" id="inboxcounter" style="
+    font-size: 100% !important;
+    line-height: inherit;
+"></span>');
+                               
                                 echo '</li>';
                             }
                         ?>
@@ -506,7 +510,6 @@
                                 echo '</li>';
                             } 
                         ?>
-  
                     </ul>
                     
                 </section>
