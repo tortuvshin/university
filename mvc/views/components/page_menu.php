@@ -47,7 +47,7 @@
                         ?>
 						
 						<?php 
-                            if($this->session->userdata("usertype") == "Admin" || $usertype == "Teacher") {
+                            if($usertype) {
                                 echo '<li>';
                                     echo anchor('event/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_event').'</span>');
                                 echo '</li>';
@@ -55,7 +55,7 @@
                         ?>
 
                         <?php 
-                            if($this->session->userdata("usertype") == "Admin") {
+                            if($usertype) {
                                 echo '<li>';
                                     echo anchor('holiday/index', '<i class="fa fa-flag"></i><span>'.$this->lang->line('menu_holiday').'</span>');
                                 echo '</li>';
@@ -427,7 +427,7 @@
                         ?>
 
                         <?php
-                            if($usertype) { 
+                            if($usertype == "Admin" || $usertype == "Teacher" || $usertype == "Accountant") { 
                                 echo '<li>';
                                     echo anchor('media/index', '<i class="fa fa-film"></i><span>'.$this->lang->line('menu_media').'</span>');
                                 echo '</li>';
