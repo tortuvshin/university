@@ -184,7 +184,6 @@ class Mark extends Admin_Controller {
 			$this->load->view('_layout_main', $this->data);
 		}
 	}
-
 	function mark_send() {
 		$examID = $this->input->post("examID");
 		$classesID = $this->input->post("classesID");
@@ -427,6 +426,9 @@ class Mark extends Admin_Controller {
 	     	return FALSE;
 		}
 		return TRUE;
+	}
+	public function graph() {
+			$this->load->view('mark/graph', $this->data);
 	}
 }
 
