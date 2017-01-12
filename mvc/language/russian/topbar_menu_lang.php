@@ -31,6 +31,7 @@ $lang['menu_edit'] = 'Засах';
 $lang['menu_view'] = 'Харах';
 $lang['menu_success'] = 'Амжилттай';
 $lang['menu_dashboard'] = 'Нүүр';
+$lang['menu_holiday'] = 'Амралтын өдөр';
 $lang['menu_event'] = 'Event';
 $lang['menu_student'] = 'Оюутан';
 $lang['menu_parent'] = 'Эцэг эх';

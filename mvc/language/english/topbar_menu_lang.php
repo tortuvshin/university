@@ -30,6 +30,7 @@ $lang['menu_edit'] = 'Edit';
 $lang['menu_view'] = 'View';
 $lang['menu_success'] = 'Success';
 $lang['menu_dashboard'] = 'Dashboard';
+$lang['menu_holiday'] = 'Holiday';
 $lang['menu_event'] = 'Event';
 $lang['menu_student'] = 'Student';
 $lang['menu_parent'] = 'Parents';

@@ -47,9 +47,17 @@
                         ?>
 						
 						<?php 
-                            if($this->session->userdata("usertype") == "Admin") {
+                            if($this->session->userdata("usertype") == "Admin" || $usertype == "Teacher") {
                                 echo '<li>';
                                     echo anchor('event/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_event').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
+                        <?php 
+                            if($this->session->userdata("usertype") == "Admin") {
+                                echo '<li>';
+                                    echo anchor('holiday/index', '<i class="fa fa-flag"></i><span>'.$this->lang->line('menu_holiday').'</span>');
                                 echo '</li>';
                             }
                         ?>
