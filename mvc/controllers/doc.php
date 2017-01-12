@@ -7,7 +7,9 @@
 | -----------------------------------------------------
 | EMAIL:			info@tagtaasolution.mn
 | -----------------------------------------------------
-| WEBSITE:			http://tagtaasolution.mn
+| COPYRIGHT:		RESERVED BY TAGTAA DEVELOPMENT TEAM
+| -----------------------------------------------------
+| WEBSITE:			http://sms.tagtaasolution.mn
 | -----------------------------------------------------
 */
 class Doc extends Admin_Controller {

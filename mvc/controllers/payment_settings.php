@@ -4,15 +4,15 @@ use Omnipay\Omnipay;
 class Payment_settings extends Admin_Controller {
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
+| PRODUCT NAME: 	INISYS SCHOOL MANAGEMENT SYSTEM
 | -----------------------------------------------------
-| AUTHOR:			INILABS TEAM
+| AUTHOR:			TAGTAA DEVELOPMENT TEAM
 | -----------------------------------------------------
-| EMAIL:			info@inilabs.net
+| EMAIL:			info@tagtaasolution.mn
 | -----------------------------------------------------
-| COPYRIGHT:		RESERVED BY INILABS IT
+| COPYRIGHT:		RESERVED BY TAGTAA DEVELOPMENT TEAM
 | -----------------------------------------------------
-| WEBSITE:			http://inilabs.net
+| WEBSITE:			http://sms.tagtaasolution.mn
 | -----------------------------------------------------
 */
 	function __construct () {
