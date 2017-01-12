@@ -27,25 +27,25 @@
             }
         ?>
             <div class="form-group">
-                <input class="form-control" placeholder="Username" name="username" type="text" autofocus value="<?=set_value('username')?>">
+                 <input class="form-control" placeholder="<?=$this->lang->line('signin_username')?>" name="username" type="text" autofocus value="<?=set_value('username')?>">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password">
+                 <input class="form-control" placeholder="<?=$this->lang->line('signin_password')?>" name="password" type="password">
             </div>
 
 
             <div class="checkbox">
                 <label>
                     <input type="checkbox" value="Remember Me" name="remember">
-                    <span> &nbsp; Remember Me</span>
+                     <span> &nbsp; <?=$this->lang->line('signin_remember_me')?></span>
                 </label>
                 <span class="pull-right">
                     <label>
-                        <a href="<?=base_url('reset/index')?>"> Forgot Password?</a>
+                       <a href="<?=base_url('reset/index')?>"> <?=$this->lang->line('signin_forgot')?>?</a>
                     </label>
                 </span>
             </div>
-            <input type="submit" class="btn btn-lg btn-success btn-block" value="SIGN IN" />
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="<?=$this->lang->line('signin_value')?>" />
         </div>
     </form>
 </div>
