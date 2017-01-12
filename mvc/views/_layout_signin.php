@@ -43,7 +43,7 @@
 </body>
 <footer class="login-footer">
     <span>
-        <a href="#"  target="_blank"><?php echo $siteinfos->sname; ?> © 2016 он</a>
+        <a href="#"  target="_blank"><?php echo $siteinfos->sname; ?> © 2017 он</a>
         <a href="#"  target="_blank">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
