@@ -45,6 +45,14 @@
                                 echo '</li>';
                             }
                         ?>
+						
+						<?php 
+                            if($this->session->userdata("usertype") == "Admin") {
+                                echo '<li>';
+                                    echo anchor('event/index', '<i class="fa fa-clipboard"></i><span>'.$this->lang->line('menu_event').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
 
                         <?php 
                             if($usertype == "Admin" || $usertype == "Teacher") {

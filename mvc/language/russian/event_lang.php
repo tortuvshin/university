@@ -1,16 +1,16 @@
 <?php
 
 /* List Language  */
-$lang['panel_title'] = "Үйл ажиллагаа";
-$lang['add_title'] = "Үйл ажиллагаа нэмэх";
+$lang['panel_title'] = "Event";
+$lang['add_title'] = "Event нэмэх";
 $lang['slno'] = "#";
 $lang['event_title'] = "Гарчиг";
 $lang['event_details'] = "Нэмэлт мэдээлэл";
-$lang['event_header'] = "Үйл ажиллагааны мэдээлэл";
+$lang['event_header'] = "Eventны мэдээлэл";
 $lang['event_date'] = "Огноо";
 $lang['event_fdate'] = "Эхлэх хугацаа";
 $lang['event_tdate'] = "Дуусах хугацаа";
-$lang['event_photo'] = "Үйл ажиллагааны зураг";
+$lang['event_photo'] = "Eventны зураг";
 $lang['action'] = "Үйлдэл";
 
 $lang['view'] = 'Харах';
@@ -25,8 +25,8 @@ $lang['ignore'] = 'Татгалзах';
 
 /* Add Language */
 
-$lang['add_class'] = 'Үйл ажиллагаа нэмэх';
-$lang['update_class'] = 'Үйл ажиллагааны мэдээлэл шинэчлэх';
+$lang['add_class'] = 'Event нэмэх';
+$lang['update_class'] = 'Eventны мэдээлэл шинэчлэх';
 
 $lang['to'] = 'Хэнд';
 $lang['subject'] = 'Гарчиг';
