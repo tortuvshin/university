@@ -133,6 +133,12 @@
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_grade");
                                                                 echo "</th>";
+																
+                                                                if($usertype == "Admin" || $usertype == "Teacher" ) {
+																	echo "<th>";
+																	echo $this->lang->line("mark_highest_mark");
+																	echo "</th>";
+																	}
                                                             }
                                                         echo "</tr>";
                                                     echo "</thead>";
@@ -164,6 +170,11 @@
                                                             }
                                                         }
                                                     }
+                                                    if($usertype == "Admin" || $usertype == "Teacher" ) {
+														echo "<td data-title='".$this->lang->line('mark_highest_mark')."'>";
+															echo $mark->highestmark;
+															echo "</td>";
+															}
                                                 echo "</tr>";
                                             }
                                         }
