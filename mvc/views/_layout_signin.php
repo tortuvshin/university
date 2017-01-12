@@ -43,17 +43,17 @@
 </body>
 <footer class="login-footer">
     <span>
-        <a href="https://www.citi.edu.mn" target="_blank"><?php echo $siteinfos->sname; ?> © 2016 он</a>
-        <a href="https://www.facebook.com/citiuniversity" target="_blank">
+        <a href="#"  target="_blank"><?php echo $siteinfos->sname; ?> © 2016 он</a>
+        <a href="#"  target="_blank">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
-        <a href="https://twitter.com/CitiUniversity" target="_blank">
+        <a href="#" target="_blank">
             <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/citiuniversity" target="_blank">
+        <a href="#"  target="_blank">
             <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="https://www.youtube.com/channel/UCROeKzkani6QRJYmmVsa92g" target="_blank">
+        <a href="#"  target="_blank">
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </a>
     </span>
