@@ -60,6 +60,8 @@ $lang['menu_paymentsettings'] = 'Payment Settings';
 $lang['menu_expense'] = 'Expense';
 $lang['menu_notice'] = 'Notice';
 $lang['menu_report'] = 'Report';
+$lang['menu_systemadmin'] = 'System admin';
+$lang['menu_reset_password'] = 'Reset password';
 $lang['menu_setting'] = 'Setting';
 $lang['menu_update'] = 'Update';
 
