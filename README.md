@@ -3,25 +3,65 @@
 
 ### Суулгах
 
-	git clone https://github.com/tortuvshin/sms.git
+Дараах коммандыг ажиллуулж энэхүү төслийг clone хийж авна:
 
-	composer install/update
+```
+git clone https://github.com/tortuvshin/sms.git
+```
 
-	npm install 
+Composer татаж суулгана
 
-	bower install
+```
+[Composer татах](https://getcomposer.org/download/)
+```
 
-#### Dompdf дээр ашиглаж байгаа сангууд суулгах
+Дараа нь, энэхүү төслийг татаж авсан хавтаст орж composer update/install комманд ажиллуулна
 
-	cd mvc/libraries/dompdf
+```
+composer install
+```
 
-	composer install/update
+Nodejs татаж суулгана 
 
-### Less compile хийх 
+```
+https://nodejs.org/en/download/
+```
 
-	gulp less
+NPM сангууд татах
 
-### Javascript minify хийх
+```
+npm install
+```
 
-	gulp js
 
+Dompdf дээр ашиглаж байгаа сангууд суулгах
+
+```
+cd mvc/libraries/dompdf
+```
+
+```
+composer install/update
+```
+ 
+Gulp суулгах:
+
+```
+npm install --global gulp
+```
+NPM сангууд суулгах:
+
+```
+npm install 
+```
+
+Less compile хийх 
+
+```
+gulp less
+```
+Javascript minify хийх
+
+```
+gulp js
+```
