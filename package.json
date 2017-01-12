@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tortuvshin/tagtaa-sms.git"
+    "url": "git+https://github.com/tortuvshin/sms.git"
   },
   "keywords": [
     "SMS"
@@ -16,9 +16,9 @@
   "author": "Tortuvshin Byambaa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tortuvshin/tagtaa-sms/issues"
+    "url": "https://github.com/tortuvshin/sms/issues"
   },
-  "homepage": "https://github.com/tortuvshin/tagtaa-sms#readme",
+  "homepage": "https://github.com/tortuvshin/sms#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
