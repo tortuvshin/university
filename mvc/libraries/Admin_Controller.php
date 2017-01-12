@@ -9,9 +9,7 @@ class Admin_Controller extends MY_Controller {
 | -----------------------------------------------------
 | EMAIL:			info@tagtaasolution.mn
 | -----------------------------------------------------
-| COPYRIGHT:		RESERVED BY TAGTAA DEVELOPMENT TEAM
-| -----------------------------------------------------
-| WEBSITE:			http://sms.tagtaasolution.mn
+| WEBSITE:			http://tagtaasolution.mn
 | -----------------------------------------------------
 */
 
