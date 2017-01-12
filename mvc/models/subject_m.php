@@ -29,6 +29,11 @@ class Subject_m extends MY_Model {
 		return $query->result();
 	}
 
+	function get_credit() {
+ 		$this->db->select('*')->from('credit')->order_by('credit_numeric asc');
+ 		$query = $this->db->get();
+ 		return $query->result();
+ 	}
 
 	function get_classes() {
 		$this->db->select('*')->from('classes')->order_by('classes_numeric asc');
