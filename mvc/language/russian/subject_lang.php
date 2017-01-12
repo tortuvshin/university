@@ -9,6 +9,7 @@ $lang['subject_teacher_name'] = "Багшийн нэр";
 $lang['subject_student'] = "Оюутан";
 $lang['subject_name'] = "Хичээлийн нэр";
 $lang['subject_author'] = "Хичээл үндэслэгч";
+$lang['subject_credit'] = "Хичээлийн багц цаг";
 $lang['subject_code'] = "Хичээлийн код";
 $lang['subject_teacher'] = "Багш";
 $lang['subject_classes'] = "Курс";

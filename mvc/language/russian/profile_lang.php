@@ -10,12 +10,12 @@ $lang['profile_religion'] = "Аймаг/сум";
 $lang['profile_phone'] = "Утас";
 $lang['profile_address'] = "Хаяг";
 
-$lang['profile_guargian_name'] = "Эцэг эхийн нэр";
+$lang['profile_guargian_name'] = "Дүн харагчийн нэр";
 $lang['profile_father_name'] = "Эцгийн нэр";
 $lang['profile_mother_name'] = "Эхийн нэр";
 $lang['profile_father_profession'] = "Эцгийн мэргэжил";
 $lang['profile_mother_profession'] = "Эхийн мэргэжил";
-$lang['parent_error'] = "Эцэг эх одоогоор бүртгүүлээгүй байна! Эцэг эхийн мэдээллээ нэмнэ үү.";
+$lang['parent_error'] = "Дүн харагч одоогоор бүртгүүлээгүй байна! Дүн харагчийн мэдээллээ нэмнэ үү.";
 
 $lang['personal_information'] = "Хувийн мэдээлэл";
-$lang['parents_information'] = "Эцэг эхийн мэдээлэл";
+$lang['parents_information'] = "Дүн харагчийн мэдээлэл";

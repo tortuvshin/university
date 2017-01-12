@@ -20,7 +20,7 @@ $lang['parentes_select_class'] = "Курс сонгох";
 $lang['parentes_status'] = "Статус";
 
 /* Parentes */
-$lang['parentes_guargian_name'] = "Эцэг эх нэр";
+$lang['parentes_guargian_name'] = "Эцэг эхийн нэр";
 $lang['parentes_father_name'] = "Эцгийн нэр";
 $lang['parentes_mother_name'] = "Эхийн нэр";
 $lang['parentes_father_profession'] = "Эцгийн мэргэжил";
@@ -47,9 +47,9 @@ $lang['mail_error'] = 'Уучлаарай! Эмэйл илгээгдсэнгүй
 
 /* Add Language */
 
-$lang['add_parentes'] = 'Эцэг эх нэмэх';
-$lang['update_parentes'] = 'Эцэг эх шинэчлэх';
+$lang['add_parentes'] = 'Дүн харагч нэмэх';
+$lang['update_parentes'] = 'Дүн харагч шинэчлэх';
 
 /* ini code starts here*/
 $lang['personal_information'] = "Хувийн мэдээлэл";
-$lang['parentess_information'] = "Эцэг эхийн мэдээлэл";
+$lang['parentess_information'] = "Дүн харагчийн мэдээлэл";

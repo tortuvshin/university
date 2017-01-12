@@ -29,10 +29,10 @@ $lang['delete'] = 'Устгах';
 $lang['add_routine'] = 'Хичээлийн хуваарь нэмэх';
 $lang['update_routine'] = 'Хичээлийн хуваарь шинэчлэх';
 
-$lang['sunday'] = "SUNDAY";
-$lang['monday'] = "MONDAY";
-$lang['tuesday'] = "TUESDAY";
-$lang['wednesday'] = "WEDNESDAY";
-$lang['thursday'] = "THURSDAY";
-$lang['friday'] = "FRIDAY";
-$lang['saturday'] = "SATURDAY";
+$lang['sunday'] = "НЯМ";
+$lang['monday'] = "ДАВАА";
+$lang['tuesday'] = "МЯГМАР";
+$lang['wednesday'] = "ЛХАГВА";
+$lang['thursday'] = "ПҮРЭВ";
+$lang['friday'] = "БААСАН";
+$lang['saturday'] = "БЯМБА";

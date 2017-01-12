@@ -68,6 +68,7 @@ $lang['menu_systemadmin'] = 'Систем админ';
 $lang['menu_reset_password'] = 'Нууц үг сэргээх';
 $lang['menu_setting'] = 'Тохиргоо';
 $lang['menu_update'] = 'Update';
+$lang['menu_doc'] = 'Гарын авлага';
 
 $lang['accountant'] = 'Нягтлан бодогч';
 $lang['librarian'] = 'Номын санч';
