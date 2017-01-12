@@ -97,6 +97,23 @@
                     </div>
 
                     <?php 
+                         if(form_error('subject_credit')) 
+                             echo "<div class='form-group has-error' >";
+                         else     
+                             echo "<div class='form-group' >";
+                     ?>
+                         <label for="subject_credit" class="col-sm-2 control-label">
+                             <?=$this->lang->line("subject_credit")?>
+                         </label>
+                         <div class="col-sm-6">
+                             <input type="text" class="form-control" id="subject_credit" name="subject_credit" value="<?=set_value('subject_credit')?>" >
+                         </div>
+                         <span class="col-sm-4 control-label">
+                             <?php echo form_error('subject_credit'); ?>
+                         </span>
+                     </div>
+
+                    <?php 
                         if(form_error('subject_code')) 
                             echo "<div class='form-group has-error' >";
                         else     

@@ -9,6 +9,7 @@ $lang['subject_teacher_name'] = "Teacher Name";
 $lang['subject_student'] = "Student";
 $lang['subject_name'] = "Subject Name";
 $lang['subject_author'] = "Subject Author";
+$lang['subject_credit'] = "Subject Credit";
 $lang['subject_code'] = "Subject Code";
 $lang['subject_teacher'] = "Teacher";
 $lang['subject_classes'] = "Class";
