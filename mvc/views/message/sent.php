@@ -26,7 +26,7 @@
                 <div class="box-body">
                     <div class="margin-bottom">
                         <div class="btn-group">
-                            <button id="all" class="btn btn-info btn-sm"  data-original-title="Select mail" data-toggle="tooltip" data-placement="top">
+                            <button id="all" class="btn btn-info btn-sm"  data-original-title="<?=$this->lang->line('select')?>" data-toggle="tooltip" data-placement="top">
                                 <i class="fa fa-square-o"></i>
                             </button>
                             <button class="btn btn-danger btn-sm" id="delete_submit" data-original-title="Delete mail" data-toggle="tooltip" data-placement="top">
