@@ -133,9 +133,6 @@
                                                                 echo "<th>";
                                                                     echo $this->lang->line("mark_grade");
                                                                 echo "</th>";
-                                                                 // echo "<th>";
-+                                                                //     echo $this->lang->line("mark_highest_mark");
-+                                                                // echo "</th>";
                                                             }
                                                         echo "</tr>";
                                                     echo "</thead>";
@@ -167,9 +164,6 @@
                                                             }
                                                         }
                                                     }
-                                                     // echo "<td data-title='".$this->lang->line('mark_highest_mark')."'>";
-+                                                    //     echo $mark->highestmark;
-+                                                    // echo "</td>";
                                                 echo "</tr>";
                                             }
                                         }
