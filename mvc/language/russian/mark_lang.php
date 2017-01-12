@@ -20,8 +20,8 @@ $lang['mark_address'] = "Хаяг";
 $lang['mark_username'] = "Хэрэглэгчийн нэр";
 
 $lang['mark_subject'] = "Хичээл";
-$lang['mark_mark'] = "Дүн";
-$lang['mark_point'] = "Оноо";
+$lang['mark_mark'] = "Оноо";
+$lang['mark_point'] = "Голч";
 $lang['mark_grade'] = "Голч";
 $lang['mark_highest_mark'] = "Дээд дүн";
 
