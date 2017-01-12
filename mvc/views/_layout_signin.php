@@ -34,5 +34,43 @@
 
 <script type="text/javascript" src="<?php echo base_url('assets/inilabs/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
+ <style type="text/css">
+         .white-bg-login {
+         background-image: url(../uploads/images/citi_back_login.jpg);
+        background-repeat: no-repeat; 
+        background-size: cover;   
+    }
+
+ 
+ <div class="login-header">
+      <div class="login-control">
+          <?php
+              if(count($siteinfos->photo)) {
+                  echo "<img class='login-logo' width='50' height='50' src=".base_url('uploads/images/'.$siteinfos->photo)." />";
+              }
+          ?>
+       <h4 style="float:left;"><?php echo $siteinfos->sname; ?></h4>    
+    </div>        
+</div>
+
+<footer class="login-footer">
+    <span>
+        <a href="https://www.citi.edu.mn" target="_blank">Сити их сургууль © 2016 он</a>
+         <a href="https://www.facebook.com/citiuniversity" target="_blank">">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/CitiUniversity" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/citiuniversity" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+       <a href="https://www.youtube.com/channel/UCROeKzkani6QRJYmmVsa92g" target="_blank">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </a>
+    </span>
+</footer>
+
+
 </body>
 </html>

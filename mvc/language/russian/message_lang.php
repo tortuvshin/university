@@ -4,7 +4,7 @@
 $lang['panel_title'] = "Зурвас";
 $lang['add_title'] = "Зурвас бичих";
 $lang['folder'] = "Хавтаснууд";
-$lang['inbox'] = "Ирсэн зурвас";
+$lang['inbox'] = "Зурвасууд";
 $lang['to'] = "Хэнд";
 $lang['status'] = "Статус";
 $lang['name'] = "Нэр";
