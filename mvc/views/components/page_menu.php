@@ -33,6 +33,14 @@
                                 echo anchor('dashboard/index', '<i class="fa fa-laptop"></i><span>'.$this->lang->line('menu_dashboard').'</span>'); 
                             ?>
                         </li>
+						
+						<?php
+                            if($usertype) { 
+                                echo '<li>';
+                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
 
                         <?php 
                             if($usertype == "Admin" || $usertype == "Teacher") {
@@ -430,15 +438,6 @@
                         <?php
                             if($usertype) { 
                                 echo '<li>';
-                                    echo anchor('message/index', '<i class="fa fa-envelope"></i><span>'.$this->lang->line('menu_message').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
-                        
-
-                        <?php
-                            if($usertype) { 
-                                echo '<li>';
                                     echo anchor('notice/index', '<i class="fa fa-calendar"></i><span>'.$this->lang->line('menu_notice').'</span>');
                                 echo '</li>';
                             }
@@ -483,9 +482,49 @@
                                 echo '</li>';
                             } 
                         ?>
+						
+						<?php
+                            if($this->session->userdata("usertype") == "Admin") { 
+                                echo '<li>';
+                                    echo anchor('doc/admin', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                echo '</li>';
+                            } 
+                        ?>
+
+                        <?php
+                            if($this->session->userdata("usertype") == "Teacher") { 
+                                echo '<li>';
+                                    echo anchor('doc/teacher', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                echo '</li>';
+                            } 
+                        ?>
+
+                        <?php
+                            if($this->session->userdata("usertype") == "Student") { 
+                                echo '<li>';
+                                    echo anchor('doc/student', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_doc').'</span>', 'target="_blank"');
+                                echo '</li>';
+                            } 
+                        ?>
   
                     </ul>
                     
                 </section>
                 <!-- /.sidebar -->
             </aside>
+			<script type="text/javascript">
+    
+    $( document ).ready(function () {
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('message/unreadCounter')?>",
+            dataType: "json",
+            success: function(data) {
+                var a = data.inbox + data.send;
+                $( "#inboxcounter" ).append(a);
+
+            }
+        });
+    });
+
+</script>
