@@ -451,6 +451,22 @@
                                 echo '</li>';
                             }
                         ?>
+						
+						<?php
+                            if($this->session->userdata("usertype") == "Admin") {
+                                echo '<li>';
+                                    echo anchor('reset_password/index', '<i class="fa icon-reset_password"></i><span>'.$this->lang->line('menu_reset_password').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+						
+						<?php
+                            if($this->session->userdata("usertype") == "Admin") {
+                                echo '<li>';
+                                    echo anchor('systemadmin/index', '<i class="fa icon-systemadmin"></i><span>'.$this->lang->line('menu_systemadmin').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
 
                         <?php
                             if($this->session->userdata("usertype") == "Admin") { 
