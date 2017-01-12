@@ -1,4 +1,4 @@
-mvc/config/production/*
+/mvc/config/production/*
 
 # Sublime
 # cache files for sublime text
