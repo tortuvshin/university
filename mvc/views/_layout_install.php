@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Installer</title>
     <link href="<?php echo base_url('assets/bootstrap/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/inilabs/install.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/inisys/install.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/fonts/font-awesome.css'); ?>" rel="stylesheet">
 </head>
 
@@ -24,9 +24,9 @@
             <!-- </div> -->
         </div>
     </div>
-<script type="text/javascript" src="<?php echo base_url('assets/inilabs/jquery.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/inisys/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/inilabs/inilabs.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/inisys/inisys.js'); ?>"></script>
 
 </body>
 </html>

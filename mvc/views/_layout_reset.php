@@ -12,10 +12,7 @@
     <!-- font Awesome -->
     <link href="<?php echo base_url('assets/fonts/font-awesome.css'); ?>" rel="stylesheet"  type="text/css">
     <!-- Style -->
-    <link href="<?php echo base_url('assets/inilabs/style.css'); ?>" rel="stylesheet"  type="text/css">
-    <!-- iNilabs css -->
-    <link href="<?php echo base_url('assets/inilabs/inilabs.css'); ?>" rel="stylesheet"  type="text/css">
-    <link href="<?php echo base_url('assets/inilabs/responsive.css'); ?>" rel="stylesheet"  type="text/css">
+    <link href="<?php echo base_url('assets/inisys/style.css'); ?>" rel="stylesheet"  type="text/css">
 </head>
 
 <style type="text/css">
@@ -40,7 +37,7 @@
     </div>
 
     <?php $this->load->view($subview); ?>
-<script type="text/javascript" src="<?php echo base_url('assets/inilabs/jquery.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/inisys/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/bootstrap/bootstrap.min.js'); ?>"></script>
 
 <footer class="login-footer">
