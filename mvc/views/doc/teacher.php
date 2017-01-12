@@ -92,20 +92,16 @@
 
 		<div id="documenter_copyright">
 		
-			<a href="http://folder.mn">v1.2</a> <br>
-			Copyright Tagtaa solution 2016<br>
+			<a href="http://folder.mn">Copyright Tagtaa solution 2016</a> <br>
 		</div>
 	</div>
 	<div id="documenter_content">
 		<section id="documenter_cover">
-			<h1>Inisys Оюутны бүртгэлийн систем v.1.2<br></h1>
+			<h1>Оюутны бүртгэлийн систем<br></h1>
 		
 			
 			<hr>
-	      <ul>
-	      <li>Citi University  ( <a href="http://citi.edu.mn">www.citi.edu.mn</a> )</li>
-	      </ul>
-			<p>Inisys Оюутны бүртгэлийн систем v.1.2 танилцуулгын дэлгэрэнгүй</p>
+			<p>Оюутны бүртгэлийн систем танилцуулгын дэлгэрэнгүй</p>
 		</section>
 	
 
