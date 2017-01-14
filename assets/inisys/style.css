@@ -4237,7 +4237,7 @@ label {
     margin-top: 12px !important;
   }
   /* Report Select * Button Margin Close */
-  .grade-table {
+  .grade-div {
     width: 100% !important;
     float: left;
     margin-bottom: 0px !important;
@@ -4275,7 +4275,7 @@ label {
   }
 }
 @media screen and (max-width: 1920px) and (min-width: 897px) {
-  .grade-table {
+  .grade-div {
     width: 49% !important;
     float: left;
     margin-bottom: 0px !important;
@@ -4700,6 +4700,9 @@ label {
 .login-footer span a i {
   font-size: 24px;
   margin-top: 5px;
+}
+.grade-table {
+  width: 100%;
 }
 .grade-table > tbody > tr {
   height: 10px;
