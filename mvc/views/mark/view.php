@@ -129,7 +129,7 @@
                                             echo "<tbody>";
                                             foreach ($marks as $mark) {
                                                 if($exam->examID == $mark->examID) {
-                                                    if ($mark->mark != 'null') {
+                                                    if ($mark->mark != null) {
                                                         echo "<tr>";
                                                             echo "<td data-title='".$this->lang->line('mark_subject')."'>";
                                                                 echo $mark->subject;

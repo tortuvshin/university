@@ -139,7 +139,7 @@
 
                                                 <?php 
                                                     if($usertype == "Teacher") {
-                                                        if ($mark->mark == 'null') {?>
+                                                        if ($mark->mark == null) {?>
                                                         <input 
                                                             class="form-control mark" 
                                                             type="number" 
