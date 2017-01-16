@@ -139,17 +139,17 @@
 
                                                 <?php 
                                                     if($usertype == "Teacher") {
-                                                         if ($mark->mark==null || $mark->mark==0 || $mark->mark==' ') {?>
-                                                    <input 
-                                                        class="form-control mark" 
-                                                        type="number" 
-                                                        name="<?=$student->studentID?>" 
-                                                        id="<?=$student->studentID?>" 
-                                                        value="<?=set_value($student->studentID, $mark->mark)?>" 
-                                                    />
+                                                        if ($mark->mark == 'null') {?>
+                                                        <input 
+                                                            class="form-control mark" 
+                                                            type="number" 
+                                                            name="<?=$student->studentID?>" 
+                                                            id="<?=$student->studentID?>" 
+                                                            value="<?=set_value($student->studentID, $mark->mark)?>" 
+                                                        />
 
                                                         
-                                                <?php   } 
+                                                <?php  } 
                                                     else {
                                                             echo $mark->mark;
                                                         } 
