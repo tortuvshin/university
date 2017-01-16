@@ -129,28 +129,32 @@
                                             echo "<tbody>";
                                             foreach ($marks as $mark) {
                                                 if($exam->examID == $mark->examID) {
-                                                    echo "<tr>";
-                                                        echo "<td data-title='".$this->lang->line('mark_subject')."'>";
-                                                            echo $mark->subject;
-                                                        echo "</td>";
-                                                        echo "<td data-title='".$this->lang->line('mark_mark')."'>";
-                                                            echo $mark->mark;
-                                                        echo "</td>";
-                                                        if(count($grades)) {
-                                                            $gpa = 0;
-                                                            foreach ($grades as $grade) {
-                                                                if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                                    echo "<td class='std-gpa' data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
-                                                                        echo $grade->point;
-                                                                    echo "</td>";
-                                                                    echo "<td data-title='".$this->lang->line('mark_grade')."'>";
-                                                                        echo $grade->grade;
-                                                                    echo "</td>";
-                                                                    break;
+                                                    if ($mark->mark != 'null') {
+                                                        echo "<tr>";
+                                                            echo "<td data-title='".$this->lang->line('mark_subject')."'>";
+                                                                echo $mark->subject;
+                                                            echo "</td>";
+                                                            echo "<td data-title='".$this->lang->line('mark_mark')."'>";
+                                                                echo $mark->mark;
+                                                            echo "</td>";
+                                                            if(count($grades)) {
+                                                                $gpa = 0;
+                                                                foreach ($grades as $grade) {
+                                                                    if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
+                                                                        echo "<td class='std-gpa' data-gpa='".$grade->point."' data-title='".$this->lang->line('mark_point')."'>";
+                                                                            echo $grade->point;
+                                                                        echo "</td>";
+                                                                        echo "<td data-title='".$this->lang->line('mark_grade')."'>";
+                                                                            echo $grade->grade;
+                                                                        echo "</td>";
+                                                                    
+                                                                        break;
+                                                                    }
                                                                 }
                                                             }
-                                                        }
-                                                    echo "</tr>";
+                                                        
+                                                        echo "</tr>";
+                                                    }
                                                 }
                                             }
                                             echo "</tbody>";

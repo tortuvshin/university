@@ -139,7 +139,7 @@
 
                                                 <?php 
                                                     if($usertype == "Teacher") {
-                                                         if ($mark->mark==null || $mark->mark==0) {?>
+                                                         if ($mark->mark==null || $mark->mark==0 || $mark->mark==' ') {?>
                                                     <input 
                                                         class="form-control mark" 
                                                         type="number" 
@@ -183,10 +183,11 @@
                     $("#add_mark").click(function() {
                         var inputs = "";
                         var inputs_value = "";
+                        var val_null = null;
                         $('.mark').each(function(index, value) {
                             inputs_value = $(this).val(); 
                             if(inputs_value == '' || inputs_value == null) {
-                                inputs += $(this).attr("id") +":"+'0'+"$";
+                                inputs += $(this).attr("id") +":"+val_null+"$";
                             } else {
                                 inputs += $(this).attr("id") +":"+inputs_value+"$";
                             }
