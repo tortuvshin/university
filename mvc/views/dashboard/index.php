@@ -4,9 +4,6 @@
     if($usertype == "Admin") {
 
 ?>
-
-
-
   <div class="row">
     <div class="col-lg-3 col-xs-6">
         <div class="small-box ">
@@ -238,52 +235,6 @@
           }
         }
     });
-
-
-    $.ajax({
-        type: 'POST',
-        url: 'http://schoolupdate.inilabs.net/updatenotification/index',
-        data: "id=" + 1,
-        dataType: "html",
-        success: function(data) {
-            if(data != 2.0) {
-              toastr["success"]("Update 3.0 now Relese <br /><br /><button id='update' type='button' class='btn clear'>Update</button>")
-              toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "positionClass": "toast-top-right",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": "10000",
-                "hideDuration": "100",
-                "timeOut": 0,
-                "extendedTimeOut": 0,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut",
-                "tapToDismiss": false
-              }
-
-              $('#update').click(function() {
-                $.ajax({
-                  type: 'POST',
-                  url: 'http://schoolupdate.inilabs.net/updatenotification/verification',
-                  data: "purchase_code=" + "<?=$setting->purchase_code?>",
-                  dataType: "html",
-                  success: function(data) {
-                      alert(data);
-                  }
-                });
-
-              });
-            }
-        }
-    });
-
-
 
   </script>
 
