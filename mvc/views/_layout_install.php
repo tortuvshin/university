@@ -16,7 +16,7 @@
             <!-- <div class="row"> -->
                 <div class="col-sm-6 col-sm-offset-3 ins-marg">
                     <center><img width="100" height="100" src="<?=base_url('uploads/images/site.png')?>" /></center>
-                    <center><h4><strong style="color:red">iNi</strong><strong>Labs</strong><strong> School </strong></h4></center>
+                    <center><h4><strong style="color:red">Tagtaa</strong><strong> Student </strong><strong>Management System </strong></h4></center>
                 </div>
                 <div class="col-sm-6 col-sm-offset-3 ins-marg">
                     <?php $this->load->view($subview); ?>
