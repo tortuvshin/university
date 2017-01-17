@@ -18,6 +18,7 @@ $lang['setting_school_select_day_attendance'] = "Өдрөөр ангилсан �
 $lang['setting_school_select_subject_attendance'] = "Хичээлээр ангилсан ирц";
 $lang['setting_school_lang'] = "Үндсэн хэл";
 $lang['setting_school_photo'] = "Лого";
+$lang['setting_school_back'] = "Нүүр зураг";
 $lang['setting_english'] = "Англи";
 $lang['setting_bengali'] = "Бенгали";
 $lang['setting_arabic'] = "Араб";

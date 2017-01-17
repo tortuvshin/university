@@ -248,10 +248,33 @@
                                 <input id="uploadBtn" type="file" class="upload" name="image" />
                             </div>
                         </div>
-                         <span class="col-sm-4 control-label">
+                        <span class="col-sm-4 control-label">
                             <?php if(isset($image)) echo $image; ?>
                         </span>
                     </div>
+
+                    <?php
+                        if(isset($image))
+                            echo "<div class='form-group has-error' >";
+                        else
+                           echo "<div class='form-group' >";
+                    ?>
+                        <label for="photo" class="col-sm-2 control-label">
+                           <?=$this->lang->line("setting_school_back")?>
+                        </label>
+                        <div class="col-sm-4">
+                           <input class="form-control"  id="uploadBackFile" placeholder="Choose File" disabled />
+                        </div>
+                        <div class="col-sm-2">
+                           <div class="fileBackUpload btn btn-success form-control">
+                                <span class="fa fa-repeat"></span>
+                                <input id="uploadBackBtn" type="file" class="upload" name="image" />
+                            </div>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                            <?php if(isset($image)) echo $image; ?>
+                        </span>
+                   </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
@@ -259,28 +282,6 @@
                         </div>
                     </div>
                 </form>
-                    <?php
-                        if(isset($image))
-                            echo "<div class='form-group has-error' >";
-                        else
-                           echo "<div class='form-group' >";
-                   ?>
-                        <label for="photo" class="col-sm-2 control-label">
-                           <?=$this->lang->line("setting_school_photo")?>
-                        </label>
-                     <div class="col-sm-4">
-                           <input class="form-control"  id="uploadFile" placeholder="Choose File" disabled />
-                         </div>
-                      <div class="col-sm-2">
-                           <div class="fileUpload btn btn-success form-control">
-                                <span class="fa fa-repeat"></span>
-                              <input id="uploadBtn" type="file" class="upload" name="image" />
-                            </div>
-                       </div>
-                         <span class="col-sm-4 control-label">
-                            <?php if(isset($image)) echo $image; ?>
-                        </span>
-                   </div>
             </div>
         </div>
     </div>
@@ -289,5 +290,8 @@
 <script type="text/javascript">
 document.getElementById("uploadBtn").onchange = function() {
     document.getElementById("uploadFile").value = this.value;
+};
+document.getElementById("uploadBackBtn").onchange = function() {
+    document.getElementById("uploadBackFile").value = this.value;
 };
 </script>

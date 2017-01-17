@@ -18,6 +18,7 @@ $lang['setting_school_select_day_attendance'] = "Per Daywise Attendance";
 $lang['setting_school_select_subject_attendance'] = "Subjectwise Attendance";
 $lang['setting_school_lang'] = "Default Language";
 $lang['setting_school_photo'] = "Logo";
+$lang['setting_school_back'] = "Background";
 $lang['setting_english'] = "English";
 $lang['setting_bengali'] = "Bengali";
 $lang['setting_arabic'] = "Arabic";
