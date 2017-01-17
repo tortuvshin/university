@@ -254,7 +254,7 @@
                     </div>
 
                     <?php
-                        if(isset($image))
+                        if(isset($image_back))
                             echo "<div class='form-group has-error' >";
                         else
                            echo "<div class='form-group' >";
@@ -266,13 +266,13 @@
                            <input class="form-control"  id="uploadBackFile" placeholder="Choose File" disabled />
                         </div>
                         <div class="col-sm-2">
-                           <div class="fileBackUpload btn btn-success form-control">
+                           <div class="fileUpload btn btn-success form-control">
                                 <span class="fa fa-repeat"></span>
-                                <input id="uploadBackBtn" type="file" class="upload" name="image" />
+                                <input id="uploadBackBtn" type="file" class="upload" name="image_back" />
                             </div>
                         </div>
                         <span class="col-sm-4 control-label">
-                            <?php if(isset($image)) echo $image; ?>
+                            <?php if(isset($image_back)) echo $image_back; ?>
                         </span>
                    </div>
 

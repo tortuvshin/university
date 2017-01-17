@@ -128,7 +128,35 @@ Class setting extends Admin_Controller {
 								$this->session->set_flashdata('success', $this->lang->line('menu_success'));
 								redirect(base_url("setting/index"));
 							}
-						} else {
+						}
+
+						if($_FILES["image_back"]['name'] !="") {
+							$file_name = $_FILES["image_back"]['name'];
+							$file_name_rename = rand(1, 100000000000);
+				            $explode = explode('.', $file_name);
+				            $new_file = $file_name_rename.'.'.$explode[1];
+
+							$config['upload_path'] = "./uploads/images";
+							$config['allowed_types'] = "gif|jpg|png";
+							$config['file_name'] = $new_file;
+							$config['max_size'] = '1024';
+							$config['max_width'] = '3000';
+							$config['max_height'] = '3000';
+							$array['photoback'] = $new_file;
+							$this->load->library('upload', $config);
+							if(!$this->upload->do_upload("image_back")) {
+								$this->data["image_back"] = $this->upload->display_errors();
+								$this->data["subview"] = "setting/index";
+								$this->load->view('_layout_main', $this->data);
+							} else {
+								$data = array("upload_data" => $this->upload->data());
+								$this->setting_m->update_setting($array, 1);
+								$this->session->set_flashdata('success', $this->lang->line('menu_success'));
+								redirect(base_url("setting/index"));
+							}
+						}
+
+						 else {
 							$this->setting_m->update_setting($array, 1);
 							$this->session->set_flashdata('success', $this->lang->line('menu_success'));
 							redirect(base_url("setting/index"));
