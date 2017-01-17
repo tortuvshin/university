@@ -14,9 +14,16 @@
     <link href="<?php echo base_url('assets/inisys/style.css'); ?>" rel="stylesheet"  type="text/css">
 </head>
 
+
+<?php
+    if(count($siteinfos->photoback)) {
+        $photobackvar = base_url('uploads/images/'.$siteinfos->photoback);
+    }
+?>
+
 <style type="text/css">
     .white-bg-login {
-        background-image: url(../uploads/images/citi_back_login.jpg);
+        background-image: url(<?php echo $photobackvar ?>);
         background-repeat: no-repeat; 
         background-size: cover;   
     }
