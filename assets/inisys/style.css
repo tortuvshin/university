@@ -4182,6 +4182,12 @@ label {
     font-weight: bold !important;
     font-size: 13px !important;
   }
+  .profile-view-school {
+    display: none;
+  }
+  .profile-view-user {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 1920px) and (min-width: 897px) {
   .grade-table {
