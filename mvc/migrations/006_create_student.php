@@ -150,6 +150,21 @@ class Migration_Create_student extends CI_Migration {
 				'type' => 'INT',
 				'constraint' => 11,
 				'null' => FALSE
+			),
+			'gpa_average' => array(
+				'type' => 'INT',
+				'constraint' => 11,
+				'null' => FALSE
+			),
+			'grade_average' => array(
+				'type' => 'INT',
+				'constraint' => 11,
+				'null' => FALSE
+			),
+			'credit_total' => array(
+				'type' => 'INT',
+				'constraint' => 11,
+				'null' => FALSE
 			)
 		));
 		$this->dbforge->add_key('studentID', TRUE);
