@@ -160,14 +160,27 @@
                                 echo '</li>';
                             }   
                         ?>
-                           
-                        <?php
-                            if($usertype == "Student") { 
-                                echo '<li>';
-                                    echo anchor('mark/view', '<i class="fa fa-flask"></i><span>'.$this->lang->line('menu_mark').'</span>');
-                                echo '</li>';
-                            }
-                        ?>
+
+                        <?php if($usertype == "Student") { ?>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-flask"></i> 
+                                    <span><?=$this->lang->line('menu_mark');?></span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <?php echo anchor('mark/view', '<i class="fa fa-flask"></i><span>'.$this->lang->line('menu_mark_view').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('mark/graph', '<i class="fa fa-flask"></i><span>'.$this->lang->line('menu_mark_graph').'</span>'); ?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('mark/show', '<i class="fa fa-flask"></i><span>'.$this->lang->line('menu_mark_show').'</span>'); ?>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php } ?>
 
                         <?php
                             if($usertype == "Parent") { 
