@@ -1,25 +1,53 @@
-
 <div class="box">
     <div class="box-header">
         <h3 class="box-title"><i class="fa fa-flask"></i> <?=$this->lang->line('panel_title')?></h3>
-
-       
         <ol class="breadcrumb">
             <li><a href="<?=base_url("dashboard/index")?>"><i class="fa fa-laptop"></i> <?=$this->lang->line('menu_dashboard')?></a></li>
             <li class="active"><?=$this->lang->line('menu_mark')?></li>
         </ol>
-    </div><!-- /.box-header -->
-    <!-- form start -->
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-sm-12"></div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"><i class="fa fa-flask"></i> <?=$this->lang->line('panel_title')?></h3>
+        <ol class="breadcrumb">
+            <li><a href="<?=base_url("dashboard/index")?>"><i class="fa fa-laptop"></i> <?=$this->lang->line('menu_dashboard')?></a></li>
+            <li class="active"><?=$this->lang->line('menu_mark')?></li>
+        </ol>
+    </div>
+
     <div class="box-body">
         <div class="row">
             <div class="col-sm-12">
-
                 <canvas id="myChartLine"></canvas>
-                <canvas id="myChart"></canvas>
             </div>
         </div>
     </div>
 </div>
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"><i class="fa fa-flask"></i> <?=$this->lang->line('panel_title')?></h3>
+        <ol class="breadcrumb">
+            <li><a href="<?=base_url("dashboard/index")?>"><i class="fa fa-laptop"></i> <?=$this->lang->line('menu_dashboard')?></a></li>
+            <li class="active"><?=$this->lang->line('menu_mark')?></li>
+        </ol>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 <script type="text/javascript" src="<?php echo base_url('assets/chartjs/chart.js'); ?>"></script>
 <script type="text/javascript">
@@ -30,12 +58,12 @@
         type: 'line',
         data: {
             labels: ["2013-2014 оны 1-р улирал",
-             "2013-2014 оны 2-р улирал", 
-             "2014-2015 оны 1-р улирал", 
-             "2014-2015 оны 2-р улирал", 
-             "2015-2016 оны 1-р улирал", 
-             "2015-2016 оны 2-р улирал", 
-             "2016-2017 оны 1-р улирал"],
+                     "2013-2014 оны 2-р улирал", 
+                     "2014-2015 оны 1-р улирал", 
+                     "2014-2015 оны 2-р улирал", 
+                     "2015-2016 оны 1-р улирал", 
+                     "2015-2016 оны 2-р улирал", 
+                     "2016-2017 оны 1-р улирал"],
             datasets: [
                 {
                     label: "Оюутны дүнгийн үзүүлэлт",
