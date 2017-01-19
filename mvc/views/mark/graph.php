@@ -66,7 +66,7 @@
                      "2016-2017 оны 1-р улирал"],
             datasets: [
                 {
-                    label: "Оюутны дүнгийн үзүүлэлт",
+                    label: "Голч дүн",
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: "rgba(75,192,192,0.4)",
@@ -84,10 +84,45 @@
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [2.1, 2.5, 2.4, 3.2, 2.0, 2.8, 3.6],
+                    data: [2.1, 2.5, 2.4, 3.2, 2.0, 2.8, 1.6],
                     spanGaps: false,
                 }
             ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            hover: {
+                mode: 'label'
+            },
+            scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Хичээлийн жил'
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            steps: 10,
+                            stepValue: 5,
+                            max: 4.0
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Үнэлгээний голч дүн'
+                        }
+                    }]
+            },
+            title: {
+                display: true,
+                text: 'Оюутны дүнгийн үзүүлэлт'
+            }
         }
     });
     var myChart = new Chart(ctx, {
