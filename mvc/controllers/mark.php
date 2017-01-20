@@ -433,6 +433,12 @@ class Mark extends Admin_Controller {
 		$this->data["subview"] = "mark/graph";
 		$this->load->view('_layout_main', $this->data);
 	}
+
+	public function show() {
+		
+		$this->data["subview"] = "mark/show";
+		$this->load->view('_layout_main', $this->data);
+	}
 }
 
 /* End of file class.php */
