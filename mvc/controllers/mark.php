@@ -435,6 +435,63 @@ class Mark extends Admin_Controller {
 	}
 
 	public function show() {
+
+		$usertype = $this->session->userdata("usertype");
+		if($usertype == "Admin" || $usertype == "Teacher") {
+			$id = htmlentities(mysql_real_escape_string($this->uri->segment(3)));
+			$url = htmlentities(mysql_real_escape_string($this->uri->segment(4)));
+
+			if ((int)$id && (int)$url) {
+				$this->data["student"] = $this->student_m->get_student($id);
+				$this->data["classes"] = $this->student_m->get_class($url);
+				if($this->data["student"] && $this->data["classes"]) {
+					$this->data['set'] = $url;
+					$this->data["exams"] = $this->exam_m->get_exam();
+					$this->data["grades"] = $this->grade_m->get_grade();
+					$this->data["marks"] = $this->mark_m->get_order_by_mark_with_highest_mark($url,$id);
+					$this->data["section"] = $this->section_m->get_section($this->data['student']->sectionID);
+
+					// dump($this->data["marks"]);
+					// die;
+
+
+					$this->data["subview"] = "mark/view";
+					$this->load->view('_layout_main', $this->data);
+				} else {
+					$this->data["subview"] = "error";
+					$this->load->view('_layout_main', $this->data);
+				}
+			} else {
+				$this->data["subview"] = "error";
+				$this->load->view('_layout_main', $this->data);
+			}
+		} elseif($usertype == "Student") {
+			$username = $this->session->userdata("username");
+			$student = "";
+			if($usertype == "Student") {
+				$student = $this->user_m->get_username_row("student", array("username" => $username));
+			} elseif($usertype == "Parent") {
+				$user = $this->user_m->get_username_row("parent", array("username" => $username));
+				$student = $this->student_m->get_student($user->studentID);
+			}
+			$this->data["student"] = $this->student_m->get_student($student->studentID);
+			$this->data["classes"] = $this->student_m->get_class($student->classesID);
+			if($this->data["student"] && $this->data["classes"]) {
+				$this->data["exams"] = $this->exam_m->get_exam();
+				$this->data["grades"] = $this->grade_m->get_grade();
+				$this->data["marks"] = $this->mark_m->get_order_by_mark(array("studentID" => $student->studentID, "classesID" => $student->classesID));
+
+				$this->data["section"] = $this->section_m->get_section($this->data['student']->sectionID);
+				$this->data["subview"] = "mark/view";
+				$this->load->view('_layout_main', $this->data);
+			} else {
+				$this->data["subview"] = "error";
+				$this->load->view('_layout_main', $this->data);
+			}
+		} else {
+			$this->data["subview"] = "error";
+			$this->load->view('_layout_main', $this->data);
+		}
 		
 		$this->data["subview"] = "mark/show";
 		$this->load->view('_layout_main', $this->data);

@@ -26,7 +26,6 @@
 
     <div id="printablediv">
 
-
     <style type="text/css">
         .grade-table {
             width: 49%;
