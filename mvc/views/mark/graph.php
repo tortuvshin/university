@@ -114,7 +114,7 @@
         data: {
             labels: ["Хөтөлбөрийн хэмжээнд", "Сургуулийн хэмжээнд", "Citi-ийн хэмжээнд"],
             datasets: [{
-                label: 'Дүнгийн үзүүлэлт индексээр',
+                label: '',
                 data: [12, 119, 343],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -130,12 +130,38 @@
             }]
         },
         options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            hover: {
+                mode: 'label'
+            },
             scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Байр'
+                        }
+                    }],
                 yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            steps: 10,
+                            stepValue: 5,
+                            max: 4.0
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Тайлбар'
+                        }
+                    }]
+            },
+            title: {
+                display: true,
+                text: 'Дүнгийн үзүүлэлт индексээр'
             }
         }
     });
@@ -155,4 +181,4 @@
             });
         }
     });
-</script>
+</script>   
