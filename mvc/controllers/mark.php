@@ -482,7 +482,7 @@ class Mark extends Admin_Controller {
 				$this->data["marks"] = $this->mark_m->get_order_by_mark(array("studentID" => $student->studentID, "classesID" => $student->classesID));
 
 				$this->data["section"] = $this->section_m->get_section($this->data['student']->sectionID);
-				$this->data["subview"] = "mark/view";
+				$this->data["subview"] = "mark/show";
 				$this->load->view('_layout_main', $this->data);
 			} else {
 				$this->data["subview"] = "error";
@@ -493,8 +493,6 @@ class Mark extends Admin_Controller {
 			$this->load->view('_layout_main', $this->data);
 		}
 		
-		$this->data["subview"] = "mark/show";
-		$this->load->view('_layout_main', $this->data);
 	}
 }
 
