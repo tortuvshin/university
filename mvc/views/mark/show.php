@@ -94,9 +94,6 @@
                                                     echo $this->lang->line("mark_mark");
                                                 echo "</th>";
                                                 echo "<th>";
-                                                    echo $this->lang->line("mark_credit");
-                                                echo "</th>";
-                                                echo "<th>";
                                                     echo $this->lang->line("mark_point");
                                                 echo "</th>";
                                                 echo "<th>";
@@ -136,9 +133,6 @@
                                                             echo "</td>";
                                                             echo "<td data-title='".$this->lang->line('mark_subject')."'>";
                                                                 echo $mark->subject;
-                                                            echo "</td>";
-                                                            echo "<td data-credit='".$this->lang->line('mark_credit')."'>";
-                                                                echo $mark->credit;
                                                             echo "</td>";
                                                             echo "<td data-title='".$this->lang->line('mark_mark')."'>";
                                                                 echo $mark->mark;

@@ -56,12 +56,12 @@
                         <thead>
                             <tr>
                                 <th class="col-sm-1"><?=$this->lang->line('slno')?></th>
-                                
+
                                 <th class="col-sm-2"><?=$this->lang->line('subject_code')?></th>
                                 <th class="col-sm-3"><?=$this->lang->line('subject_name')?></th>
                                 <th class="col-sm-1"><?=$this->lang->line('subject_credit')?></th>
                                 <?php  if($usertype == "Admin") { ?>
-                                <th class="col-sm-2"><?=$this->lang->line('action')?></th>
+                                    <th class="col-sm-2"><?=$this->lang->line('action')?></th>
                                 <?php } ?>
                             </tr>
                         </thead>
