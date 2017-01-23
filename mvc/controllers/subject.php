@@ -45,7 +45,7 @@ Class Subject extends Admin_Controller {
 		} elseif($usertype == "Student" && $usertype != "Accountant") {
 			$student = $this->student_info_m->get_student_info();
 			$this->data['subjects'] = $this->student_info_m->get_join_where_subject($student->classesID);
-			$this->data["subview"] = "subject/index";
+			$this->data["subview"] = "subject/index_student";
 			$this->load->view('_layout_main', $this->data);
 		} elseif($usertype == "Parent") {
 			$username = $this->session->userdata("username");
