@@ -1,2 +1,0 @@
-[19-Sep-2016 18:31:29 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function get_order_by_subject() on null in /home/foldermn/public_html/www.sms.folder.mn/mvc/controllers/sattendance.php on line 535
-[20-Sep-2016 13:24:58 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function get_order_by_subject() on null in /home/foldermn/public_html/www.sms.folder.mn/mvc/controllers/sattendance.php on line 535
