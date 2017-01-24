@@ -179,7 +179,41 @@
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [2.1, 2.5, 2.4, 3.2, 2.0, 2.8, 1.6],
+                    data: [
+                        <?php if($marks && $exams) { 
+                            $map1 = function($r) { return intval($r->examID);};
+                            $marks_examsID = array_map($map1, $marks);
+                            $max_semester = max($marks_examsID);
+                            $map2 = function($r) { return intval($r->examID);};
+                            $examsID = array_map($map2, $exams);
+                            $map3 = function($r) { return array("mark" => intval($r->mark), "semester"=>$r->examID);};
+                            $all_marks = array_map($map3, $marks);
+                            $map4 = function($r) { return array("gradefrom" => $r->gradefrom, "gradeupto" => $r->gradeupto);};
+                            $grades_check = array_map($map4, $grades);
+                            foreach ($exams as $exam) {
+                                
+                                foreach ($marks as $mark) {
+                                    if($exam->examID == $mark->examID) {
+                                        if ($mark->mark != null) {
+                                            
+                                            if(count($grades)) {
+                                                $gpa = 0;
+                                                foreach ($grades as $grade) {
+                                                    if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
+                                                            echo $grade->point;
+                                                            echo ",";
+                                                    
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                                
+                        } ?>
+                    ],
                     spanGaps: false,
                 }
             ]
