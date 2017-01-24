@@ -429,9 +429,35 @@ class Mark extends Admin_Controller {
 	}
 	
 	public function graph() {
-		
-		$this->data["subview"] = "mark/graph";
-		$this->load->view('_layout_main', $this->data);
+
+		$usertype = $this->session->userdata("usertype");
+		if ($usertype == "Student") {
+			$username = $this->session->userdata("username");
+			$student = "";
+			if($usertype == "Student") {
+				$student = $this->user_m->get_username_row("student", array("username" => $username));
+			} elseif($usertype == "Parent") {
+				$user = $this->user_m->get_username_row("parent", array("username" => $username));
+				$student = $this->student_m->get_student($user->studentID);
+			}
+			$this->data["student"] = $this->student_m->get_student($student->studentID);
+			$this->data["classes"] = $this->student_m->get_class($student->classesID);
+			if($this->data["student"] && $this->data["classes"]) {
+				$this->data["exams"] = $this->exam_m->get_exam();
+				$this->data["grades"] = $this->grade_m->get_grade();
+				$this->data["marks"] = $this->mark_m->get_order_by_mark(array("studentID" => $student->studentID, "classesID" => $student->classesID));
+
+				$this->data["section"] = $this->section_m->get_section($this->data['student']->sectionID);
+				$this->data["subview"] = "mark/graph";
+				$this->load->view('_layout_main', $this->data);
+			} else {
+				$this->data["subview"] = "error";
+				$this->load->view('_layout_main', $this->data);
+			}
+		} else {
+			$this->data["subview"] = "error";
+			$this->load->view('_layout_main', $this->data);
+		}
 	}
 
 	public function show() {
