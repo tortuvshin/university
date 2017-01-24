@@ -24682,7 +24682,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
 --
 
 INSERT INTO `setting` (`settingID`, `sname`, `phone`, `address`, `email`, `automation`, `currency_code`, `currency_symbol`, `language`, `theme`, `fontorbackend`, `footer`, `photo`, `photoback`, `purchase_code`, `updateversion`, `attendance`) VALUES
-(1, 'СИТИ ИХ СУРГУУЛЬ', '99223209', 'Ulaanbaatar,Mongolia', 'admin@citi.edu.mn', 5, '₮', 'MNT', 'russian', 'Basic', 0, 'Оюутны Бүртгэлийн Систем', '92984086415.jpg', '92984086415.jpg', '15ccba3b-f8d5-478f-9402-7fe8713b192f', '2.00', 'day');
+(1, 'СИТИ ИХ СУРГУУЛЬ', '99223209', 'Ulaanbaatar,Mongolia', 'admin@citi.edu.mn', 5, '₮', 'MNT', 'russian', 'Basic', 0, 'Оюутны Бүртгэлийн Систем', '92984086415.jpg', 'citi_back_login.jpg', '15ccba3b-f8d5-478f-9402-7fe8713b192f', '2.00', 'day');
 
 -- --------------------------------------------------------
 
