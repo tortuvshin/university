@@ -24670,6 +24670,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `fontorbackend` int(11) DEFAULT NULL,
   `footer` text,
   `photo` varchar(128) DEFAULT NULL,
+  `photoback` varchar(128) DEFAULT NULL,
   `purchase_code` varchar(255) DEFAULT NULL,
   `updateversion` text,
   `attendance` varchar(30) DEFAULT NULL,
@@ -24680,8 +24681,8 @@ CREATE TABLE IF NOT EXISTS `setting` (
 -- Dumping data for table `setting`
 --
 
-INSERT INTO `setting` (`settingID`, `sname`, `phone`, `address`, `email`, `automation`, `currency_code`, `currency_symbol`, `language`, `theme`, `fontorbackend`, `footer`, `photo`, `purchase_code`, `updateversion`, `attendance`) VALUES
-(1, 'СИТИ ИХ СУРГУУЛЬ', '99223209', 'Ulaanbaatar,Mongolia', 'admin@citi.edu.mn', 5, '₮', 'MNT', 'russian', 'Basic', 0, 'Оюутны Бүртгэлийн Систем', '92984086415.jpg', '15ccba3b-f8d5-478f-9402-7fe8713b192f', '2.00', 'day');
+INSERT INTO `setting` (`settingID`, `sname`, `phone`, `address`, `email`, `automation`, `currency_code`, `currency_symbol`, `language`, `theme`, `fontorbackend`, `footer`, `photo`, `photoback`, `purchase_code`, `updateversion`, `attendance`) VALUES
+(1, 'СИТИ ИХ СУРГУУЛЬ', '99223209', 'Ulaanbaatar,Mongolia', 'admin@citi.edu.mn', 5, '₮', 'MNT', 'russian', 'Basic', 0, 'Оюутны Бүртгэлийн Систем', '92984086415.jpg', '92984086415.jpg', '15ccba3b-f8d5-478f-9402-7fe8713b192f', '2.00', 'day');
 
 -- --------------------------------------------------------
 
