@@ -292,4 +292,37 @@
             });
         }
     });
+
+     $( document ).ready(function() {
+        semisterGpa();
+        totalGpa();
+    });
+    function semisterGpa () {
+        $(".grade-table").each(function(){
+            var gpalist = $(this).find(".std-gpa[data-gpa]");
+            var count = 0;
+            var gpasum = 0;
+            for (var i = 0; i < gpalist.length; i++) {
+              var gpa = gpalist[i].getAttribute('data-gpa');
+              count = count + 1;
+              gpasum = parseFloat(gpasum) + parseFloat(gpa);
+            }
+            var average = gpasum / count;
+            
+            $(this).find(".sem-gpa").html("Улирлын ҮГД: "+average.toFixed(2));
+        });
+    }
+    function totalGpa () {
+        var gpalist = $(".std-gpa[data-gpa]");
+        var count = 0;
+        var gpasum = 0;
+        for (var i = 0; i < gpalist.length; i++) {
+          var gpa = gpalist[i].getAttribute('data-gpa');
+          count = count + 1;
+          gpasum = parseFloat(gpasum) + parseFloat(gpa);
+          
+        }
+        var average = gpasum / count;
+        $(".gpa-sum").html("ҮГД: "+average.toFixed(2));
+    }
 </script>   
