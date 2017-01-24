@@ -39,6 +39,7 @@ $lang['menu_user'] = 'User';
 $lang['menu_classes'] = 'Class';
 $lang['menu_section'] = 'Section';
 $lang['menu_subject'] = 'Subject';
+$lang['menu_subject_student'] = 'Subject';
 $lang['menu_grade'] = 'Grade';
 $lang['menu_exam'] = 'Exam';
 $lang['menu_examschedule'] = 'Exam Schedule';

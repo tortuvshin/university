@@ -111,9 +111,18 @@
                         ?>
 
                         <?php 
-                            if($usertype == "Admin" || $usertype == "Student" || $usertype == "Parent" || $usertype == "Librarian" || $usertype == "Teacher") {
+                            if($usertype == "Admin" || $usertype == "Parent" || $usertype == "Librarian" || $usertype == "Teacher") {
                                 echo '<li>';
                                 echo anchor('subject/index', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_subject').'</span>');
+                                echo '</li>';
+                            }
+                        ?>
+
+
+                        <?php 
+                            if($usertype == "Student") {
+                                echo '<li>';
+                                echo anchor('subject/index', '<i class="fa icon-subject"></i><span>'.$this->lang->line('menu_subject_student').'</span>');
                                 echo '</li>';
                             }
                         ?>

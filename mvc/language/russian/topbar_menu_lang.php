@@ -40,6 +40,7 @@ $lang['menu_user'] = 'Хэрэглэгч';
 $lang['menu_classes'] = 'Курс';
 $lang['menu_section'] = 'Анги';
 $lang['menu_subject'] = 'Хичээл';
+$lang['menu_subject_student'] = 'Сургалтын төлөвлөгөө';
 $lang['menu_grade'] = 'Дүнгийн зэрэг';
 $lang['menu_exam'] = 'Шалгалт';
 $lang['menu_examschedule'] = 'Шалгалтын хуваарь';

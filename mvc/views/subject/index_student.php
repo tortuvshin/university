@@ -1,11 +1,11 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title"><i class="fa icon-subject"></i> <?=$this->lang->line('panel_title')?></h3>
+        <h3 class="box-title"><i class="fa icon-subject"></i> <?=$this->lang->line('menu_subject_student')?></h3>
 
         <ol class="breadcrumb">
             <li><a href="<?=base_url("dashboard/index")?>"><i class="fa fa-laptop"></i> <?=$this->lang->line('menu_dashboard')?></a></li>
-            <li class="active"><?=$this->lang->line('menu_subject')?></li>
+            <li class="active"><?=$this->lang->line('menu_subject_student')?></li>
         </ol>
     </div><!-- /.box-header -->
     <!-- form start -->
