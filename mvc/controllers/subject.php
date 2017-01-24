@@ -220,7 +220,7 @@ Class Subject extends Admin_Controller {
 			$this->load->view('_layout_main', $this->data);
 		}
 	}
-
+	
 	public function unique_subject() {
 		$id = htmlentities(mysql_real_escape_string($this->uri->segment(3)));
 		if((int)$id) {
