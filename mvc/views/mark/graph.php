@@ -180,7 +180,7 @@
                     pointRadius: 1,
                     pointHitRadius: 10,
                     data: [
-                        <?php if($marks && $exams) { 
+                        <?php
                             $map1 = function($r) { return intval($r->examID);};
                             $marks_examsID = array_map($map1, $marks);
                             $max_semester = max($marks_examsID);
@@ -191,28 +191,56 @@
                             $map4 = function($r) { return array("gradefrom" => $r->gradefrom, "gradeupto" => $r->gradeupto);};
                             $grades_check = array_map($map4, $grades);
                             foreach ($exams as $exam) {
-                                
-                                foreach ($marks as $mark) {
-                                    if($exam->examID == $mark->examID) {
-                                        if ($mark->mark != null) {
-                                            
-                                            if(count($grades)) {
-                                                $gpa = 0;
-                                                foreach ($grades as $grade) {
-                                                    if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                            echo $grade->point;
-                                                            echo ",";
-                                                    
-                                                        break;
+                                 if($exam->examID <= $max_semester) {
+                                    $check = array_search($exam->examID, $marks_examsID);
+                                    if($check>=0) {
+                                        $f = 0;
+                                        foreach ($grades_check as $key => $range) {
+                                            foreach ($all_marks as $value) {
+                                                if($value['semester'] == $exam->examID ) {
+                                                    if($value['mark']>=$range['gradefrom'] && $value['mark']<=$range['gradeupto'])
+                                                    {
+                                                        $f=1;
                                                     }
                                                 }
                                             }
-                                        }
+                                            if($f==1)
+                                            {
+                                                break;
+                                            }
+                                        }    
+                                        if(count($grades) && $f == 1) {
+                                            $gpa = 0;
+                                            $count = 0;
+                                            foreach ($marks as $mark) {
+                                                if($exam->examID == $mark->examID) {
+                                                    if ($mark->mark != null) {
+                                                      
+                                                        if(count($grades)) {
+                                                           
+                                                            foreach ($grades as $grade) {
+                                                                if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
+                                                            
+                                                                    break;
+                                                                }
+                                                            }
+                                                        }
+                                                        $gpa = $gpa + $grade->point;
+                                                            
+                                                        $count++;
+                                                        
+                                                    }         
+                                                }
+                                            } 
+                                        }      
                                     }
                                 }
+
+                                echo $gpa / $count;
+                                echo ",";
                             }
-                                
-                        } ?>
+
+                        ?>
                     ],
                     spanGaps: false,
                 }
