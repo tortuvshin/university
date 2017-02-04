@@ -22,15 +22,6 @@
     </div>
 </div>
 
-<div class="box">
-    <div class="box-body">
-        <div class="row">
-            <div class="col-sm-12">
-                <canvas id="myChart"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script type="text/javascript" src="<?php echo base_url('assets/chartjs/chart.js'); ?>"></script>
 <script type="text/javascript">
@@ -40,14 +31,14 @@
     var myLineChart = new Chart(ctxline, {
         type: 'line',
         data: {
-            labels: [ <?php 
-              
+            labels: [ <?php
+
                         foreach ($exams as $exam) {
                             echo "\"";
                             echo $exam->exam;
                             echo "\",";
                         }
-              
+
                      ?>
                 ],
             datasets: [
@@ -99,31 +90,31 @@
                                             {
                                                 break;
                                             }
-                                        }    
+                                        }
                                         if(count($grades) && $f == 1) {
                                             $gpa = 0;
                                             $count = 0;
                                             foreach ($marks as $mark) {
                                                 if($exam->examID == $mark->examID) {
                                                     if ($mark->mark != null) {
-                                                      
+
                                                         if(count($grades)) {
-                                                           
+
                                                             foreach ($grades as $grade) {
                                                                 if($grade->gradefrom <= $mark->mark && $grade->gradeupto >= $mark->mark) {
-                                                            
+
                                                                     break;
                                                                 }
                                                             }
                                                         }
                                                         $gpa = $gpa + $grade->point;
-                                                            
+
                                                         $count++;
-                                                        
-                                                    }         
+
+                                                    }
                                                 }
-                                            } 
-                                        }      
+                                            }
+                                        }
                                     }
                                 }
 
@@ -173,62 +164,7 @@
             }
         }
     });
-    var myChart = new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-            labels: ["Хөтөлбөрийн хэмжээнд", "Сургуулийн хэмжээнд", "Citi-ийн хэмжээнд"],
-            datasets: [{
-                label: '',
-                data: [12, 119, 343],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(75, 192, 192, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(75, 192, 192, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            legend: {
-                position: 'top',
-            },
-            hover: {
-                mode: 'label'
-            },
-            scales: {
-                xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Байр'
-                        }
-                    }],
-                yAxes: [{
-                        display: true,
-                        ticks: {
-                            beginAtZero: true,
-                            steps: 10,
-                            stepValue: 5,
-                            max: 4.0
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Тайлбар'
-                        }
-                    }]
-            },
-            title: {
-                display: true,
-                text: 'Дүнгийн үзүүлэлт индексээр'
-            }
-        }
-    });
+  
     $('#classesID').change(function() {
         var classesID = $(this).val();
         if(classesID == 0) {
@@ -245,4 +181,4 @@
             });
         }
     });
-</script>   
+</script>
