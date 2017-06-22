@@ -11,9 +11,7 @@ git clone https://github.com/tortuvshin/sms.git
 
 Composer татаж суулгана
 
-```
 [Composer татах](https://getcomposer.org/download/)
-```
 
 Дараа нь, энэхүү төслийг татаж авсан хавтаст орж composer update/install комманд ажиллуулна
 
@@ -23,9 +21,7 @@ composer install
 
 Nodejs татаж суулгана 
 
-```
-https://nodejs.org/en/download/
-```
+[Nodejs татах](https://nodejs.org/en/download/)
 
 NPM сангууд татах
 
@@ -64,12 +60,4 @@ Javascript minify хийх
 
 ```
 gulp js
-```
-
-```
-username: 14b1seas2868
-```
-
-```
-password: erka12
 ```
