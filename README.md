@@ -9,14 +9,13 @@ Administrator able to generate PDF report with dompdf and able to print them str
 Clone repo:
 
 ```
-git clone https://github.com/tortuvshin/sms.git
+git clone https://github.com/tortuvshin/university.git
 ```
 
 Install composer
 
 [Composer download](https://getcomposer.org/download/)
 
-Дараа нь, энэхүү төслийг татаж авсан хавтаст орж composer update/install комманд ажиллуулна
 
 ```
 composer install
